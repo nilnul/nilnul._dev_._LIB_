@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="nilnul.dev.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="srcs" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="folder_srcCfg_doc" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.nilnulCfg</Value>
+    </Setting>
+    <Setting Name="src_destination_my" Type="System.String" Scope="User">
+      <Value Profile="(Default)">my</Value>
+    </Setting>
+    <Setting Name="src_destination_pub" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pub</Value>
+    </Setting>
+    <Setting Name="src_destination" Type="System.String" Scope="User">
+      <Value Profile="(Default)">src_</Value>
+    </Setting>
+    <Setting Name="src_destination_nilnul" Type="System.String" Scope="User">
+      <Value Profile="(Default)">nilnul</Value>
+    </Setting>
+    <Setting Name="srcsParent" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="srcDirS" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;_my_&lt;/string&gt;
+  &lt;string&gt;_pub_&lt;/string&gt;
+  &lt;string&gt;_nilnul_&lt;/string&gt;
+  &lt;string&gt;_team1_&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="divisionInPersonal4srcsParent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">src_</Value>
+    </Setting>
+    <Setting Name="my_address" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="my_division_in_personal" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="tgt_address" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="tgt_division_in_my" Type="System.String" Scope="User">
+      <Value Profile="(Default)">_tgt_</Value>
+    </Setting>
+    <Setting Name="upgraded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="nugetPacsSrc_division" Type="System.String" Scope="User">
+      <Value Profile="(Default)">_dev_/_nuget_/_src_</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

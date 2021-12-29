@@ -1,0 +1,1 @@
+﻿xcopy /Y /E /I /D "$(SolutionDir)\packages\*.*" "$(MSBuildProjectDirectory)\packages"

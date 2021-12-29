@@ -1,0 +1,13 @@
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt
+	"NuGet.exe" push $(TargetName).@(VersionNumber).nupkg -Source local
+	"NuGet.exe" push $(TargetName).@(VersionNumber).nupkg -Source my
+) ELSE (
+	if $(ConfigurationName) == Symbols4Debug (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt
+		"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source local
+		"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source my
+	) ELSE (
+		echo $(VersionNumber)
+	)
+)
