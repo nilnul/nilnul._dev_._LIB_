@@ -33,7 +33,7 @@ namespace nilnul.dev.src.sln._sub
 
 			target = prjName_as_slnSub9tgt.Item2;
 			///remained of the prjName
-			var  subRemained = prjName_as_slnSub9tgt.Item1.Skip(
+			var subRemained = prjName_as_slnSub9tgt.Item1.Skip(
 				slnName.Count()
 			);
 
@@ -41,11 +41,27 @@ namespace nilnul.dev.src.sln._sub
 			// there might be subSln
 			var directory = new List<string>();
 
+			//var slnSub = rtSln;
+
+			var prjFolderParentCandidate = nilnul.fs.address_.shield_.BaseDiv.Ov_divOfDnts(
+					rtSln
+					,
+					directory
+				); ;
+
 			while (
-				subRemained.Any()		// subsln
+				subRemained.Any()       // subsln
 			)
 			{
-				var dir4sub = nilnul.fs.folder._DirsX.Captions(rtSln).Select(
+				//prjFolderParentCandidate =  nilnul.fs.address_.shield_.BaseDiv.Ov_divOfDnts(
+				//	rtSln
+				//	,
+				//	directory
+				//); ;
+
+				var dir4sub = nilnul.fs.folder._DirsX.Captions(
+					prjFolderParentCandidate
+				).Select(
 					c =>
 
 					nilnul.dev.src.sln.dir.name._ParsedX.NulableParsed(c)
@@ -70,18 +86,31 @@ nilnul.objs.re_.init_.EqDefault<string, nilnul.txt.Eq>.Singleton.re(
 				subRemained = subRemained.Skip(
 					dir4sub.asSegs().Count()
 				);
+				//prjFolderParentCandidate = nilnul.fs.address_.shield_.BaseDir.Create_dirOfDenote(
+				//	prjFolderParentCandidate
+				//	,
+				//	dir4sub.ToString()
+				//);
+
+				prjFolderParentCandidate = nilnul.fs.address_.shield_.BaseDiv.Ov_divOfDnts(
+					rtSln
+					,
+					directory
+				);
+
 
 			}
 
 			// now find the prj
 
-			var prjFolderParent = nilnul.fs.address_.shield_.BaseDiv.Ov_divOfDnts(
-				rtSln,
-				directory
-			);
+			//var prjFolderParent = nilnul.fs.address_.shield_.BaseDiv.Ov_divOfDnts(
+			//	rtSln,
+			//	directory
+			//);
 			subRemained0 = subRemained;
+			return prjFolderParentCandidate;
 
-			return prjFolderParent;
+			//return prjFolderParent;
 		}
 
 		/// <summary>
@@ -101,7 +130,8 @@ nilnul.objs.re_.init_.EqDefault<string, nilnul.txt.Eq>.Singleton.re(
 			out IEnumerable<string> subRemained0
 			,
 			out string target
-		) {
+		)
+		{
 
 
 			return _Sub_ofMain(

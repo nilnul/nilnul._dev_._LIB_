@@ -12,6 +12,16 @@ namespace nilnul.dev.src.synd_.cs.doc_.snk_.unoccupied.create_
 	/// </summary>
 	static public class _SymX
 	{
+		static public string Address_underPrimarySrc() {
+			var primary = nilnul.dev.src_.Primary.Address_ofCfg().ToString();
+			var captions= nilnul.fs.folder.docs_._ExtX.Captions_ofAddress( primary ,".snk" ).Take(2);
+			if (captions.Count()!=1)
+			{
+				return null;
+			}
+			return System.IO.Path.Combine( primary, captions.First() );
+		}
+
 		static public void _Vod_prjFolderOfAddressAssumeSnkeyUnoccupied(
 			string prj
 			,

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.prj.asDoc.main
+namespace nilnul.dev.src.prj.main
 {
 	/// <summary>
 	/// </summary>

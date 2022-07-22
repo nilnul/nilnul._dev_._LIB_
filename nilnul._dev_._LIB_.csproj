@@ -15,6 +15,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release4Test|AnyCPU'">
     <OutputPath>bin\Release4Test\</OutputPath>
@@ -75,10 +77,10 @@
       <HintPath>..\..\(packages)\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.CodeCommit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\AWSSDK.CodeCommit.3.7.0.109\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
+      <HintPath>..\..\(packages)\AWSSDK.CodeCommit.3.7.0.177\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\AWSSDK.Core.3.7.5.8\lib\net45\AWSSDK.Core.dll</HintPath>
+      <HintPath>..\..\(packages)\AWSSDK.Core.3.7.12.5\lib\net45\AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
@@ -95,6 +97,10 @@
     <Reference Include="MathNet.Iridium, Version=1.0.1.32096, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\MathNet.Iridium.1.0.1.32096\lib\net46\MathNet.Iridium.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi, Version=18.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.Azure.DevOps.Comments.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Azure.Services.AppAuthentication, Version=1.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Microsoft.Azure.Services.AppAuthentication.1.6.2\lib\net472\Microsoft.Azure.Services.AppAuthentication.dll</HintPath>
     </Reference>
@@ -102,25 +108,31 @@
       <HintPath>..\..\(packages)\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.Build.17.0.0\lib\net472\Microsoft.Build.dll</HintPath>
+      <HintPath>..\..\(packages)\Microsoft.Build.17.2.0\lib\net472\Microsoft.Build.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Engine, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.Build.Engine.17.0.0\lib\net472\Microsoft.Build.Engine.dll</HintPath>
+      <HintPath>..\..\(packages)\Microsoft.Build.Engine.17.2.0\lib\net472\Microsoft.Build.Engine.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.Build.Framework.17.0.0\lib\net472\Microsoft.Build.Framework.dll</HintPath>
+      <HintPath>..\..\(packages)\Microsoft.Build.Framework.17.2.0\lib\net472\Microsoft.Build.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.21.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Abstractions.6.21.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Microsoft.IdentityModel.Clients.ActiveDirectory.5.2.9\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.JsonWebTokens.6.15.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.21.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.JsonWebTokens.6.21.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Logging.6.15.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.21.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Logging.6.21.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Tokens.6.15.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.21.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Tokens.6.21.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.Redist, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IO.Redist.6.0.0\lib\net472\Microsoft.IO.Redist.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Msagl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=640c57aa40e7ae7d, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Microsoft.Msagl.1.1.3\lib\net40\Microsoft.Msagl.dll</HintPath>
@@ -131,12 +143,68 @@
     <Reference Include="Microsoft.NET.StringTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Microsoft.NET.StringTools.1.0.0\lib\net472\Microsoft.NET.StringTools.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.TeamFoundation.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\..\(packages)\Microsoft.VisualStudio.Services.Client.16.185.0-preview\lib\net462\Microsoft.TeamFoundation.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Dashboards.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Dashboards.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.16.170.0\lib\net462\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Policy.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Test.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Test.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Work.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\..\(packages)\Microsoft.VisualStudio.Services.Client.16.185.0-preview\lib\net462\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\(packages)\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -144,7 +212,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Setup.Configuration.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.0.4492\lib\net35\Microsoft.VisualStudio.Setup.Configuration.Interop.dll</HintPath>
+      <HintPath>..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.2.2146\lib\net35\Microsoft.VisualStudio.Setup.Configuration.Interop.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="miroslavStampar.math._calculus_._LIB_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -153,136 +221,123 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.0.8015.2140, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.collection_._discrete_._LIB_.1.0.8015.2140\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.0.8187.507, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.collection_._discrete_._LIB_.1.0.8187.507\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.fs._git_._LIB_, Version=2.0.8187.40803, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.fs._git_._LIB_.2.0.8187.40803\lib\net48\nilnul.fs._git_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.geometry._planar_._LIB_, Version=1.0.8212.37496, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.geometry._planar_._LIB_.1.0.8212.37496\lib\net48\nilnul.geometry._planar_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.math._calculus_._LIB_, Version=1.0.8118.34219, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.math._calculus_._LIB_.1.0.8118.34219\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.0.8118.34252, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num.real._func_._LIB_.1.0.8118.34252\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.0.8219.18843, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num.real._matrix_._LIB_.1.0.8219.18843\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._complex_._LIB_, Version=1.0.8212.4377, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._complex_._LIB_.1.0.8212.4377\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.0.8220.34987, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.0.8220.34987\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.0.8222.37135, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._quotient_._LIB_.1.0.8222.37135\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.0.8225.41044, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._real_._LIB_.2.0.8225.41044\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.rel._graph_._LIB_, Version=1.0.8084.33093, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>..\..\(packages)\nilnul.rel._graph_._LIB_.1.0.8084.33093\lib\net48\nilnul.rel._graph_._LIB_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul.fs._git_._LIB_, Version=2.0.8031.39029, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul.fs._git_._LIB_.2.0.8031.39029\lib\net48\nilnul.fs._git_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._acc_._LIB_, Version=2.0.8187.23967, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._acc_._LIB_.2.0.8187.23967\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.geometry._planar_._LIB_, Version=1.0.8019.33578, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.geometry._planar_._LIB_.1.0.8019.33578\lib\net48\nilnul.geometry._planar_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._acc_._LINQ_, Version=1.0.8187.23641, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._acc_._LINQ_.1.0.8187.23641\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.math._calculus_._LIB_, Version=1.0.7985.42834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul.math._calculus_._LIB_.1.0.7985.42834\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._app_._LIB_, Version=1.0.8187.40713, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._app_._LIB_.1.0.8187.40713\lib\net48\nilnul._app_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.0.7985.42870, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul.num.real._func_._LIB_.1.0.7985.42870\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.0.8186.38808, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.0.8186.38808\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.0.8019.32201, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num.real._matrix_._LIB_.1.0.8019.32201\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nilnul.num._integer_._LIB_, Version=1.0.8015.2163, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.0.8015.2163\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.0.8015.5583, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num._quotient_._LIB_.1.0.8015.5583\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nilnul.num._real_._LIB_, Version=2.0.8019.31994, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num._real_._LIB_.2.0.8019.31994\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nilnul.rel._graph_._LIB_, Version=1.0.8019.33769, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.rel._graph_._LIB_.1.0.8019.33769\lib\net48\nilnul.rel._graph_._LIB_.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nilnul._acc_._LIB_, Version=2.0.8020.37517, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._acc_._LIB_.2.0.8020.37517\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
-    </Reference>
-    <Reference Include="nilnul._acc_._LINQ_, Version=1.0.8020.37510, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._acc_._LINQ_.1.0.8020.37510\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
-    </Reference>
-    <Reference Include="nilnul._app_._LIB_, Version=1.0.8019.33806, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._app_._LIB_.1.0.8019.33806\lib\net48\nilnul._app_._LIB_.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nilnul._bit_._LIB_, Version=1.0.8015.1963, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.0.8015.1963\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
-      <Private>True</Private>
-      <Aliases>global,bit</Aliases>
-    </Reference>
-    <Reference Include="nilnul._character_._LIB_, Version=2.1.8018.41314, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._character_._LIB_.2.1.8018.41314\lib\net48\nilnul._character_._LIB_.dll</HintPath>
-      <Aliases>global,character</Aliases>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8187.368, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._character_._LIB_.2.1.8187.368\lib\net48\nilnul._character_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._comm_._LIB_, Version=1.0.7827.34092, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._fs_._LIB_, Version=2.0.8033.16580, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.0.8033.16580\lib\net48\nilnul._fs_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._data_._LIB_, Version=1.0.8175.732, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._data_._LIB_.1.0.8175.732\lib\net48\nilnul._data_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._fs_._LIB_, Version=2.0.8206.29338, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.0.8206.29338\lib\net48\nilnul._fs_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._human_._LIB_, Version=1.0.8186.39346, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._human_._LIB_.1.0.8186.39346\lib\net48\nilnul._human_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._human_._LINQ_, Version=1.0.8186.38559, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._human_._LINQ_.1.0.8186.38559\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
     </Reference>
     <!--<Reference Include="nilnul._geometry_._LIB_, Version=1.0.7992.1866, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <HintPath>..\..\(packages)\nilnul._geometry_._LIB_.1.0.7992.1866\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
 </Reference>-->
-    <Reference Include="nilnul._human_._LIB_, Version=1.0.7988.40406, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._human_._LIB_.1.0.7988.40406\lib\net48\nilnul._human_._LIB_.dll</HintPath>
-    </Reference>
-    <Reference Include="nilnul._human_._LINQ_, Version=1.0.7988.40400, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._human_._LINQ_.1.0.7988.40400\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
-    </Reference>
     <Reference Include="nilnul._linq_._LIB_, Version=1.0.7827.34075, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\nilnul._linq_._LIB_.1.0.7827.34075\lib\net48\nilnul._linq_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._num_._LIB_, Version=1.0.8015.2077, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._num_._LIB_.1.0.8015.2077\lib\net48\nilnul._num_._LIB_.dll</HintPath>
-      <Private>True</Private>
-      <Aliases>global,num</Aliases>
+    <Reference Include="nilnul._num_._LIB_, Version=1.0.8226.22818, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LIB_.1.0.8226.22818\lib\net48\nilnul._num_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._num_._LINQ_, Version=1.0.7985.41572, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._num_._LINQ_.1.0.7985.41572\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.0.8186.37898, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LINQ_.1.0.8186.37898\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._obj_._LIB_, Version=1.0.8014.25599, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.0.8014.25599\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
-      <Aliases>global,obj</Aliases>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.0.8222.36466, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.0.8222.36466\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._rel_._LIB_, Version=1.1.8015.2027, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._rel_._LIB_.1.1.8015.2027\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.1.8208.38024, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._rel_._LIB_.1.1.8208.38024\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._set_._LIB_, Version=1.0.8015.2000, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.0.8015.2000\lib\net48\nilnul._set_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._set_._LIB_, Version=1.0.8186.39447, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.0.8186.39447\lib\net48\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._time_._LIB_, Version=1.0.8019.32173, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._time_._LIB_.1.0.8019.32173\lib\net48\nilnul._time_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._time_._LIB_, Version=1.0.8187.37305, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._time_._LIB_.1.0.8187.37305\lib\net48\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._txt_._LIB_, Version=1.0.8019.31648, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.0.8019.31648\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
-      <Private>True</Private>
-      <Aliases>global,txt</Aliases>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.0.8187.662, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.0.8187.662\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._web_._LIB_, Version=1.0.8019.33674, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._web_._LIB_.1.0.8019.33674\lib\net48\nilnul._web_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._web_._LIB_, Version=1.0.8187.40628, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._web_._LIB_.1.0.8187.40628\lib\net48\nilnul._web_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._win_._LIB_, Version=1.0.8030.573, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.0.8030.573\lib\net48\nilnul._win_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._win_._LIB_, Version=1.0.8206.40185, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.0.8206.40185\lib\net48\nilnul._win_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._xml_._LIB_, Version=1.0.8030.41658, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._xml_._LIB_.1.0.8030.41658\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._xml_._LIB_, Version=1.0.8186.39415, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._xml_._LIB_.1.0.8186.39415\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Common, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\NuGet.Common.6.0.0\lib\net472\NuGet.Common.dll</HintPath>
+    <Reference Include="NuGet.Common, Version=6.2.1.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\NuGet.Common.6.2.1\lib\net472\NuGet.Common.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Configuration, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\NuGet.Configuration.6.0.0\lib\net472\NuGet.Configuration.dll</HintPath>
+    <Reference Include="NuGet.Configuration, Version=6.2.1.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\NuGet.Configuration.6.2.1\lib\net472\NuGet.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Frameworks, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\NuGet.Frameworks.6.0.0\lib\net472\NuGet.Frameworks.dll</HintPath>
+    <Reference Include="NuGet.Frameworks, Version=6.2.1.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\NuGet.Frameworks.6.2.1\lib\net472\NuGet.Frameworks.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Packaging, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\NuGet.Packaging.6.0.0\lib\net472\NuGet.Packaging.dll</HintPath>
+    <Reference Include="NuGet.Packaging, Version=6.2.1.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\NuGet.Packaging.6.2.1\lib\net472\NuGet.Packaging.dll</HintPath>
     </Reference>
-    <Reference Include="NuGet.Versioning, Version=6.0.0.280, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\NuGet.Versioning.6.0.0\lib\net472\NuGet.Versioning.dll</HintPath>
+    <Reference Include="NuGet.Versioning, Version=6.2.1.2, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\NuGet.Versioning.6.2.1\lib\net472\NuGet.Versioning.dll</HintPath>
     </Reference>
-    <Reference Include="Octokit, Version=0.51.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Octokit.0.51.0\lib\net48\Octokit.dll</HintPath>
+    <Reference Include="Octokit, Version=0.52.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Octokit.0.52.0\lib\net46\Octokit.dll</HintPath>
     </Reference>
     <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.0.7863.31102, Culture=neutral, PublicKeyToken=085f320e4a727230">
       <HintPath>..\..\(packages)\sergeyBochkanov._alglib_._LIB_.1.0.7863.31102\lib\net48\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
@@ -305,8 +360,8 @@
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.15.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\System.IdentityModel.Tokens.Jwt.6.15.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.21.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IdentityModel.Tokens.Jwt.6.21.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -319,8 +374,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -328,8 +383,8 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Numerics" />
@@ -380,8 +435,8 @@
     <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\System.Text.Json.6.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=6.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Text.Json.6.0.5\lib\net461\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Dataflow, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\System.Threading.Tasks.Dataflow.6.0.0\lib\net461\System.Threading.Tasks.Dataflow.dll</HintPath>
@@ -393,15 +448,18 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    <Reference Include="System.Web.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.Cors.5.2.9\lib\net45\System.Web.Cors.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
@@ -411,11 +469,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="_nilnul_._LIB_, Version=1.0.7827.34100, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.0.7827.34100\lib\net48\_nilnul_._LIB_.dll</HintPath>
+    <Reference Include="_nilnul_._LIB_, Version=1.0.8181.34397, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.0.8181.34397\lib\net48\_nilnul_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="_nilnul_._LINQ_, Version=1.0.7819.39633, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\_nilnul_._LINQ_.1.0.7819.39633\lib\net48\_nilnul_._LINQ_.dll</HintPath>
+    <Reference Include="_nilnul_._LINQ_, Version=1.0.8100.39202, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\_nilnul_._LINQ_.1.0.8100.39202\lib\net48\_nilnul_._LINQ_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -423,6 +481,7 @@
     <Compile Include="nilnul0\fs\file_\ext_\deV_\Sqlproj.cs" />
     <Compile Include="nilnul0\fs\file_\ext_\deV_\Csproj.cs" />
     <Compile Include="nilnul0\fs\folder\doc_\deV_\prj_\Cs.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\div_\nonlink_\_NotDotLedX.cs" />
     <Compile Include="nilnul0\fs\_address\_route\division_\_div\_dir\dnt_\VerWithTag.cs" />
     <Compile Include="nilnul0\fs\_address\_route\division_\_div\_dir\dnt_\_identity\Variant.cs" />
     <Compile Include="nilnul0\obj_\deV\Identy.cs" />
@@ -431,11 +490,14 @@
     <Compile Include="nilnul0\obj_\deV\identy\Noted.cs" />
     <Compile Include="nilnul0\obj_\deV\identy\noted\Parsed.cs" />
     <Compile Include="nilnul0\obj_\deV\identy\of_\Segs.cs" />
+    <Compile Include="nilnul0\obj_\deV\identy_\Long.cs" />
     <Compile Include="nilnul0\obj_\deV\id_\Human.cs" />
+    <Compile Include="nilnul0\obj_\deV\Location.cs" />
     <Compile Include="nilnul0\obj_\deV\_identy\Version.cs" />
     <Compile Include="nilnul0\obj_\deV\_identy\_version\Major.cs" />
     <Compile Include="nilnul0\obj_\deV\_identy\_version\major_\Parity.cs" />
     <Compile Include="nilnul0\obj_\deV\ReduceComplexity.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\nom_\IAbbr.cs" />
     <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_prefixed\prefix_\TypeInGeneric.cs" />
     <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\Abbr.cs" />
     <Compile Include="nilnul0\obj_\deV_\pkg\ISpec.cs" />
@@ -467,28 +529,51 @@
     <Compile Include="nilnul0\_obj\typ\nom_\Eponym.cs" />
     <Compile Include="Prj.cs" />
     <Compile Include="prj\be_\cs_\Lib.cs" />
+    <Compile Include="prj\div\dir_\Retiring.cs" />
+    <Compile Include="prj\documents_\Closure.cs" />
     <Compile Include="prj\_build\target\Ensure.cs" />
     <Compile Include="prj\_build\target\ensure_\FourDotEight.cs" />
     <Compile Include="prj\_build\_target\Val.cs" />
-    <Compile Include="prj_\cs\_meta_\evt_\build_\post\OnUpd.cs" />
+    <Compile Include="prj_\cs\version\_DefiniteX.cs" />
+    <Compile Include="prj_\_cs_\Import.cs" />
+    <Compile Include="prj_\_cs_\imports\_NormalizeX.cs" />
+    <Compile Include="prj_\_cs_\evt_\build_\post\OnUpd.cs" />
     <Compile Include="prj_\Sql.cs" />
     <Compile Include="prj_\sql\_build\target\ensure_\FourDotEight.cs" />
     <Compile Include="prj_\sql\_meta_\document_\build\ToNone.cs" />
+    <Compile Include="prj_\_cs_\prop_\Nulable.cs" />
+    <Compile Include="prj_\_cs_\prop_\Determin.cs" />
+    <Compile Include="prj_\_cs_\prop_\determin\Determin.cs" />
+    <Compile Include="prj_\_sql_\directory\include_\Nonbuild.cs" />
+    <Compile Include="prj_\_sql_\directory\include_\nonbuild_\AssumeUnincluded.cs" />
+    <Compile Include="prj_\_sql_\division\Nonbuild.cs" />
     <Compile Include="srcs\prj\Locator.cs" />
     <Compile Include="srcs\which_\SupOf.cs" />
     <Compile Include="srcs\Extensions.cs" />
     <Compile Include="src\directory_\GitManaged.cs" />
+    <Compile Include="src\div\dir\nomina\parsed_\Parsed - Copy.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\parse_\_ParseX.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\Dotter.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\Comments - Copy.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\Idioms0Comments.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\IdiomsOrCommentI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\Segs.cs" />
     <Compile Include="src\Prjs.cs" />
+    <Compile Include="src\prj\main\NewFolder1\Nomina - Copy.cs" />
     <Compile Include="src\prj\main\Nomina.cs" />
     <Compile Include="src\prj\license_\Bsd.cs" />
     <Compile Include="src\prj\license_\Gpl.cs" />
     <Compile Include="src\prj_\cs\Build.cs" />
     <Compile Include="src\prj_\cs\build_\config_\Max.cs" />
     <Compile Include="src\prj_\cs\build_\Force.cs" />
+    <Compile Include="src\prj_\cs\build_\outputPath_\Force.cs" />
+    <Compile Include="src\prj_\cs\build_\outputPath_\Result.cs" />
+    <Compile Include="src\prj_\cs\built\Outs.cs" />
     <Compile Include="src\prj_\cs\build_\Result.cs" />
     <Compile Include="src\prj_\cs\build_\_config\PrjRef.cs" />
     <Compile Include="src\prj_\cs\pres_\raw\closure_\ClosureOfSpear.cs" />
     <Compile Include="src\prj_\cs\pres_\raw\closure_\_ofSpear\Asyn.cs" />
+    <Compile Include="src\prj_\cs\Req.cs" />
     <Compile Include="src\prj_\cs\ref_\CachedByVs.cs" />
     <Compile Include="src\prj_\cs\_build\ref_\Unused.cs" />
     <Compile Include="src\prj_\cs\pres\closure_\ClosureOfNomina.cs" />
@@ -499,19 +584,28 @@
     <Compile Include="src\sln\name\be_\Bak - Copy.cs" />
     <Compile Include="src\sln\of_\prj_\nomina\SrcSlnNulable.cs" />
     <Compile Include="src\sln\prj_\cs_\NominaOnDoc.cs" />
-    <Compile Include="src\sln\sub\synd\prj\nomina\choose_\_intervened\Settings1.Designer.cs">
+    <Compile Include="src\sln\sub\synd\of_\MainInDoc.cs" />
+    <Compile Include="src\sln\sub\synd\prj\of_\doc_\retNulable_\Choose.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\cs_\OfNomina.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\_sql_\directory\include_\Nonbuild.cs" />
+    <Compile Include="src\sln\sub\synd\prj\of_\doc_\Locate.cs" />
+    <Compile Include="src\sln\sub\synd\_prj\choose_\_intervened\Settings1.Designer.cs">
+      <DependentUpon>Settings1.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="src\sln\sub\synd_\Cs.cs" />
+    <Compile Include="src\sln\_sub\OvPrj.cs" />
+    <Compile Include="src\synd\dir_\deps_\link_\sym\make_\IfNewable0empty.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied01empty\mksym\attempt\_tgtSrcDir\Settings1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings1.settings</DependentUpon>
     </Compile>
-    <Compile Include="src\sln\sub\synd\prj\_main\Choose.cs" />
-    <Compile Include="src\sln\sub\synd\prj_\cs_\OfNomina.cs" />
-    <Compile Include="src\sln\sub\synd_\Cs.cs" />
-    <Compile Include="src\sln\_sub\OvPrj.cs" />
     <Compile Include="src\synd\dir_\NewFolder1\Deps - Copy.cs" />
     <Compile Include="src\synd\dir_\deps_\empty\TryMake.cs" />
     <Compile Include="src\synd\dir_\deps_\unoccupied01empty\MakeSym.cs" />
-    <Compile Include="src\synd\dir_\deps_\unoccupied01empty\mksym\attempt\TgtSrcDir.cs" />
+    <Compile Include="src\synd\dir_\deps_\link_\sym\make_\ifNewable0empty_\TgtSrcDir.cs" />
     <Compile Include="src\synd\dir_\deps_\unoccupied01empty\mksym\TryMake - Copy.cs" />
     <Compile Include="src\synd\dir_\deps_\unoccupied\create_\Relative.cs" />
     <Compile Include="src\prj_\cs\Pre.cs" />
@@ -596,7 +690,6 @@
     <Compile Include="src\div_\Idsable.cs" />
     <Compile Include="src\div_\idsable\Parsed.cs" />
     <Compile Include="src\dir\name\Parsed.cs" />
-    <Compile Include="src\div\dir\name\Parsed.cs" />
     <Compile Include="src\sln\dir\name\Parsed.cs" />
     <Compile Include="src\sln\div\dir\name\Parsed.cs" />
     <Compile Include="src\sln\div\dir_\nonCommentEs\names\Parsed.cs" />
@@ -605,14 +698,14 @@
     <Compile Include="src\sln\sub\of_\identity_\SlnPrj.cs" />
     <Compile Include="src\sln\sub\of_\identity\Residueless.cs" />
     <Compile Include="src\sln\sub\synd\prj\Nomina.cs" />
-    <Compile Include="src\sln\sub\synd\prj\nomina\Choose.cs" />
+    <Compile Include="src\sln\sub\synd\prj\of_\doc_\NewFolder1\Choose.cs" />
     <Compile Include="src\synd\_name\_tgt\Compound.cs" />
     <Compile Include="src\synd\_name\_tgt\Primitive.cs" />
     <Compile Include="src\synd\_name\_tgt\primitive\alias\Sortie.cs" />
     <Compile Include="src\synd\_name\_tgt\primitive_\Libs.cs" />
     <Compile Include="src\sln\prj_\cs_\Test.cs" />
     <Compile Include="src\sln\sub\dir_\_synd\Choose.cs" />
-    <Compile Include="src\sln\sub\synd\prj_\cs\_meta\Locate.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\_cs\Locate.cs" />
     <Compile Include="src\sln\sub\Syndi.cs" />
     <Compile Include="src\Type.cs" />
     <Compile Include="src\typ\Identity.cs" />
@@ -742,11 +835,8 @@
     <Compile Include="src\sln\prj_\cs_\lib\vow\ee_\VowDefault.cs" />
     <Compile Include="src\prj_\cs\NewFolder1\Build.cs" />
     <Compile Include="src\sln\div\repoName_\ThrowIfNotInSrc.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\%28retiring\Segs.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments_\Comments.cs" />
-    <Compile Include="src\div\dir\name_\IdiomsOrCommentI.cs" />
-    <Compile Include="src\div\dir\name_\Idioms0Comments.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\%28retiring\_ParseX - Copy.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\%28retiring\Segs.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\%28retiring\_ParseX - Copy.cs" />
     <Compile Include="nilnul0\fs\git\module\be_\dev_\NothingButSetting.cs" />
     <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\VsAwGlBb.cs" />
     <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\Aw.cs" />
@@ -927,7 +1017,6 @@
     <Compile Include="Properties\Settings.cs" />
     <Compile Include="src\Sln-1.cs" />
     <Compile Include="src_\folder\Slns.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_ParseX.cs" />
     <Compile Include="src\sln\div\repoName~\RepoName.cs" />
     <Compile Include="src\sln\directory\be_\IntendGit.cs" />
     <Compile Include="src\sln\div\be_\Base.cs" />
@@ -935,58 +1024,57 @@
     <Compile Include="src\sln\div\%28retiring\ThrowIfNotInSrc.cs" />
     <Compile Include="src\sln\div\repoName~\RepoName-.cs" />
     <Compile Include="src\sln\documents_\_NonRepoX.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\SegOrDot.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\SegOrDot.cs" />
     <Compile Include="src\sln\name\Infixer.cs" />
     <Compile Include="src\sln\name\_infixer\Compile.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\Lex.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\parse~\Parse - Copy.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\Parse.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\WordI.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\word_\Comment.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\word_\Txt.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\word_\Dot.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\input_\txt\Split.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\word_\TxtOrCommentI.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\SymbolI.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\Dot.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\Seg.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\seg\Eq.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\Start.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\start\Eq.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\Post.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\post\Eq.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\Pre.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\_post_\CommentTxt.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\_post_\commentTxt\Eq.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\_pre_\TxtComment.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg\_pre_\txtComment\Eq.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments_\Segs.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_start_\Tail.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\Result.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\Lex.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\Parse1.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\SymbolI.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\LeftParen.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\RightParen.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\comment_\Begun.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\comment_\Ended.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\comment_\Parened.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\Content.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\TxtOrComment.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\Txt.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\Comment.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\_content_\CommentTxtS.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\symbol_\_content_\CommentTxt.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\Ret.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\WordI.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word\List.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word\nulable\be_\CommentBorder.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word\nulable\be_\commentBorder\Anto.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word\nulable\be_\CommentEnd.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word\Slider.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word_\LeftParen.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word_\RightParen.cs" />
-    <Compile Include="src\div\dir\name_\idioms0Comments\_parener_\_lex\word_\Represent.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\Lex.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\parse~\Parse - Copy.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\Parse.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\WordI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\Comment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\Txt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\Dot.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\input_\txt\Split.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\TxtOrCommentI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\SymbolI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\Dot.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\Seg.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\seg\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\Start.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\start\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\Post.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\post\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\Pre.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_post_\CommentTxt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_post_\commentTxt\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_pre_\TxtComment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_pre_\txtComment\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_start_\Tail.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\Result.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\Lex.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\Parse1.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\SymbolI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\LeftParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\RightParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\comment_\Begun.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\comment_\Ended.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\comment_\Parened.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\Content.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\TxtOrComment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\Txt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\Comment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\_content_\CommentTxtS.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\_content_\CommentTxt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\Ret.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\WordI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\List.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\nulable\be_\CommentBorder.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\nulable\be_\commentBorder\Anto.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\nulable\be_\CommentEnd.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\Slider.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word_\LeftParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word_\RightParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word_\Represent.cs" />
     <Compile Include="src\sln\directory_\module\name\of_\Segs.cs" />
     <Compile Include="src_\folder_\nonlinks_\disjoint\Slns.cs" />
     <Compile Include="srcs_\Nonlink.cs" />
@@ -1147,7 +1235,8 @@
     <Compile Include="nilnul0\obj_\deV_\pkg\_identity\_version\PreRelease.cs" />
     <Compile Include="nilnul0\obj_\deV_\pkg\_identity\_version\Revision.cs" />
     <Compile Include="nilnul0\obj_\deV_\pkg\_identity\_version_\CoreI.cs" />
-    <Compile Include="_srcs\~\_CfgedX - Copy.cs" />
+    <Compile Include="_design\MinSurprise.cs" />
+    <Compile Include="_srcs\_\_CfgedX - Copy.cs" />
     <Compile Include="_srcs\_CfgedX.cs" />
     <Compile Include="srcs\bak_\RetVoid.cs" />
     <Compile Include="srcs\bak_\_retVoid\_ShieldsX.cs" />
@@ -1322,10 +1411,14 @@
     <Folder Include="nilnul0\win\prog_\deV_\build\run\ofWeb_\" />
     <Folder Include="nilnul0\win\prog_\deV_\build\_run\_options\allCfg\" />
     <Folder Include="nilnul0\_lang\_syntax\sentence\" />
+    <Folder Include="nilnul0\_obj\typ_\impls\" />
     <Folder Include="nilnul0\_obj\typ_\sub\" />
-    <Folder Include="pac\_identy_\_versioned\" />
     <Folder Include="prj\be_\cs_\lib\" />
-    <Folder Include="prj_\cs\_meta_\evt_\build_\post\on_\upd\" />
+    <Folder Include="prj\documents_\closure\" />
+    <Folder Include="prj_\cs\version\definite\" />
+    <Folder Include="prj_\cs\_meta_\" />
+    <Folder Include="prj_\_sql_\directory\include_\nonbuild_\nonsys\" />
+    <Folder Include="prj_\_sql_\include_\nonbuild_\nonsys\" />
     <Folder Include="srcs\bak_\_retVoid\sln\directory_\folder_\normal_\" />
     <Folder Include="srcs\bak_\_retVoid\sln_\%28retiring\" />
     <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\%28retiring\" />
@@ -1372,25 +1465,28 @@
     <Folder Include="srcs\_bak\setting\" />
     <Folder Include="srcs_\folders\" />
     <Folder Include="srcs_\nonlink\" />
-    <Folder Include="src\directory\" />
     <Folder Include="src\dir\be_\sln\" />
     <Folder Include="src\dir\be_\_sln\_ofDir\_onDenote\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\parener\segment\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\parener\_dot_\parse_\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_lex\word\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_seg_\_retrieve\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_start\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\parener\_dot_\_parse\symbol_\_start_\tail\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\_parener_\lex\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\_parener_\lex_\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\_ret\" />
-    <Folder Include="src\div\dir\name_\idioms0Comments\_parener_\_parse\_ret_\" />
-    <Folder Include="src\div\dir\name_\notedIdsEs\" />
-    <Folder Include="src\div\dir\name_\notedIds\op_\" />
-    <Folder Include="src\div\dir\name_\_idiomsOrComment\" />
+    <Folder Include="src\div\dir\dnt\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\segment\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\parse_\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg_\_retrieve\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_start\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_start_\tail\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\lex\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\lex_\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\_ret\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\_ret_\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments_\segs_\" />
+    <Folder Include="src\div\dir\nomina_\notedIdsEs\" />
+    <Folder Include="src\div\dir\nomina_\notedIds\op_\" />
+    <Folder Include="src\div\dir\nomina_\_idiomsOrComment\" />
     <Folder Include="src\div\dir_\" />
     <Folder Include="src\prj\asDoc\" />
     <Folder Include="src\prj_\cs\be\vow\" />
+    <Folder Include="src\prj_\cs\built\outs\" />
+    <Folder Include="src\prj_\cs\NewFolder2\" />
     <Folder Include="src\prj_\cs\pre\closure\" />
     <Folder Include="src\prj_\cs\pre_\dlls\eachPath\" />
     <Folder Include="src\prj_\cs\pre_\dlls_\no\" />
@@ -1401,7 +1497,6 @@
     <Folder Include="src\prj_\cs\refs_\" />
     <Folder Include="src\prj_\cs\_build\ref_\unused\" />
     <Folder Include="src\prj_\cs\_meta\_rt\" />
-    <Folder Include="src\prj_\cs\_meta_\evt_\post\_put\_rsc\" />
     <Folder Include="src\prj_\cs_\lib\cfg\refered\redir\" />
     <Folder Include="src\prj_\cs_\lib\compileds\" />
     <Folder Include="src\prj_\db\_meta_\nugeT_\" />
@@ -1433,22 +1528,23 @@
     <Folder Include="src\sln\prj_\vs\" />
     <Folder Include="src\sln\sub\synd\doc_\prj\" />
     <Folder Include="src\sln\sub\synd\doc_\prj_\" />
+    <Folder Include="src\sln\sub\synd\of_\doc_\asNuly_\" />
     <Folder Include="src\sln\sub\synd\prj\asDoc\" />
     <Folder Include="src\sln\sub\synd\prj\blob\" />
     <Folder Include="src\sln\sub\synd\prj\meta\" />
     <Folder Include="src\sln\sub\synd\prj\meta_\" />
-    <Folder Include="src\sln\sub\synd\prj_\cs\meta\" />
+    <Folder Include="src\sln\sub\synd\prj\nomina\choose_\" />
     <Folder Include="src\sln\sub\synd\prj_\folder\" />
     <Folder Include="src\sln\sub\synd\prj_\folder_\" />
     <Folder Include="src\sln\sub\synd\prj_\sql\meta\" />
     <Folder Include="src\sln\sub\synd\prj_\sql\_meta\" />
-    <Folder Include="src\sln\sub\synd\_prj\" />
+    <Folder Include="src\sln\sub\synd\prj_\_sql_\directory\include_\nonbuild\" />
+    <Folder Include="src\sln\sub\synd\_prj\nomina\" />
     <Folder Include="src\sln_\git_\plain\directory\" />
     <Folder Include="src\sln_\git_\work\div_\rt\ignore\_patch\" />
     <Folder Include="src\sln_\git_\work_\top\" />
     <Folder Include="src\sln_\nonlink\documents_\git_\" />
     <Folder Include="src\sln_\nonlink\documents_\noRepoUnLink\" />
-    <Folder Include="src\synd\dir_\deps_\link_\sym\create_\" />
     <Folder Include="src\synd\dir_\deps_\link_\sym_\" />
     <Folder Include="src\synd\_name\tgt_\" />
     <Folder Include="src\synd_\cs\doc_\snKey\" />
@@ -1489,7 +1585,11 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="src\sln\sub\synd\prj\nomina\choose_\_intervened\Settings1.settings">
+    <None Include="src\sln\sub\synd\_prj\choose_\_intervened\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="src\synd\dir_\deps_\unoccupied01empty\mksym\attempt\_tgtSrcDir\Settings1.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
@@ -1506,6 +1606,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="src\prj_\db\_meta_\evt_\build_\_post\Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1571,13 +1672,13 @@
     <None Include="src\prj_\db\_meta_\evt_\build_\nugetPostbuild.bat" />
     <None Include="Resources\nugetPostBuild.bat.txt" />
     <None Include="Resources\content.txt" />
+    <Content Include="nilnul0\win\prog_\deV_\build\_run\setting_\_dir\LangVer.xml" />
     <Content Include="src\prj_\db\_meta_\refs_\Db.xml" />
     <Content Include="src\prj_\cs\_meta\eg.xml" />
     <EmbeddedResource Include="src\prj_\cs\_meta\evt_\build_\_post\content_\2 - Copy.bat" />
   </ItemGroup>
   <ItemGroup>
-    <!--<Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.0.109\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" />-->
-    <Analyzer Include="packages\AWSSDK.CodeCommit.3.7.0.109\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.0.177\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="PostBuildMacros">
@@ -1611,6 +1712,10 @@ if $(ConfigurationName) == Release (
 		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt
 		"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source local
 	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt
+		"NuGet.exe" push $(TargetName).@(VersionNumber).nupkg -Source nuget.org
+	)
 )</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -1620,13 +1725,13 @@ if $(ConfigurationName) == Release (
     <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
     <Error Condition="!Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
-    <Error Condition="!Exists('..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.0.4492\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.0.4492\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets'))" />
-    <Error Condition="!Exists('..\..\(packages)\System.Text.Json.6.0.1\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\System.Text.Json.6.0.1\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.2.2146\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.2.2146\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets'))" />
+    <Error Condition="!Exists('..\..\(packages)\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
   </Target>
   <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
-  <Import Project="..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.0.4492\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets" Condition="Exists('..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.0.4492\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets')" />
-  <Import Project="..\..\(packages)\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\..\(packages)\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
+  <Import Project="..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.2.2146\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets" Condition="Exists('..\..\(packages)\Microsoft.VisualStudio.Setup.Configuration.Interop.3.2.2146\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets')" />
+  <Import Project="..\..\(packages)\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('..\..\(packages)\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

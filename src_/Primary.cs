@@ -15,6 +15,11 @@ namespace nilnul.dev.src_
 
 	static public class Primary
 	{
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <returns></returns>
+		/// <exception cref="">If configured srcs is empty</exception>
 		static public nilnul.fs.AddressI Address_ofCfg() {
 			return Srcs_addresses.OvCfg().addresses.First();
 		}

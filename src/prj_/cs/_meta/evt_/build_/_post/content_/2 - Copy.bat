@@ -25,7 +25,7 @@ if $(ConfigurationName) == Release (
 	if  $(ConfigurationName)==Symbol (
 		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt
 		"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source local
-		rem "NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source my
+		"NuGet.exe" push $(TargetName).@(VersionNumber).symbols.nupkg -Source my
 
 	)
 	if  $(ConfigurationName)==Nuget (

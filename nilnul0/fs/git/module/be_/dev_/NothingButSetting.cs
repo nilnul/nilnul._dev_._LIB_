@@ -20,6 +20,13 @@ namespace nilnul.fs.git.module.be_.dev_
 						,
 						nilnul.fs.folder.doc_.dev_.NilnulCfg.DOC
 					)
+					&&
+					!nilnul.fs._address.doc.Eq.Singleton.eq(
+						nilnul.fs.address_.spear._DocX.Doc(a)
+						,
+						nilnul.fs.folder.dnt_.cfg.Settings1.Default.txt??".nilnul"
+					)
+
 				)
 			);
 

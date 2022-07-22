@@ -17,7 +17,7 @@ namespace nilnul.obj_.deV
 	/// nomanclature:
 	///		in dev.Src, the src code, for example, an identifier, donot have the luxuray to append a multipart version such as "1.2.3". only a simple ver such as 1 can be appended to the nom in an Id, which in turn constitute the whole identity
 	/// note:
-	///		identity doesnot include version, as identity is used to denote dev object while version such as "1.2.3" is illegal in identifying a development object except dir name such as those for nuget package. we treat this as versioned.
+	///		identity doesnot include version, as identity is used to denote dev object while version such as "1.2.3" is illegal in identifying a development object except dir name such as those for nuget package. we treat this as versioned/ or identity. note "identy" is different from "identity".
 	///  </remarks>
 	public interface IIdenty:_identy_.IVersioned
 	{

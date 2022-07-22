@@ -14,7 +14,11 @@ namespace nilnul.obj_.deV._id.nom_.xpn_
 	/// <seealso cref="nameof(nilnul.txt_._versioned.version_.LetterEnd)"/>. when a letter ends a version, that version is open and hence interim.
 	/// </summary>
 	/// <remarks>
-	/// becuz this is used locally, we don't define this as a type, which is used globally
+	/// becuz this is used locally, we don't define this as a type, which is used globally.
+	/// use case:
+	///		we may use a single letter to denote a type as:
+	///			using A=someNs.SomeType;
+	///			then we can rest assured that A is not type anywhere else, but here locally, and we would not accidentaly used the wrong type.
 	/// </remarks>
 
 	[Serializable]

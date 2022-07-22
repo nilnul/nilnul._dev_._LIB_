@@ -111,6 +111,14 @@ namespace nilnul.dev.src.prj_.cs.doc_.snk.put_
 
 		}
 
-
+		public static void _Created_prjMetaAssumeCs(ParentDoc prjFile)
+		{
+			_Created_prjMetaAssumeCs(
+				prjFile
+				,
+				nilnul.dev.src.synd_.cs.doc_.snk_.unoccupied.create_._SymX.Address_underPrimarySrc()
+			);
+			//throw new NotImplementedException();
+		}
 	}
 }

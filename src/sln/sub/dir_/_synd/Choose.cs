@@ -9,19 +9,11 @@ using System.Threading.Tasks;
 namespace nilnul.dev.src.sln.sub.dir_._synd
 {
 	/// <summary>
-	/// choose the project dir
+	/// choose the project container, which is a folder
 	/// </summary>
+	/// obsoleting <see cref="nilnul.dev.srcs.prj._locator._SubDirX"/>
 	static public class _ChooseX
 	{
-		static public (string, fs.folder._repoName.dir.name_.idioms0Comments_.Segs) DntNulable(
-			nilnul.fs.FolderI sub
-			,
-			string prjIdentityRemained
-
-		)
-		{
-			return DntNulable(sub, prjIdentityRemained.Split('.'));
-		}
 		/// <summary>
 		/// 
 		/// </summary>
@@ -136,6 +128,24 @@ namespace nilnul.dev.src.sln.sub.dir_._synd
 
 
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sub"></param>
+		/// <param name="prjIdentityRemained"></param>
+		/// <returns> the dnt, and the parsed segs</returns>
+		static public (string, fs.folder._repoName.dir.name_.idioms0Comments_.Segs) DntNulable(
+			nilnul.fs.FolderI sub
+			,
+			string prjIdentityRemained
+
+		)
+		{
+			return DntNulable(sub, prjIdentityRemained.Split('.'));
+		}
+
+
 
 		/// <summary>
 		/// container of prjFolder

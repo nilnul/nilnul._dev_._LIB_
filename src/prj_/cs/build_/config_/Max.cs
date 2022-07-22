@@ -84,7 +84,9 @@ namespace nilnul.dev.src.prj_.cs.build_.config_
 			if (!isMax(config))
 			{
 				//rebuild to push as the newest
-				var r=build_._ForceX.ThrowXpn(prjFile, config); // nuget update is not 
+				///https://github.com/dotnet/msbuild/issues/87
+				///it seems output path has an issue with when the path of the project is too long
+				var r =build_.outputPath_._ForceX.ThrowXpn(prjFile, config); // nuget update is not 
 
 				return r;
 			}
@@ -108,7 +110,8 @@ namespace nilnul.dev.src.prj_.cs.build_.config_
 				$"{prjNomina}.dll"
 			);
 			if (
-				nilnul.fs.address_.spear.be_.File.Singleton.Be_ofAddress(builtDll)
+				nilnul.fs.address_.spear.BeX1.Be(
+				nilnul.fs.address_.spear.be_.File.Singleton, builtDll)
 			)
 			{
 				var assemblyMeta = AssemblyName.GetAssemblyName(builtDll);
