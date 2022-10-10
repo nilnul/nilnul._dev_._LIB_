@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Target name="test">
+
+	<Message Text="$(FullOutputPath.Contains(`subs1`))" Importance="high" />
+	<Message Text="$(random)$(random)"/>"
+	<Message Text="$([System.Version]::new($(ver)))"/>
+	
+	<!--
+devblogs.microsoft.com/visualstudio/msbuild-property-functions/	
+by vs team
+
+	* You can’t run instance methods on raw strings. For example $("c:foo".get_Length()). They must go into a property first.
+	
+	* Out parameters won’t work – there are no intermediate values except for the return value. No delegates or generics either.
+	
+	there is an unsupported way to call members on arbitrary types: set the environment variable MSBUILDENABLEALLPROPERTYFUNCTIONS=1.
+	
+	
+	To figure out the assembly, it tries to work up the name. So for this example (assuming the environment variable is set)
+
+$([Microsoft.VisualBasic.FileIO.FileSystem]::CurrentDirectory)
+
+it will look for Microsoft.VisualBasic.FileIO.dll, then Microsoft.VisualBasic.dll (which it will find and load from the GAC) and you will get the value of the current directory.
+
+If that’s not going to work for your assembly, it is possible to pass in a strong name. For example, the above could equivalently be written like this:
+
+$([Microsoft.VisualBasic.FileIO.FileSystem, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]::CurrentDirectory)
+
+This means you can write your own functions for MSBuild to call – just put the assembly somewhere that the CLR can find it. By doing that, you can (if you set the environment variable) cause your build do do absolutely anything during property evaluation.
+
+
+$(LibraryPath.Split(`;`)) or the like to create array.
+
+	-->
+	
+	
+</Target>

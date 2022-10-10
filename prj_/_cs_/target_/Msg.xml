@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Target Name="go">
+	<Message Text="hi, $(SomeProperty)" />
+	<Message Text="hi, @(SomeItem->MetaData('ChildElName'))" />
+</Target>

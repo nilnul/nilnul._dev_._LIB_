@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ItemGroup>
+	<ArtifactReference Include="packages\nilnul._DB_.1.0.3\dacpac\nilnul._DB_.dacpac">
+		<HintPath>packages\nilnul._DB_.1.0.3\dacpac\nilnul._DB_.dacpac</HintPath>
+		<SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+	</ArtifactReference>
+	
+</ItemGroup>

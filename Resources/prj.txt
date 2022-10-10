@@ -1,0 +1,3 @@
+#nilnul: packages; possibly a symlink to another folder. without this ignore rule, git treats this as a file.
+#(packages)
+/packages

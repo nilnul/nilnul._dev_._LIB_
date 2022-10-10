@@ -1,0 +1,1877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94988FFF-EBE6-4EA9-B9AC-AFC9DF1D4B91}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.dev</RootNamespace>
+    <AssemblyName>nilnul._dev_._LIB_</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BAK_SERIAL0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release4Test|AnyCPU'">
+    <OutputPath>bin\Release4Test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbols4Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Symbols4Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BAK_SERIAL0</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbol|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Symbol\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;BAK_SERIAL0</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>default</LangVersion>
+    <!--<LangVersion>latest</LangVersion>-->
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AE.Net.Mail, Version=1.7.7816.38666, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CodeCommit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\AWSSDK.CodeCommit.3.7.0.220\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\AWSSDK.Core.3.7.13.18\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="johnHurliman.math._calculus_._LIB_, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\johnHurliman.math._calculus_._LIB_.1.0.1\lib\net46\johnHurliman.math._calculus_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Iridium, Version=1.0.1.32096, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Iridium.1.0.1.32096\lib\net46\MathNet.Iridium.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Services.AppAuthentication, Version=1.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Azure.Services.AppAuthentication.1.6.2\lib\net472\Microsoft.Azure.Services.AppAuthentication.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Build.17.3.1\lib\net472\Microsoft.Build.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Engine, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Build.Engine.17.3.1\lib\net472\Microsoft.Build.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Build.Framework.17.3.1\lib\net472\Microsoft.Build.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Caching.Memory.1.1.2\lib\net451\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Configuration.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Configuration.Abstractions.1.1.2\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Configuration.Binder.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.DependencyInjection.1.1.1\lib\netstandard1.1\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.DependencyInjection.Abstractions.1.1.1\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Logging.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Logging.Abstractions.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Options.1.1.2\lib\netstandard1.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Extensions.Primitives.1.1.1\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Abstractions.6.23.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.2.9\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.JsonWebTokens.6.23.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Logging.6.23.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Tokens.6.23.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=640c57aa40e7ae7d, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Msagl.1.1.3\lib\net40\Microsoft.Msagl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Msagl.Drawing, Version=3.0.0.0, Culture=neutral, PublicKeyToken=8a3d7c21d5fa1306, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Msagl.Drawing.1.1.3\lib\net40\Microsoft.Msagl.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Net.Http.Headers.1.1.2\lib\netstandard1.1\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.NET.StringTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.NET.StringTools.17.3.1\lib\net472\Microsoft.NET.StringTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Setup.Configuration.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Setup.Configuration.Interop.3.3.2180\lib\net35\Microsoft.VisualStudio.Setup.Configuration.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="miroslavStampar.math._calculus_._LIB_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\miroslavStampar.math._calculus_._LIB_.1.0.0\lib\net46\miroslavStampar.math._calculus_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.fs._git_._LIB_, Version=2.0.8187.40803, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.fs._git_._LIB_.2.0.8187.40803\lib\net48\nilnul.fs._git_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.geometry._planar_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.geometry._planar_._LIB_.1.1.220815.32404\lib\net48\nilnul.geometry._planar_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.math._calculus_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.math._calculus_._LIB_.1.1.220729.125019\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul.num.real._func_._LIB_.1.1.220725.160835\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num.real._matrix_._LIB_.1.1.220814.74253\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._complex_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num._complex_._LIB_.1.1.220731.125443\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.1.220905.105721\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._quotient_._LIB_.1.1.220926.131208\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num._real_._LIB_.2.1.220818.53104\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.rel._graph_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul.rel._graph_._LIB_.1.1.220726.120832\lib\net48\nilnul.rel._graph_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._acc_._LIB_, Version=2.0.8187.23967, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._acc_._LIB_.2.0.8187.23967\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._acc_._LINQ_, Version=1.0.8187.23641, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._acc_._LINQ_.1.0.8187.23641\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._app_._LIB_, Version=1.0.8187.40713, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._app_._LIB_.1.0.8187.40713\lib\net48\nilnul._app_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._bit_._LIB_.1.1.220822.32314\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8272.35271, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._character_._LIB_.2.1.220825.113426\lib\net481\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._comm_._LIB_, Version=1.0.7827.34092, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._data_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._data_._LIB_.1.1.220818.120031\lib\net481\nilnul._data_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.1.220916.152857\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._human_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._human_._LIB_.1.1.220725.151533\lib\net48\nilnul._human_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._human_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._human_._LINQ_.1.1.220725.150847\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._linq_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._linq_._LIB_.1.1.220906.140610\lib\net481\nilnul._linq_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LIB_.1.1.220826.15831\lib\net481\nilnul._num_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._num_._LINQ_.1.1.220825.155237\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.220905.122106\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <!--<Reference Include="nilnul._geometry_._LIB_, Version=1.0.7992.1866, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <HintPath>packages\nilnul._geometry_._LIB_.1.0.7992.1866\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
+</Reference>-->
+    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.1.220905.140119\lib\net481\nilnul._set_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._time_._LIB_.1.1.221006.142535\lib\net481\nilnul._time_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.1.220908.84230\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._web_._LIB_, Version=1.0.8187.40628, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._web_._LIB_.1.0.8187.40628\lib\net48\nilnul._web_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.1.220909.180901\lib\net481\nilnul._win_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._xml_._LIB_.1.1.220731.165341\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Common, Version=6.3.0.131, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\NuGet.Common.6.3.0\lib\net472\NuGet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Configuration, Version=6.3.0.131, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\NuGet.Configuration.6.3.0\lib\net472\NuGet.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=6.3.0.131, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\NuGet.Frameworks.6.3.0\lib\net472\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Packaging, Version=6.3.0.131, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\NuGet.Packaging.6.3.0\lib\net472\NuGet.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Versioning, Version=6.3.0.131, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\NuGet.Versioning.6.3.0\lib\net472\NuGet.Versioning.dll</HintPath>
+    </Reference>
+    <Reference Include="Octokit, Version=0.51.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\Octokit.2.1.0.1\lib\net48\Octokit.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.0.7863.31102, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\sergeyBochkanov._alglib_._LIB_.1.0.7863.31102\lib\net48\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.ComponentModel.Primitives.4.3.0\lib\net45\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.ComponentModel.TypeConverter.4.3.0\lib\net462\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IdentityModel.Tokens.Jwt.6.23.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Ix-Async.1.2.5\lib\net45\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LINQ_.1.1.220819.143032\lib\net481\_nilnul_._LINQ_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ISrc.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\be_\deV_\InSln.cs" />
+    <Compile Include="nilnul0\fs\file_\ext_\deV_\Sqlproj.cs" />
+    <Compile Include="nilnul0\fs\file_\ext_\deV_\Csproj.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\deV_\prj_\Cs.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\div_\nonlink_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\git\module\_cfg\ignore_\_dev\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="nilnul0\fs\_address\_route\division_\_div\_dir\dnt_\VerWithTag.cs" />
+    <Compile Include="nilnul0\fs\_address\_route\division_\_div\_dir\dnt_\_identity\Variant.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\ITemp.cs" />
+    <Compile Include="nilnul0\obj_\deV\IWord0empty.cs" />
+    <Compile Include="nilnul0\obj_\deV\Identy.cs" />
+    <Compile Include="nilnul0\obj_\deV\IId.cs" />
+    <Compile Include="nilnul0\obj_\deV\identy\be_\NilnulCirca.cs" />
+    <Compile Include="nilnul0\obj_\deV\identy\Noted.cs" />
+    <Compile Include="nilnul0\obj_\deV\identy\noted\Parsed.cs" />
+    <Compile Include="nilnul0\obj_\deV\identy\of_\Segs.cs" />
+    <Compile Include="nilnul0\obj_\deV\identy_\Long.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\Human.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\INomSingle.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\INomEmpty.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\IPerm.cs" />
+    <Compile Include="nilnul0\obj_\deV\Location.cs" />
+    <Compile Include="nilnul0\obj_\deV\method\co\Inline0outsrc.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\Version.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_nomina\_sur\_seg\Nontrivia.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_version\Major.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_version\major_\Parity.cs" />
+    <Compile Include="nilnul0\obj_\deV\ReduceComplexity.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\nom_\IAbbr.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\nom_\INomEmpty.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\nom_\INomSingle.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\nom_\IPerm.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\op_\unary_\Pluralize.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_affixed\Sigil_.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_prefixed\prefix_\TypeInGeneric - Copy.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_prefixed\prefix_\TypeInGeneric.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\affixed_\Prefixed.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\affixed_\Suffixed.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\ITerm.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\term_\Idiom.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\op_\unary_\SierraI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\Abbr.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\IMono.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity\op_\unary_\SierraI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\Es.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\singlular\to_\Pluralize.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\Singular.cs" />
+    <Compile Include="nilnul0\obj_\deV_\IPrj.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\IIdenty.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\ISpec.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_nomina\_sur\SegI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy_\Vered.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa\Core.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa\eq_\core_\EqDefault.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa\eq_\OnCore.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa\eq_\core_\eqDefault_\CaseInsentive.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\Chinese.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\SingleLetterAmong.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\TwoSix.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id_\Vered.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\spec\Version.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version_\ISem.cs" />
+    <Compile Include="nilnul0\obj_\deV_\prj\INomina.cs" />
+    <Compile Include="nilnul0\obj_\deV_\prj\nomina\Noted.cs" />
+    <Compile Include="nilnul0\obj_\deV_\Static0dynamic.cs" />
+    <Compile Include="nilnul0\txt_\Versioned.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\builder_\Ms.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\Run.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\run\OfWeb.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\run\Result.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\EnvVar.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\opt_\Cfg.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\opt_\Log.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\opt_\Target.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\setting_\Along.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\setting_\alonG_\MsCsTargets.cs" />
+    <Compile Include="nilnul0\win\prog_\deV_\build\_run\_options\AllCfg.cs" />
+    <Compile Include="nilnul0\_obj\typs_\ISynonym.cs" />
+    <Compile Include="nilnul0\_obj\typs_\synonym\ISwarm.cs" />
+    <Compile Include="nilnul0\_obj\typ\Nom.cs" />
+    <Compile Include="nilnul0\_obj\typ\Nomina.cs" />
+    <Compile Include="nilnul0\_obj\typ\nom_\Eponym.cs" />
+    <Compile Include="nilnul0\_obj\typ\re_\ISynonym.cs" />
+    <Compile Include="nilnul0\_obj\typ\_id\InfoGrow.cs" />
+    <Compile Include="Prj.cs" />
+    <Compile Include="prj\be_\cs_\Lib.cs" />
+    <Compile Include="prj\div\dir_\Retiring.cs" />
+    <Compile Include="prj\documents_\Closure.cs" />
+    <Compile Include="prj\ILifecycle.cs" />
+    <Compile Include="prj\IRequirment.cs" />
+    <Compile Include="prj\INecessity.cs" />
+    <Compile Include="prj\_build\target\Ensure.cs" />
+    <Compile Include="prj\_build\target\ensure_\_FourDotEightDotOneX.cs" />
+    <Compile Include="prj\_build\target\ensure_\FourDotEight.cs" />
+    <Compile Include="prj\_build\_target\Val.cs" />
+    <Compile Include="prj\_life\IPrepare.cs" />
+    <Compile Include="prj\_life\prep\IIntegrate.cs" />
+    <Compile Include="prj\_life\prep\integrate\IDeliver.cs" />
+    <Compile Include="prj\_life\_prep_\ISnap.cs" />
+    <Compile Include="prj\_life\_prep\ICreate.cs" />
+    <Compile Include="prj_\cs\IPrime.cs" />
+    <Compile Include="prj_\cs\Modify.cs" />
+    <Compile Include="prj_\cs\prime\IUptake.cs" />
+    <Compile Include="prj_\cs\prime\uptake\Build.cs" />
+    <Compile Include="prj_\cs\prime\uptake\build\Delivery.cs" />
+    <Compile Include="prj_\cs\version\_DefiniteX.cs" />
+    <Compile Include="prj_\cs\_meta_\links\norm_\_dotted\_Packages2dottedX.cs" />
+    <Compile Include="prj_\cs\_meta_\links\_NormalizeX.cs" />
+    <Compile Include="prj_\sql\_build\target\ensure_\_FourDotEightDotOneX.cs" />
+    <Compile Include="prj_\_cs_\Import.cs" />
+    <Compile Include="prj_\_cs_\imports\_NormalizeX.cs" />
+    <Compile Include="prj_\_cs_\evt_\build_\post\OnUpd.cs" />
+    <Compile Include="prj_\Sql.cs" />
+    <Compile Include="prj_\sql\_build\target\ensure_\FourDotEight.cs" />
+    <Compile Include="prj_\sql\_meta_\document_\build\ToNone.cs" />
+    <Compile Include="prj_\_cs_\prop_\Nulable.cs" />
+    <Compile Include="prj_\_cs_\prop_\Determin.cs" />
+    <Compile Include="prj_\_cs_\prop_\determin\Determin.cs" />
+    <Compile Include="prj_\_msbuild_\prop_\PrjDirectory.cs" />
+    <Compile Include="prj_\_msbuild_\_props\attr_\Condition.cs" />
+    <Compile Include="prj_\_sql_\directory\include_\Nonbuild.cs" />
+    <Compile Include="prj_\_sql_\directory\include_\nonbuild_\AssumeUnincluded.cs" />
+    <Compile Include="prj_\_sql_\division\Nonbuild.cs" />
+    <Compile Include="SrcI.cs" />
+    <Compile Include="SrcsI3.cs" />
+    <Compile Include="SrcsI_addresses.cs" />
+    <Compile Include="srcs\prj\Locator.cs" />
+    <Compile Include="srcs\which_\SupOf.cs" />
+    <Compile Include="srcs\Extensions.cs" />
+    <Compile Include="src\directory_\GitManaged.cs" />
+    <Compile Include="src\div\dir\nomina\parsed_\Parsed - Copy.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\parse_\_ParseX.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\Dotter.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\Comments.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\Idioms0CommentsA.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\IdiomsOrCommentI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments_\~\Segs.cs" />
+    <Compile Include="src\ISyndicate.cs" />
+    <Compile Include="src\Prjs.cs" />
+    <Compile Include="src\prj\main\NewFolder1\Nomina - Copy.cs" />
+    <Compile Include="src\prj\main\Nomina.cs" />
+    <Compile Include="src\prj\license_\Bsd.cs" />
+    <Compile Include="src\prj\license_\Gpl.cs" />
+    <Compile Include="src\prj_\cs\be_\Lib0ctr.cs" />
+    <Compile Include="src\prj_\cs\Build.cs" />
+    <Compile Include="src\prj_\cs\build_\config_\Max.cs" />
+    <Compile Include="src\prj_\cs\build_\Force.cs" />
+    <Compile Include="src\prj_\cs\build_\outputPath_\Force.cs" />
+    <Compile Include="src\prj_\cs\build_\outputPath_\Result.cs" />
+    <Compile Include="src\prj_\cs\built\Outs.cs" />
+    <Compile Include="src\prj_\cs\build_\Result.cs" />
+    <Compile Include="src\prj_\cs\build_\_config\PrjRef.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw\closure_\ClosureOfSpear.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw\closure_\_ofSpear\Asyn.cs" />
+    <Compile Include="src\prj_\cs\Req.cs" />
+    <Compile Include="src\prj_\cs\ref_\CachedByVs.cs" />
+    <Compile Include="src\prj_\cs\_build\ref_\Unused.cs" />
+    <Compile Include="src\prj_\cs\pres\closure_\ClosureOfNomina.cs" />
+    <Compile Include="src\prj_\cs\pres\closure_\_nomina\AsynOfNomina.cs" />
+    <Compile Include="src\prj_\cs\_meta_\LangVersion.cs" />
+    <Compile Include="src\prj_\cs_\lib\Compileds.cs" />
+    <Compile Include="src\prj_\db\_meta_\pres\Vw.cs" />
+    <Compile Include="src\SlnI.cs" />
+    <Compile Include="src\sln\div_\crop\cognome\NotInSrcXpn - Copy.cs" />
+    <Compile Include="src\sln\div_\crop\ICognome.cs" />
+    <Compile Include="src\sln\div_\crop\_CognomeX.cs" />
+    <Compile Include="src\sln\div_\ICrop.cs" />
+    <Compile Include="src\sln\name\be_\Bak - Copy.cs" />
+    <Compile Include="src\sln\of_\prj_\nomina\SrcSlnNulable.cs" />
+    <Compile Include="src\sln\prj_\cs_\NominaOnDoc.cs" />
+    <Compile Include="synd\be_\_Link4depsX.cs" />
+    <Compile Include="synd\be_\_Nonlink4depsX.cs" />
+    <Compile Include="src\sln\sub\synd\of_\MainInDoc.cs" />
+    <Compile Include="src\sln\sub\synd\prj\of_\doc_\retNulable_\Choose.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\cs_\OfNomina.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\_sql_\directory\include_\Nonbuild.cs" />
+    <Compile Include="src\sln\sub\synd\prj\of_\doc_\Locate.cs" />
+    <Compile Include="src\sln\sub\synd\vow_\IDeps1nonlink.cs" />
+    <Compile Include="src\sln\sub\synd\vow_\_Deps1nonlinkX.cs" />
+    <Compile Include="src\sln\sub\synd\_prj\choose_\_intervened\Settings1.Designer.cs">
+      <DependentUpon>Settings1.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="src\sln\sub\synd_\Cs.cs" />
+    <Compile Include="src\sln\_sub\OvPrj.cs" />
+    <Compile Include="src\synd\dir_\Deps - Copy.cs" />
+    <Compile Include="src\synd\dir_\deps_\link_\sym\make_\IfNewable0empty.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied01empty\mksym\attempt\_tgtSrcDir\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="src\synd\dir_\NewFolder1\Deps - Copy.cs" />
+    <Compile Include="src\synd\dir_\deps_\empty\TryMake.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied01empty\MakeSym.cs" />
+    <Compile Include="src\synd\dir_\deps_\link_\sym\make_\ifNewable0empty_\TgtSrcDir.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied01empty\mksym\TryMake - Copy.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied\create_\Relative.cs" />
+    <Compile Include="src\prj_\cs\Pre.cs" />
+    <Compile Include="src\prj_\cs\pres\Closure.cs" />
+    <Compile Include="src\prj_\cs\pres_\Raw.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw\ClosureOfIdentity.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw\_closure\Asyn.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw_\NilnulCirca.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw_\nnCc\ClosureOfIdentity.cs" />
+    <Compile Include="src\prj_\cs\pres_\raw_\nnCc\_closure\Asyn.cs" />
+    <Compile Include="src\prj_\cs\pre_\dlls\Debug.cs" />
+    <Compile Include="src\prj_\cs\pre_\dlls\Rename.cs" />
+    <Compile Include="src\prj_\cs\pre_\dlls_\NilnulCirca.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\versions\change_\Ver.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\path\Version.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\Rename.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\Ver.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\versions\be_\Dismatch.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\_rename\Path.cs" />
+    <Compile Include="src\prj_\cs\pre_\Dll.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\_rename\path_\OnDict.cs" />
+    <Compile Include="src\prj_\cs\pre_\Raws.cs" />
+    <Compile Include="src\prj_\cs\pre_\Raw%28class.cs" />
+    <Compile Include="src\prj_\cs\pres_\nnCc\Closure_verOnNode.cs" />
+    <Compile Include="src\prj_\cs\pres_\nnCc\Closure_verOnTag.cs" />
+    <Compile Include="src\prj_\cs\pres_\nnCc\_closure\Asyn_VersionOnNode.cs" />
+    <Compile Include="src\prj_\cs\pres_\nnCc\_closure\AsynOfVersioned.cs" />
+    <Compile Include="src\prj_\cs\_cfg_\Binding.cs" />
+    <Compile Include="src\prj_\FroOther.cs" />
+    <Compile Include="src\prj_\lib\schema\_typ\InfoGrow.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\_sql\Locate.cs" />
+    <Compile Include="src\sln\_nomina\NewNameEs.cs" />
+    <Compile Include="src\prj\Meta.cs" />
+    <Compile Include="src\synd\prj_\Cs.cs" />
+    <Compile Include="src\synd\_name\Tgts.cs" />
+    <Compile Include="src\synd\_name\Tgt.cs" />
+    <Compile Include="src\synd\_name\tgt\Eq.cs" />
+    <Compile Include="src\synd_\cs\doc_\snk\put_\Sym.cs" />
+    <Compile Include="src\synd_\cs\doc_\Snks.cs" />
+    <Compile Include="src\prj_\cs\Ref.cs" />
+    <Compile Include="src\prj_\cs\pres\Vw.cs" />
+    <Compile Include="src\prj_\cs\pres_\NilnulCirca.cs" />
+    <Compile Include="src\prj_\cs\pres_\nnCc\ClosureOfNomina.cs" />
+    <Compile Include="src\prj_\cs\pres_\nnCc\_closure\AsynOfNomina.cs" />
+    <Compile Include="src\prj_\cs\pre_\Raw.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\aliases\Ensure.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\Commented.cs" />
+    <Compile Include="src\prj_\cs\pre_\dll\Drop.cs" />
+    <Compile Include="src\prj_\cs\pre_\dlls\Vw.cs" />
+    <Compile Include="src\prj_\cs\Refers.cs" />
+    <Compile Include="src\prj_\cs\pre_\raws\Vw.cs" />
+    <Compile Include="src\prj_\cs\_meta_\snk\Ensure.cs" />
+    <Compile Include="src\prj_\cs\_build\target\Ensure.cs" />
+    <Compile Include="src\prj_\cs\_build\target\ensure_\FourDotEight.cs" />
+    <Compile Include="src\prj_\cs\_build\target\Vw.cs" />
+    <Compile Include="src\prj_\cs\_build\_target\Val.cs" />
+    <Compile Include="src\prj_\cs_\lib\Cfg.cs" />
+    <Compile Include="src\prj_\cs_\lib\cfg\refered\Redir.cs" />
+    <Compile Include="src\prj_\cs_\lib\cfg\refered\redir_\AutoInOutput.cs" />
+    <Compile Include="src\prj_\cs_\lib\cfg\refered\redir_\UniRuntime.cs" />
+    <Compile Include="src\prj_\db\_meta_\evt_\build_\_post\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\synd_\cs\doc_\Snk.cs" />
+    <Compile Include="src\synd_\cs\doc_\snk\be_\Unoccupied.cs" />
+    <Compile Include="src\sln\sub\dir_\Synd.cs" />
+    <Compile Include="src\sln\sub\dir_\synd_\tgts_\Cs.cs" />
+    <Compile Include="src\sln\sub\of_\Identity.cs" />
+    <Compile Include="src\sln\div_\_sub\OvPrj.cs" />
+    <Compile Include="src\sln\div_\_sub\NewFolder1\SlnSub.cs" />
+    <Compile Include="src\sln\of_\Sub.cs" />
+    <Compile Include="src\synd\_name\_tgt\primitive\Aliases.cs" />
+    <Compile Include="src\sln\sub\dir_\_synd\NewFolder1\SubDir.cs" />
+    <Compile Include="src\sln\of_\prjMain\SrcSln.cs" />
+    <Compile Include="Srcs_addresses.cs" />
+    <Compile Include="Srcs3.cs" />
+    <Compile Include="src\Be.cs" />
+    <Compile Include="src\be_\Folder.cs" />
+    <Compile Include="src\Dir.cs" />
+    <Compile Include="src\div_\Idsable.cs" />
+    <Compile Include="src\div_\idsable\Parsed.cs" />
+    <Compile Include="src\dir\name\Parsed.cs" />
+    <Compile Include="src\sln\dir\name\Parsed.cs" />
+    <Compile Include="src\sln\div\dir\name\Parsed.cs" />
+    <Compile Include="src\sln\div\dir_\nonCommentEs\names\Parsed.cs" />
+    <Compile Include="src\sln\Name.cs" />
+    <Compile Include="src\sln\prj\Name.cs" />
+    <Compile Include="src\sln\sub\of_\identity_\SlnPrj.cs" />
+    <Compile Include="src\sln\sub\of_\identity\Residueless.cs" />
+    <Compile Include="src\sln\sub\synd\prj\Nomina.cs" />
+    <Compile Include="src\sln\sub\synd\prj\of_\doc_\NewFolder1\Choose.cs" />
+    <Compile Include="src\synd\_name\_tgt\Compound.cs" />
+    <Compile Include="src\synd\_name\_tgt\Primitive.cs" />
+    <Compile Include="src\synd\_name\_tgt\primitive\alias\Sortie.cs" />
+    <Compile Include="src\synd\_name\_tgt\primitive_\Libs.cs" />
+    <Compile Include="src\sln\prj_\cs_\Test.cs" />
+    <Compile Include="src\sln\sub\dir_\_synd\Choose.cs" />
+    <Compile Include="src\sln\sub\synd\prj_\_cs\_LocateX.cs" />
+    <Compile Include="src\sln\sub\Syndi.cs" />
+    <Compile Include="src\Type.cs" />
+    <Compile Include="src\typ\Identity.cs" />
+    <Compile Include="src\typ\Id.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\Nom.cs" />
+    <Compile Include="src\typ\Where2Put.cs" />
+    <Compile Include="src\typ\_IdentityX.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_nomina\Local.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_nomina\Sur.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\Idiom.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\affixed_\interfaced_\Marker.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\Circa.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa_\Ext.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa_\Sub.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa_\Bet.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa_\Pre.cs" />
+    <Compile Include="nilnul0\obj_\deV\id\Sentineleds.cs" />
+    <Compile Include="nilnul0\obj_\deV\id\Sentineled.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\circa_\sub_\AsEnum.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\Phrase.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\Affix.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\verNil\Euphemism.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\suffixed_\Ext.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\suffixed_\ext\Pre.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_suffixed\Suffix_.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom_\EsEd.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\suffixed_\plural_\Sierra.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\suffixed_\Stati.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\suffixed_\Abstra.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\Circas.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_CircaX.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_phrase\Enumer.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom_\Casible.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy\_nomina\_sur\Sep.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\xpn_\SingleLetter.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\Casible.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\Boxed.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\cased_\Capital.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\cased_\Tailcase.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\cased_\Upper.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\cased_\Lower.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\Case.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\suffix_\Sierra.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\_phrase\Case.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\Es4plural.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casibles\Underline.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\One.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Seven.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Six.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Five.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Three.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Eight.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Nine.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Nil.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\Concept.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\ConceptsI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id_\Nom.cs" />
+    <Compile Include="nilnul0\web\svr_\deV_\Azure.cs" />
+    <Compile Include="nilnul0\win\prog_\Dotnet.cs" />
+    <Compile Include="nilnul0\win\prog_\Vs.cs" />
+    <Compile Include="src\%28retiring\Sln.cs" />
+    <Compile Include="ide_\Vs.cs" />
+    <Compile Include="ide_\vs\prj_\test\CfgI.cs" />
+    <Compile Include="ide_\vs\prj_\test\cfg\LocationI.cs" />
+    <Compile Include="ide_\vs_\V2017.cs" />
+    <Compile Include="ide_\vs_\V2015.cs" />
+    <Compile Include="ide_\vs_\v2015\DevEnv.cs" />
+    <Compile Include="ide_\vs_\v2017\community\DevEnv.cs" />
+    <Compile Include="ide_\vs_\v2017\Community.cs" />
+    <Compile Include="ide_\_vs_\sln\Ext.cs" />
+    <Compile Include="nilnul0\obj_\deV\id_\VerNil.cs" />
+    <Compile Include="nilnul0\fs\folders\divs_\notDotLed_\deV_\noVs\Docs.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\Prj.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\prj_\Cs.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\prj_\Prj.cs" />
+    <Compile Include="nilnul0\fs\folder\directories_\notDotLed_\deV_\NoVsGenerated.cs" />
+    <Compile Include="nilnul0\fs\folder\dirs_\notDotLed_\deV_\_XcludeVslX.cs" />
+    <Compile Include="nilnul0\fs\folder\dir\be_\deV_\vsGen\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder\dir\be_\deV_\_VsGeneratedX.cs" />
+    <Compile Include="nilnul0\fs\folder\divs_\notDotLed_\deV_\noVs\Docs.cs" />
+    <Compile Include="nilnul0\fs\folder\divs_\notDotLed_\deV_\_XcludeVslX.cs" />
+    <Compile Include="nilnul0\fs\folder_\deV_\pac_\Installed.cs" />
+    <Compile Include="nilnul0\fs\folder_\deV_\pac_\Source.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepos_\disjoint\div_\nonlink_\notDotLed_\deV_\Prjs.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\directory_\nonlink_\notDotLed_\deV_\Prjs.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\div_\nonlink_\notDotLed_\deV_\Prjs.cs" />
+    <Compile Include="nilnul0\fs\_address\dnt\be_\deV_\src_\prj_\Cs.cs" />
+    <Compile Include="nilnul0\obj_\Dev.cs" />
+    <Compile Include="src\typ\Identity%28class.cs" />
+    <Compile Include="my_\_CfgX.cs" />
+    <Compile Include="nilnul0\fs\folder\dirs_\excludeVs_\nonlink_\_NonnegPerNilnulX.cs" />
+    <Compile Include="nilnul0\fs\folder\dirs_\excludeVs_\_NormalX.cs" />
+    <Compile Include="nilnul0\fs\folder\dirs_\_XcludeVslX.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\bak_\aft\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\bak_\Neglect.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\bak_\_AftX.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\bak_\_neglect\PerName.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\bak_\_neglect\_cfg_\Exclude.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\bak_\_neglect\_PerNilnulCfg.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\prj_\vs_\Prj.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\deV_\src_\Sln.cs" />
+    <Compile Include="nilnul0\fs\folder\dev_\src_\_IniX.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\deV_\NilnulCfg.cs" />
+    <Compile Include="nilnul0\fs\git\module\_cfg\ignore_\vsNilnul\_PutX.cs" />
+    <Compile Include="nilnul0\fs\git\module\_cfg\ignore_\vsNilnul\_CreateX.cs" />
+    <Compile Include="src\sln\prj\size\Grow.cs" />
+    <Compile Include="src\prj_\cs\BeI.cs" />
+    <Compile Include="src\prj_\cs\be\Anto.cs" />
+    <Compile Include="src\prj_\cs\be\anto_\BeDefault.cs" />
+    <Compile Include="src\prj_\cs\be\Vow.cs" />
+    <Compile Include="src\prj_\cs\be\vow_\BeDefault.cs" />
+    <Compile Include="src\prj_\cs\be_\lib\Vow.cs" />
+    <Compile Include="src\prj_\cs\be_\lib\vow\Ee.cs" />
+    <Compile Include="src\prj_\cs\Vow.cs" />
+    <Compile Include="src\prj_\cs\vow\Ee.cs" />
+    <Compile Include="src\prj_\cs\vow\ee_\VowDefault.cs" />
+    <Compile Include="src\prj_\cs\be_\Web.cs" />
+    <Compile Include="src\prj_\cs\be_\Lib.cs" />
+    <Compile Include="src\sln\prj_\cs_\Lib.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\BeI.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\be\Anto.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\be\anto_\BeDefault.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\be\Vow.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\be\vow_\BeDefault.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\Vow.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\vow\Ee.cs" />
+    <Compile Include="src\sln\prj_\cs_\lib\vow\ee_\VowDefault.cs" />
+    <Compile Include="src\prj_\cs\NewFolder1\Build.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\%28retiring\Segs.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\%28retiring\_ParseX - Copy.cs" />
+    <Compile Include="nilnul0\fs\git\module\be_\dev_\NothingButSetting.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\VsAwGlBb.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\Aw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\Gl.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\Bb.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes\has_\bak_\Vs.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlBbVs\ensure\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlBbVs\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlBbVs\_VwX1.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlBbVs\%28retiring\_VwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlVs\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlVs\_VwX1.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\vsAwGlBb\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\_vsAwGlBb_\all\key\_VwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlVs\ensure\_UpsertOmegaX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs\ensure_\id\_ResultX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\nulable\urls\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\nulable\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\urls\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs\ensure_\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last_\newest\_VwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last_\newest\create\_ResultX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last_\next\%28retiring\_VwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last_\newest\_CreateX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\nulable_\nil\ensure_\_UrlsX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last_\next\_VwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\aliases\vers\last\nulable\urls\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\aliases\vers\last\nulable\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\aliases\vers\last\nulable_\nil\ensure_\_UrlsX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\aliases\vers\last\urls\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\aliases\vers\last\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\last_\newest\_CreateX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\last_\next\_VwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aws\ensureOne_\ohio\ensureSvrFirst\_ResultX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\key\%28retiring\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bbs\ensureOne\ensureSvrFirst\_ResultX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb\key\%28retiring\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb_\newest\create_\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gl\key\%28retiring\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vsS\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vsS\ensureOne\ensureSvrFirst\_ResultX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vsS\ensureOne\_EnsureSvrFirstX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vsS\vers\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vsS\_EnsureOneX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bbs\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bbs\ensureOne\_EnsureSvrFirstX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bbs\vers\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bbs\_EnsureOneX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\key\%28retiring\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\newest\%28retiring\Nulable.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\newest\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gls\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gls\_EnsureOneX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gls\vers\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aws\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aws\vers\Any.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\create_\ohio\%28retiring\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aws\ensureOne_\ohio\_EnsureSvrFirstX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aws\ensureOne_\_OhioX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\key\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw_\newest\create_\_UsEastX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw_\newest_\ver\create_\_UsEastX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gl\%28retiring\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb_\newest\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\newest\Nulable.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\next\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\Next.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellKnowns_\awGlBbVs_\powsub_\aliases_\vers_\all\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\awGlBbVs_\aliases_\vers_\all\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_VsAwGlX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_VsAwGlBbX - Copy.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\svr_\azure_\next\create_\anonym_\accCfged_\_AnonymX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\svr_\vs\create\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\aliases_\vers_\all\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\bb_\aliases_\vers_\all\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\gl_\aliases_\vers_\all\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\aw_\aliases_\vers_\all\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_BbX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_AwX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb\key\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gl\key\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlBbVs\Clear.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs\key\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\key\Vw.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\_CfgedX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\create_\_UsEastX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb\create\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_GlX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gl\Drop.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\Create1.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\create\_NextX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\create\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\bb\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gl\create\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gl_\newest\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs\Create.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs\create\_EnsureX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_vsAwGlBb\%28retiring\_VsAwGlBbX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_VsX.cs" />
+    <Compile Include="nilnul0\fs\git\module\repo\_cfg_\remote_\svr_\_VsX.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\aw_\Ohio.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\aw_\ohio\client_\cfged\repo\Create.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\aw_\ohio\client_\Cfged.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\Gl.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\Bb.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\bb\client_\Cfged.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\bb\client_\cfged\repo\Create.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\gl\client_\Cfged.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\gl\client_\cfged\_repo\create_\PostTokenOnly1.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\gl\client_\cfged\_repo\create_\%28retiring\PostTokenOnly.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\vs_\prefixed\client_\Cfged.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\vs_\prefixed\client_\cfged\repo\Create.cs" />
+    <Compile Include="nilnul0\fs\git\svr_\wellknown_\vs_\prefixed\client_\cfged\repo\_create\Result.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\be_\deV_\InSrc.cs" />
+    <Compile Include="nilnul0\fs\address_\shield_\dev_\insideSrc\be_\_InSrcX.cs" />
+    <Compile Include="nilnul0\fs\address_\shield_\dev_\insideSrc\_LevelX.cs" />
+    <Compile Include="nilnul0\fs\address_\spear\be_\dev_\vs_\Sln.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\newable\be_\Trivia.cs" />
+    <Compile Include="nilnul0\fs\_address\_doc\ext\be_\dev_\vs_\Sln.cs" />
+    <Compile Include="nilnul0\win\prog_\dotnet\cfg\Location.cs" />
+    <Compile Include="nilnul0\win\prog_\dotnet\cfg\ResetI.cs" />
+    <Compile Include="nilnul0\win\prog_\dotnet\_cfg\load_\Alternate.cs" />
+    <Compile Include="nilnul0\win\prog_\dotnet\_cfg_\SettingsI.cs" />
+    <Compile Include="nilnul0\win\prog_\dotnet\_run\_appDomain\Env.cs" />
+    <Compile Include="nilnul0\win\prog_\dotnet\_run\_appDomain\_env_\CfgFile.cs" />
+    <Compile Include="nilnul0\win\_app\Data.cs" />
+    <Compile Include="nilnul0\fs\_address\dnt\be_\deV_\src_\Prj.cs" />
+    <Compile Include="nilnul0\fs\_address\dnt\be_\deV_\src_\Sln.cs" />
+    <Compile Include="nilnul0\DevI.cs" />
+    <Compile Include="src\dir\be_\_sln\OfDir.cs" />
+    <Compile Include="src\doc_\build_\DirectoryBuildProps.cs" />
+    <Compile Include="src\doc_\build_\DirectoryBuildTargets.cs" />
+    <Compile Include="src\Prj.cs" />
+    <Compile Include="src\sln\prj\build_\Repeatedly.cs" />
+    <Compile Include="src\sln\prj\objs\Organize.cs" />
+    <Compile Include="src\sln\prj\sup\doc_\DirectoryBuildTargets.cs" />
+    <Compile Include="src\sln\prj\_build\_evt\Par_.cs" />
+    <Compile Include="src\sln\prj_\ui\Ctr.cs" />
+    <Compile Include="src\prj_\cs\be_\Test.cs" />
+    <Compile Include="src\prj_\cs\_meta_\snk\Comment.cs" />
+    <Compile Include="src\synd_\cs\doc_\snk_\unoccupied\create_\Sym.cs" />
+    <Compile Include="src\sln\prj_\Cs_.cs" />
+    <Compile Include="src\sln\Directory_.cs" />
+    <Compile Include="src\sln\directory_\subsln.cs" />
+    <Compile Include="src\sln\prj\sup\doc_\DirectoryBuildProps.cs" />
+    <Compile Include="src\sln\div_\crop\RepoName%28.cs" />
+    <Compile Include="src\sln\Prj.cs" />
+    <Compile Include="src\sln\Prj_.cs" />
+    <Compile Include="src\sln\Prjs.cs" />
+    <Compile Include="src\sln\prj\documents\_DeDuplicateX.cs" />
+    <Compile Include="src\sln\prj\name\BeforeUpper.cs" />
+    <Compile Include="src\sln\prj\name\re_\equiv_\SameSln.cs" />
+    <Compile Include="src\sln\prj_\Blob.cs" />
+    <Compile Include="src\synd\dir_\NewFolder1\Deps.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied01empty\mksym\TryMake.cs" />
+    <Compile Include="src\synd\dir_\deps_\unoccupied\create_\MakeSym.cs" />
+    <Compile Include="src\prj_\cs\Meta.cs" />
+    <Compile Include="src\synd_\cs\dir_\Packaged.cs" />
+    <Compile Include="src\synd_\cs\dir_\packaged\MakeSym.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SettingsX.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="src\Sln-1.cs" />
+    <Compile Include="src_\folder\Slns.cs" />
+    <Compile Include="src\sln\div_\crop\repoName~\RepoName.cs" />
+    <Compile Include="src\sln\directory\be_\IntendGit.cs" />
+    <Compile Include="src\sln\div\be_\Base.cs" />
+    <Compile Include="src\sln\div\be_\IntendGit.cs" />
+    <Compile Include="src\sln\div_\crop\%28retiring\ThrowIfNotInSrc.cs" />
+    <Compile Include="src\sln\div_\crop\repoName~\RepoName-.cs" />
+    <Compile Include="src\sln\documents_\_NonRepoX.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\SegOrDot.cs" />
+    <Compile Include="src\sln\name\Infixer.cs" />
+    <Compile Include="src\sln\name\_infixer\Compile.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\Lex.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\parse~\Parse - Copy.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\Parse.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\WordI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\Comment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\Txt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\Dot.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\input_\txt\Split.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word_\TxtOrCommentI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\SymbolI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\Dot.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\Seg.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\seg\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\Start.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\start\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\Post.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\post\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\Pre.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_post_\CommentTxt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_post_\commentTxt\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_pre_\TxtComment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg\_pre_\txtComment\Eq.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_start_\Tail.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\Result.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\Lex.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\Parse1.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\SymbolI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\LeftParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\RightParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\comment_\Begun.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\comment_\Ended.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\comment_\Parened.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\Content.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\TxtOrComment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\Txt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\Comment.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\_content_\CommentTxtS.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\symbol_\_content_\CommentTxt.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\Ret.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\WordI.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\List.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\nulable\be_\CommentBorder.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\nulable\be_\commentBorder\Anto.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\nulable\be_\CommentEnd.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word\Slider.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word_\LeftParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word_\RightParen.cs" />
+    <Compile Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_lex\word_\Represent.cs" />
+    <Compile Include="src\sln\directory_\module\name\of_\Segs.cs" />
+    <Compile Include="src_\folder_\nonlinks_\disjoint\Slns.cs" />
+    <Compile Include="srcs_\Nonlink.cs" />
+    <Compile Include="src\dir_\Sln.cs" />
+    <Compile Include="src\prj_\db\Meta.cs" />
+    <Compile Include="src\prj_\db\dir_\Packaged.cs" />
+    <Compile Include="src\prj_\db\dir_\packaged\MakeSym.cs" />
+    <Compile Include="src\prj_\db\_meta_\Nuget_.cs" />
+    <Compile Include="src\prj_\db\_meta_\UserOptions.cs" />
+    <Compile Include="src\prj_\db\_meta\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\sln\prj_\Linq.cs" />
+    <Compile Include="src\sln\prj_\Retiree.cs" />
+    <Compile Include="src\sln\prj_\Delegated.cs" />
+    <Compile Include="src\sln\prj_\Adapter.cs" />
+    <Compile Include="src\sln_\git_\Plain.cs" />
+    <Compile Include="src\sln_\git_\plain\documents_\git_\nonRepo\_DeDuplicateX.cs" />
+    <Compile Include="src\sln\documents_\noRepoUnLink\_DeDuplicateX.cs" />
+    <Compile Include="src\sln_\git_\work\div_\rt\ignore\Put.cs" />
+    <Compile Include="nilnul0\fs\git\module\_cfg\ignore_\vsNilnul\_create\_LinesX.cs" />
+    <Compile Include="src\sln_\nonlink\documents_\_NonRepoX.cs" />
+    <Compile Include="src\sln_\personal_\fs_\distri_\Git.cs" />
+    <Compile Include="src\sln_\personal_\fs_\Sync.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\Nonrepos.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepos\sln_\Nonlinks.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepos\sln_\nonlinks_\disjoint\prj_\Nonlinks.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepos\sln_\nonlinks_\disjoint\prj_\nonlinks_\Cs.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepo\sln_\nonlinks_\disjoint\prj_\Nonlinks.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepo\sln_\nonlink\directory_\nonlink_\nonprj\directory_\nonlink_\Prjs.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepo\sln_\nonlink\prj_\Nonlinks.cs" />
+    <Compile Include="src\sln_\NotLink.cs" />
+    <Compile Include="srcs\bak_\_retVoid\Settings1.cs" />
+    <Compile Include="srcs\bak_\_retVoid\Settings1.Designer.cs">
+      <DependentUpon>Settings1.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="srcs\bak_\_retVoid\SettingX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\shields_\disjoint\_ShuffleX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\_IntentX_serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\_NonIntentX_serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\work_\_TopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\_Plain0nontopX_serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\work_\_NontopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\work_\_TopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\_WorkX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\_WorkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\_GitX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\_NonlinkX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\plain0nontop_\_IntentX_serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\plain0nontop_\_NonIntentX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top\be_\Neglect.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\incomplete_\_ModuleUndoneX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_IncompleteX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_IncompleteX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\incomplete_\_ModuleUndoneX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\undone\task\_WaitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\undone\_TaskX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\undone_\_PrimedX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\undone_\_primed_\_upload_\branch_\All.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\_UndoneX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\_UndoneX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\Content__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\inners\task\_WaitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\inners\_TaskX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\_ContainerX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\_InnerModulesX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\_ContainerModuleX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\_NonTopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\_TopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\_Plain0nontopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\intent_\git_\_Plain0NontopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\intent_\git_\_TopX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\plain0nontop_\undone_\_intent\_IniX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\_NonlinkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\plain0nontop_\_NonIntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\top_\undone_\_moduleUndone_\%28retiring\_PrimeX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\top_\undone_\_moduleUndone_\_PrimeX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\_GitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\work_\_NontopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\_IntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\_intent\_IniX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\_NonIntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\_Plain0nontopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\_GitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\undone_\_PrimedX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\undone_\_primed_\_UploadX%28.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\container_\_undone_\_PrimeX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\_NonTopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\_Plain0nontopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\_TopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\plain0nontop_\_IntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\plain0nontop_\_intent\_IniX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\_WorkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\intent_\git_\_TopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\intent_\git_\Plain0NontopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\nonintent_\git_\_Plain0NontopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\BakOrNo.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\_IntentX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\_NonIntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\_IntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\_DirectoryX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\plain_\_IntendGitX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\plain_\_IntendGitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\Top__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\div_\nonlink_\git_\plain0nontop_\_IntentX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\_intent\_EnsureIniX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\div_\nonlink_\git_\work_\top_\undone_\_moduleUndone_\_PrimeX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\_WorkX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\_WorkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\Top.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\directory_\nonlink_\_UndoneX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\directory_\nonlink_\git_\work_\_NonTopX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\directory_\nonlink_\git_\_WorkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\nonlink_\_GitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\_NonlinkX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\_Nonlink_byUndoneOrNotX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\sln_\_NonlinkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\git_\nonRepo_\incomplete\dir_\_NonlinkX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\git_\nonRepo_\incomplete\dir_\_NonlinkX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\git_\nonRepo_\_IncompleteX__serial.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\git_\nonRepo_\_IncompleteX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\git_\_NonRepoX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\_GitX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\folder_\_NormalX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src_\_FolderX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\_CfgX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\_Sln.cs" />
+    <Compile Include="ISrcs.cs" />
+    <Compile Include="srcs\bak_\_retVoid\shields_\_DisjointX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\shield_\InSrc.cs" />
+    <Compile Include="srcs\bak_\_retVoid\shield_\inSrc_\Folder.cs" />
+    <Compile Include="srcs\bak_\_retVoid\_ShieldX.cs" />
+    <Compile Include="srcs\_tgt\_CfgX.cs" />
+    <Compile Include="srcs_\cfged\_ShieldInSrc.cs" />
+    <Compile Include="src_\Primary.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\Identity.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\identy\_VersionX.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\Version.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version\Comparer.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version\comp\Re - Copy.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version\comp\Re.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version\comparer_\CoreOnly.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version\nulable\Eq.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version\nulable\comp_\NulMin.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version_\Ms.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version_\ms\Comparer.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version_\ms_\Timed.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version_\Sem.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\version_\sem\Comparer.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version\Build.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version\build_\_ms\CommonProps.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version\Core.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version\core\Comparer.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version\PreRelease.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version\Revision.cs" />
+    <Compile Include="nilnul0\obj_\deV_\pkg\_identy\_version_\CoreI.cs" />
+    <Compile Include="synd\vow_\IDeps1nonlink.cs" />
+    <Compile Include="synd\vow_\_Link4depsX.cs" />
+    <Compile Include="synd\vow_\_Deps1nonlinkX.cs" />
+    <Compile Include="_design\Keyframe.cs" />
+    <Compile Include="_design\MinSurprise.cs" />
+    <Compile Include="_prj\ITemplate.cs" />
+    <Compile Include="_srcs\_\_CfgedX - Copy.cs" />
+    <Compile Include="_srcs\_CfgedX.cs" />
+    <Compile Include="srcs\bak_\RetVoid.cs" />
+    <Compile Include="srcs\bak_\_retVoid\_ShieldsX.cs" />
+    <Compile Include="srcs\_bak\Settings1.cs" />
+    <Compile Include="srcs\_bak\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="srcs\_bak\SettingX.cs" />
+    <Compile Include="srcs\_bak\_settings_\BakedModule.cs" />
+    <Compile Include="srcs\bak_\_retVoid\_SrcX.cs" />
+    <Compile Include="srcs_\cfged\_DefaultX.cs" />
+    <Compile Include="src\doc_\pac_\NugetCfg.cs" />
+    <Compile Include="src\ISln.cs" />
+    <Compile Include="src_\folder_\nonlink\sln_\Nonlinks.cs" />
+    <Compile Include="src\dir\be_\Sln.cs" />
+    <Compile Include="src_\folder_\nonlink_\giT_\nonrepo\sln_\Nonlinks.cs" />
+    <Compile Include="src_\parented~\_SrcX.cs" />
+    <Compile Include="src_\_parented\_parent\_CfgX.cs" />
+    <Compile Include="src_\_parented\_SrcParentX.cs" />
+    <Compile Include="src\dir\be_\_NonSlnX.cs" />
+    <Compile Include="src\div_\exist_\nonlink\_ModulesX.cs" />
+    <Compile Include="src\div_\exist_\nonlink_\git_\plain\_ModulesX.cs" />
+    <Compile Include="src\div_\exist_\nonlink_\git_\work\_ModulesX.cs" />
+    <Compile Include="src\div_\exist_\nonlink_\git_\work_\nontop\_ModulesX.cs" />
+    <Compile Include="src\div_\exist_\nonlink_\git_\work_\top\_ModulesX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src\div_\_NormalX.cs" />
+    <Compile Include="srcs\bak_\_retVoid\src\Div.cs" />
+    <Compile Include="src\sln\prj\PartI.cs" />
+    <Compile Include="src\sln\SubI.cs" />
+    <Compile Include="src_\folder_\Nonlink.cs" />
+    <Compile Include="src_\Nonlink.cs" />
+    <Compile Include="src_\folder_\nonlink\set\modules_\nonlink\EnsureBitbucketAcc.cs" />
+    <Compile Include="src_\folder_\nonlink\set\modules_\nonlink\DelCred0Key.cs" />
+    <Compile Include="src_\folder_\nonlink\set\modules_\_LiteralX.cs" />
+    <Compile Include="src_\folder_\nonlink\sln_\nonlink\_ModulesX.cs" />
+    <Compile Include="src_\folder_\nonlink\sln_\nonlink_\git_\plain\_ModulesX.cs" />
+    <Compile Include="src_\folder_\nonlink\sln_\nonlink_\git_\work\_ModulesX.cs" />
+    <Compile Include="src_\folder_\nonlink\sln_\nonlink_\git_\work_\nontop\_ModulesX.cs" />
+    <Compile Include="src_\folder_\nonlink\sln_\nonlink_\git_\work_\top\_ModulesX.cs" />
+    <Compile Include="Src.cs" />
+    <Compile Include="src_\Folder.cs" />
+    <Compile Include="src_\NonExistShield.cs" />
+    <Compile Include="srv_\vs\ClientI.cs" />
+    <Compile Include="srv_\vs\client_\Ms.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\Ver.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\ver\Phrase.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_affixed\SigilI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\suffixed_\Plural.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\idiom\_phrase\Casing.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\IdiomsX.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concepts\BeI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concepts\be\En.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concepts\be_\Valid.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concepts\be_\valid\En.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\TxtI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\txt\be_\_valid\ReservedI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\Junc.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Four.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\junc_\Two.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\EntityI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\RadicI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\_entity\suffix_\None.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\SierraedI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy_\LocalI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_identy_\SchemaI.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\Be.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\be\En.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\be_\Upper.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\be_\upper_\HasDigit.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\be_\upper_\hasDigit\En.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\be_\upper_\NoDigit.cs" />
+    <Compile Include="nilnul0\obj_\deV\_id\_nom\_idiom\_casible\concept_\entity_\_radic\txt\be_\upper_\noDigit\En.cs" />
+    <Compile Include="_srcs\Addresses.cs" />
+    <Compile Include="_srcs_\BlankI.cs" />
+    <Compile Include="_srcs_\Addresses.cs" />
+    <Compile Include="_srcs_\Shields1.cs" />
+    <Compile Include="_srcs_\Shields.cs" />
+    <Compile Include="_src_\Nonlink.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="nilnul0\fs\addresses_\disjoint\" />
+    <Folder Include="nilnul0\fs\address_\shields_\" />
+    <Folder Include="nilnul0\fs\folders\NewFolder1\" />
+    <Folder Include="nilnul0\fs\folders_\" />
+    <Folder Include="nilnul0\fs\folder\be_\deV_\srcs_\bak_\_neglect\" />
+    <Folder Include="nilnul0\fs\folder\dev_\src_\_ini\" />
+    <Folder Include="nilnul0\fs\folder\directories_\notDotLed_\noVsGenerated\" />
+    <Folder Include="nilnul0\fs\folder\dirs_\deV_\" />
+    <Folder Include="nilnul0\fs\folder\doc_\git_\ignore\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\newable\be_\trivia\" />
+    <Folder Include="nilnul0\fs\folder_\nonlinks_\disjoint\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\directory_\nonlink_\notDotLed_\deV_\prjs\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\directory_\nonlink_\notDotLed_\deV_\src_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\div_\nonlink_\notDotLed_\deV_\prjs\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\div_\nonlink_\notDotLed_\deV_\src_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\awGlBbVs\powsub\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\bak_\vsAwGlBb\key\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remotes_\svr\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\last\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\ensure\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\aliases\vers\last\urls\ensure\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\last_\newest\%28retiring\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\newest\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\vered\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlBbVs_\vered_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\awGlVs_\aliases\vers\last\urls\ensure\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\cfged\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\create\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw\create_\ohio\ensure\ensureSvrFirst\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw_\newest_\ver\create_\usEast\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\aw_\vers\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\azure\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\github\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\gls\ensureOne\ohio\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs\create\next\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\vs_\vs_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellKnowns_\awGlBbVs_\powset\sub\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\aw_\ohio\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\aw_\vers_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\aw_\ver_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\gl_\ohio\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\gl_\vers_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\gl_\ver_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\svrs_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\wellknown_\svr_\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\bak_\_gl\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\svr_\azure_\next\create_\anonym\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\svr_\vs\create\next\" />
+    <Folder Include="nilnul0\fs\git\module\repo\_cfg_\remote_\svr_\wellknowns_\awGlBbVs\" />
+    <Folder Include="nilnul0\fs\git\module\_cfg\ignore_\dev_\_forPrj\" />
+    <Folder Include="nilnul0\fs\git\svr_\wellknown_\vs\" />
+    <Folder Include="nilnul0\fs\git\svr_\wellknown_\vs_\prefixed\client\" />
+    <Folder Include="nilnul0\fs\git\svr_\wellknown_\vs_\prefixed\client_\cfged\repo\ensure\" />
+    <Folder Include="nilnul0\fs\_address\dnt\be_\vs_\" />
+    <Folder Include="nilnul0\fs\_address\_dst\denote\be_\" />
+    <Folder Include="nilnul0\fs\_address\_route\division_\_div\dir\" />
+    <Folder Include="nilnul0\obj\nom\vered\" />
+    <Folder Include="nilnul0\obj\_id\_nom\" />
+    <Folder Include="nilnul0\obj_\deV\id_\idiom\" />
+    <Folder Include="nilnul0\obj_\deV\id~\" />
+    <Folder Include="nilnul0\obj_\deV\_identy\_nomina\local\" />
+    <Folder Include="nilnul0\obj_\deV\_identy\_nomina\namespace\" />
+    <Folder Include="nilnul0\obj_\deV\_identy\_nomina\sur\" />
+    <Folder Include="nilnul0\obj_\deV\_identy\_nomina\_local\" />
+    <Folder Include="nilnul0\obj_\deV\_identy\_version\major_\paritY_\" />
+    <Folder Include="nilnul0\obj_\deV\_id\nom\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\idiom\affixed_\_suffix\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\idiom\circa\core\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\idiom\circa\eq\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\idiom\phrase\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\idiom\~\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\_idiom\casibles\phrase_\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\_idiom\casibles_\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible\str_\started\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\nonmono_\" />
+    <Folder Include="nilnul0\obj_\deV\_id\_nom\_idiom\casible_\xpn_\" />
+    <Folder Include="nilnul0\obj_\deV\_spec_\" />
+    <Folder Include="nilnul0\obj_\deV_\pkg\spec~\" />
+    <Folder Include="nilnul0\obj_\deV_\pkg\_identy\version\comp\re\" />
+    <Folder Include="nilnul0\obj_\deV_\pkg\_identy\version_\ms\comparer_\" />
+    <Folder Include="nilnul0\txt_\op_\" />
+    <Folder Include="nilnul0\txt_\vered\" />
+    <Folder Include="nilnul0\txt_\versioned\" />
+    <Folder Include="nilnul0\txt_\_vered\nom\" />
+    <Folder Include="nilnul0\txt_\_vered\ver\" />
+    <Folder Include="nilnul0\txt_\_versioned\nomina\" />
+    <Folder Include="nilnul0\txt_\_versioned\version\" />
+    <Folder Include="nilnul0\win\prog_\deV_\build\run\ofWeb_\" />
+    <Folder Include="nilnul0\win\prog_\deV_\build\_run\_options\allCfg\" />
+    <Folder Include="nilnul0\_lang\_syntax\sentence\" />
+    <Folder Include="nilnul0\_obj\typ\re_\NewFolder1\" />
+    <Folder Include="nilnul0\_obj\typ_\impls\" />
+    <Folder Include="nilnul0\_obj\typ_\sub\" />
+    <Folder Include="prj\be_\cs_\lib\" />
+    <Folder Include="prj\be_\cs_\lib_\" />
+    <Folder Include="prj\documents_\closure\" />
+    <Folder Include="prj\typ\" />
+    <Folder Include="prj\_life\prep\integrate\deliver\" />
+    <Folder Include="prj\_life\prep\_integrate\" />
+    <Folder Include="prj\_life\prep\_integrate_\" />
+    <Folder Include="prj_\cs\version\definite\" />
+    <Folder Include="prj_\cs\_modify_\" />
+    <Folder Include="prj_\cs_\_lib_\evt_\build_\post\" />
+    <Folder Include="prj_\_sql_\directory\include_\nonbuild_\nonsys\" />
+    <Folder Include="prj_\_sql_\include_\nonbuild_\nonsys\" />
+    <Folder Include="srcs\bak_\_retVoid\sln\directory_\folder_\normal_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\%28retiring\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\%28retiring\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\%28retiring\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\intent_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\plain0nontop_\undone_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\git_\work_\nontop_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\directory_\nonlink_\undone_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\div_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\bakOrNo_\include_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\plain0nontop_\%28retiring\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\incomplete_\moduleUndone_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\content_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\git_\work_\top_\_incomplete_\_container_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\intent_\git_\plain0Nontop_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\intent_\git_\plain\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\nonintent_\git_\plain0Nontop\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\nonintent_\undone_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\%28retiring\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\plain0nontop_\intendGit_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\plain0nontop_\intent_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\plain0nontop_\undone\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\plain0nontop_\undone_\intent_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\top_\primed\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\top_\undone_\%28retiring\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink\div_\nonlink_\normal_\git_\work_\nonTop\bak_\retShields\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\directory_\nonlink_\git_\work_\nonTop\bak_\retShields\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\directory_\normal_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\div_\nonlink\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\git_\work_\top\div_\nonlink_\git_\work_\top_\undone_\moduleUndone_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\normal_\undone_\plain_\intendGit_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\normal_\undone_\work_\" />
+    <Folder Include="srcs\bak_\_retVoid\sln_\nonlink_\plain0work\" />
+    <Folder Include="srcs\bak_\_retVoid\src\bak_\" />
+    <Folder Include="srcs\bak_\_retVoid\src\dir\" />
+    <Folder Include="srcs\bak_\_retVoid\src_\folder_\nonlink\" />
+    <Folder Include="srcs\bak_\_retVoid\src_\folder_\nonlink_\git_\nonRepo\" />
+    <Folder Include="srcs\modules\" />
+    <Folder Include="srcs\prjs\" />
+    <Folder Include="srcs\prj\whichSrc\" />
+    <Folder Include="srcs\prj\_locator\" />
+    <Folder Include="srcs\tgt_\" />
+    <Folder Include="srcs\_bak\setting\" />
+    <Folder Include="srcs_\folders\" />
+    <Folder Include="srcs_\nonlink\" />
+    <Folder Include="src\dir\be_\sln\" />
+    <Folder Include="src\dir\be_\_sln\_ofDir\_onDenote\" />
+    <Folder Include="src\div\dir\dnt\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\segment\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\parse_\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_lex\word\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_seg_\_retrieve\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_start\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\parener\_dot_\_parse\symbol_\_start_\tail\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\lex\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\lex_\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\_ret\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments\_parse\_parener_\_parse\_ret_\" />
+    <Folder Include="src\div\dir\nomina_\idioms0comments_\segs_\" />
+    <Folder Include="src\div\dir\nomina_\notedIdsEs\" />
+    <Folder Include="src\div\dir\nomina_\notedIds\op_\" />
+    <Folder Include="src\div\dir\nomina_\_idiomsOrComment\" />
+    <Folder Include="src\div\dir_\" />
+    <Folder Include="src\prj\asDoc\" />
+    <Folder Include="src\prj_\cs\be\vow\" />
+    <Folder Include="src\prj_\cs\built\outs\" />
+    <Folder Include="src\prj_\cs\NewFolder2\" />
+    <Folder Include="src\prj_\cs\pre\closure\" />
+    <Folder Include="src\prj_\cs\pre_\dlls\eachPath\" />
+    <Folder Include="src\prj_\cs\pre_\dlls_\no\" />
+    <Folder Include="src\prj_\cs\pre_\dll\drop_\" />
+    <Folder Include="src\prj_\cs\pre_\dll_\" />
+    <Folder Include="src\prj_\cs\pre_\raw_\" />
+    <Folder Include="src\prj_\cs\refs\" />
+    <Folder Include="src\prj_\cs\refs_\" />
+    <Folder Include="src\prj_\cs\_build\ref_\unused\" />
+    <Folder Include="src\prj_\cs\_meta\_rt\" />
+    <Folder Include="src\prj_\cs_\lib\cfg\refered\redir\" />
+    <Folder Include="src\prj_\cs_\lib\compileds\" />
+    <Folder Include="src\prj_\db\_meta_\nugeT_\" />
+    <Folder Include="src\prj_\lib\schema\typ\" />
+    <Folder Include="src\sln\directory\documents_\git_\" />
+    <Folder Include="src\sln\directory_\giT_\nonrepo\tip\" />
+    <Folder Include="src\sln\div\dirs_\nonComment\" />
+    <Folder Include="src\sln\div\documents_\git_\" />
+    <Folder Include="src\sln\div\_id_\" />
+    <Folder Include="src\sln\div_\crop\repoName_\" />
+    <Folder Include="src\sln\div_\crop\_repoName\" />
+    <Folder Include="src\sln\div_\git_\" />
+    <Folder Include="src\sln\div_\NewFolder1\" />
+    <Folder Include="src\sln\div_\sub\" />
+    <Folder Include="src\sln\documents\" />
+    <Folder Include="src\sln\documents_\git_\" />
+    <Folder Include="src\sln\doc_\" />
+    <Folder Include="src\sln\name\_infixer\_compile_\" />
+    <Folder Include="src\sln\nomina\" />
+    <Folder Include="src\sln\prj\dir_\packages\makeSym_\" />
+    <Folder Include="src\sln\prj\docs\" />
+    <Folder Include="src\sln\prj\names\" />
+    <Folder Include="src\sln\prj\name\_tgt\" />
+    <Folder Include="src\sln\prj\_build\evt_\" />
+    <Folder Include="src\sln\prj\_names\" />
+    <Folder Include="src\sln\prj_\blob\" />
+    <Folder Include="src\sln\prj_\cs\" />
+    <Folder Include="src\sln\prj_\cs_\lib\be\vow\" />
+    <Folder Include="src\sln\prj_\cs_\lib\be_\" />
+    <Folder Include="src\sln\prj_\io\" />
+    <Folder Include="src\sln\prj_\vs\" />
+    <Folder Include="src\sln\sub\synd\be_\deps1nonlink\" />
+    <Folder Include="src\sln\sub\synd\doc_\prj\" />
+    <Folder Include="src\sln\sub\synd\doc_\prj_\" />
+    <Folder Include="src\sln\sub\synd\of_\doc_\asNuly_\" />
+    <Folder Include="src\sln\sub\synd\prj\asDoc\" />
+    <Folder Include="src\sln\sub\synd\prj\blob\" />
+    <Folder Include="src\sln\sub\synd\prj\meta\" />
+    <Folder Include="src\sln\sub\synd\prj\meta_\" />
+    <Folder Include="src\sln\sub\synd\prj\nomina\choose_\" />
+    <Folder Include="src\sln\sub\synd\prj_\folder\" />
+    <Folder Include="src\sln\sub\synd\prj_\folder_\" />
+    <Folder Include="src\sln\sub\synd\prj_\sql\meta\" />
+    <Folder Include="src\sln\sub\synd\prj_\sql\_meta\" />
+    <Folder Include="src\sln\sub\synd\prj_\_sql_\directory\include_\nonbuild\" />
+    <Folder Include="src\sln\sub\synd\_prj\nomina\" />
+    <Folder Include="src\sln_\git_\plain\directory\" />
+    <Folder Include="src\sln_\git_\work\div_\rt\ignore\_patch\" />
+    <Folder Include="src\sln_\git_\work_\top\" />
+    <Folder Include="src\sln_\nonlink\documents_\git_\" />
+    <Folder Include="src\sln_\nonlink\documents_\noRepoUnLink\" />
+    <Folder Include="src\synd\dir_\deps_\link_\sym_\" />
+    <Folder Include="src\synd\_name\tgt_\" />
+    <Folder Include="src\synd_\cs\doc_\snKey\" />
+    <Folder Include="src\synd_\cs\doc_\snKey_\" />
+    <Folder Include="src\synd_\cs\doc_\snk\put\" />
+    <Folder Include="src\synd_\cs\doc_\snk_\unoccupied\create_\link_\" />
+    <Folder Include="src\tgt_\" />
+    <Folder Include="src\typ\inst\" />
+    <Folder Include="src\typ\member\procedure\" />
+    <Folder Include="src\typ\method\var\" />
+    <Folder Include="src_\folder\dir\be_\" />
+    <Folder Include="src_\folder_\nonlinks\" />
+    <Folder Include="src_\folder_\nonlinks_\disjoint\sln\prj\" />
+    <Folder Include="src_\folder_\nonlink\set\div_\" />
+    <Folder Include="src_\folder_\nonlink\set\nonlink\" />
+    <Folder Include="src_\folder_\nonlink\set\nonlink_\" />
+    <Folder Include="src_\folder_\nonlink\sln_\nonlinks\" />
+    <Folder Include="src_\folder_\nonlink_\giT_\nonrepo\dir\be_\" />
+    <Folder Include="src_\folder_\nonlink_\giT_\nonrepo\dir_\nonlink\" />
+    <Folder Include="src_\folder_\nonlink_\giT_\nonrepo\sln_\nonlinks_\disjoint\prj_\nonlinks\" />
+    <Folder Include="src_\folder_\nonlink_\giT_\nonrepo\sln_\nonlink\prj_\nonlinks\" />
+    <Folder Include="src_\parented\" />
+    <Folder Include="_cfg_\" />
+    <Folder Include="_src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="srcs\bak_\_retVoid\Settings1.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="srcs\_bak\Settings1.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="src\sln\sub\synd\_prj\choose_\_intervened\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="src\synd\dir_\deps_\unoccupied01empty\mksym\attempt\_tgtSrcDir\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blob.txt" />
+    <None Include="Resources\vsSlnIgnore.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="nilnul0\fs\git\module\_cfg\ignore_\_dev\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resource.zh-Hans.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\prj_\db\_meta_\evt_\build_\_post\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\prj_\db\_meta\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <!--<ItemGroup>
+    <PackageReference Include="AWSSDK.Core">
+      <Version>3.5.1.42</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Bcl.Build">
+      <Version>1.0.21</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Net.Http">
+      <Version>2.2.29</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul.fs._git_._LIB_">
+      <Version>2.0.7631.19742</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._app_._LIB_">
+      <Version>1.0.7637.23282</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._character_._LIB_">
+      <Version>2.1.7634.36220</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._fs_._LIB_">
+      <Version>2.0.7632.36132</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._fs_._LINQ_">
+      <Version>1.0.7632.25119</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._num_._LIB_">
+      <Version>1.0.7626.26160</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._time_._LIB_">
+      <Version>1.0.7633.26611</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._txt_._LIB_">
+      <Version>1.0.7632.24430</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._web_._LIB_">
+      <Version>1.0.7577.37909</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._win_._LIB_">
+      <Version>1.0.7623.28002</Version>
+    </PackageReference>
+    <PackageReference Include="NuGet.Versioning">
+      <Version>5.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.4</Version>
+    </PackageReference>
+  </ItemGroup>-->
+  <ItemGroup>
+    <Compile Include="src\sln\div_\crop\cognome\NotInSrcXpn.cs" />
+    <None Include="src\prj_\db\_meta_\evt_\build_\nugetPostbuild.bat" />
+    <None Include="Resources\nugetPostBuild.bat.txt" />
+    <None Include="Resources\content.txt" />
+    <Content Include="nilnul0\win\prog_\deV_\build\_run\setting_\_dir\LangVer.xml" />
+    <None Include="Resources\prj.txt" />
+    <Content Include="src\prj_\db\_meta_\refs_\Db.xml" />
+    <Content Include="src\prj_\cs\_meta\eg.xml" />
+    <EmbeddedResource Include="src\prj_\cs\_meta\evt_\build_\_post\content_\2 - Copy.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--<Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.0.194\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />-->
+    <Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.0.220\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+    <nilnulPattern4date>^.{6}</nilnulPattern4date>
+    <nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+    <nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+    <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+    <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+    <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
+    <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+) ELSE (
+	if  $(ConfigurationName)==Symbol (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+)</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <!--<Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Setup.Configuration.Interop.3.3.2180\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Setup.Configuration.Interop.3.3.2180\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets'))" />-->
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="packages\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
+  <Import Project="packages\Microsoft.VisualStudio.Setup.Configuration.Interop.3.3.2180\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets" Condition="Exists('packages\Microsoft.VisualStudio.Setup.Configuration.Interop.3.3.2180\build\Microsoft.VisualStudio.Setup.Configuration.Interop.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
