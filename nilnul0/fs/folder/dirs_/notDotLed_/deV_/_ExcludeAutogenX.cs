@@ -50,5 +50,23 @@ namespace nilnul.fs.folder.dirs_.notDotLed_.deV_
 				nilnul.fs.Folder.FroAddress(parent)
 			);
 		}
+
+		static public IEnumerable<string> Addresses(DirectoryInfo parent)
+		{
+
+			return Dirs(parent).Select(
+				d=>
+				System.IO.Path.Combine(
+					parent.FullName
+					,
+					d.denote.en
+				)
+			);
+		}
+
+		static public IEnumerable<string> Addresses_ofAddress(string parent)
+		{
+			return Addresses(new DirectoryInfo(parent));
+		}
 	}
 }
