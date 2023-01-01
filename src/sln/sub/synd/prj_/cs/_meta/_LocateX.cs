@@ -54,11 +54,19 @@ namespace nilnul.dev.src.sln.sub.synd.prj_.cs._meta
 		}
 		public static nilnul.fs.address_.spear_.ParentDoc SpearNulable_ofMain(string main)
 		{
+			return src.sln.sub.prj.meta.of_.doc_._FroManyX.Spears_ofDoc(
+				main
+				,
+				nilnul.dev.src.prj_.Cs.EXT
+			).SingleOrDefault();
+			/*
 			return src.sln.sub.prj.meta_._ChoosePrjX.SpearNulable_ofDoc(
 				main
 				,
 				nilnul.dev.src.prj_.Cs.EXT
 			);
+			*/
+
 		}
 
 

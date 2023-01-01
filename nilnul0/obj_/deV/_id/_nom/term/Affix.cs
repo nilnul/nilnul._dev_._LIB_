@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.obj_.deV._id._nom.term
+namespace nilnul.obj_.deV._id._nom.idiom
 {
 	/// <summary>
 	/// when a single caplital letter is prefixed or suffixed, the single letter decorates the whole Term.

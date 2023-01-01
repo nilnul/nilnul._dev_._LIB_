@@ -26,10 +26,10 @@ namespace nilnul.dev.src.prj_.cs._meta_.snk
 
 			var xpath = "/*/*[local-name()='PropertyGroup']/*[local-name()='SignAssembly']";
 
-			var el1 = xml.XPathSelectElements(xpath).SingleOrDefault();
-			if (el1 is null)
+			var el4signAssembly = xml.XPathSelectElements(xpath).SingleOrDefault();
+			if (el4signAssembly is null)
 			{
-				el1 = new XElement(
+				el4signAssembly = new XElement(
 					//xml.Root.GetDefaultNamespace()+
 					"PropertyGroup"
 					,
@@ -55,26 +55,26 @@ namespace nilnul.dev.src.prj_.cs._meta_.snk
 						var firstPropGrp = xml.XPathSelectElements("/*/*[local-name()='PropertyGroup']").FirstOrDefault();
 						if (firstPropGrp is null)
 						{
-							xml.Root.AddFirst(el1);
+							xml.Root.AddFirst(el4signAssembly);
 							prjModified.touch();
 
 						}
 						else
 						{
-							firstPropGrp.AddBeforeSelf(el1);
+							firstPropGrp.AddBeforeSelf(el4signAssembly);
 							prjModified.touch();
 						}
 					}
 					else
 					{
-						conditioned.AddAfterSelf(el1);
+						conditioned.AddAfterSelf(el4signAssembly);
 						prjModified.touch();
 					}
 
 				}
 				else
 				{
-					itemGrpEle.AddBeforeSelf(el1);
+					itemGrpEle.AddBeforeSelf(el4signAssembly);
 					prjModified.touch();
 				}
 
@@ -98,10 +98,10 @@ namespace nilnul.dev.src.prj_.cs._meta_.snk
 				//attrs.Remove();
 
 				#endregion
-				if (!(el1.Parent is null))
+				if (!(el4signAssembly.Parent is null))
 				{
 
-					foreach (var item in el1.DescendantsAndSelf())
+					foreach (var item in el4signAssembly.DescendantsAndSelf())
 					{
 						//item.Name = XNamespace.None+ item.Name.LocalName; //not work
 
@@ -120,13 +120,13 @@ namespace nilnul.dev.src.prj_.cs._meta_.snk
 			{
 				if (
 
-					!nilnul.txt.nulable.eq_.Trim.Singleton.Equals(el1.Value, "true")
+					!nilnul.txt.nulable.eq_.Trim.Singleton.Equals(el4signAssembly.Value, "true")
 
 
 
 					)
 				{
-					el1.Value = nilnul.bit.phrase_._LowerX.True;
+					el4signAssembly.Value = nilnul.bit.phrase_._LowerX.True;
 					prjModified.touch();
 
 				}
@@ -139,7 +139,6 @@ namespace nilnul.dev.src.prj_.cs._meta_.snk
 
 			var el4snkFile = xml.XPathSelectElements(xpath4snkFile).SingleOrDefault();
 
-			el1 = el4snkFile;
 			if (el4snkFile is null)
 			{
 				var intendedEl4snk = new XElement(
@@ -171,18 +170,18 @@ xml.Root.GetDefaultNamespace() +
 						if (firstPropGrp is null)
 						{
 
-							xml.Root.AddFirst(el1);
+							xml.Root.AddFirst(el4snkFile);
 
 						}
 						else
 						{
-							firstPropGrp.AddBeforeSelf(el1);
+							firstPropGrp.AddBeforeSelf(el4snkFile);
 						}
 						prjModified.touch();
 					}
 					else
 					{
-						conditioned.AddAfterSelf(el1);
+						conditioned.AddAfterSelf(el4snkFile);
 						prjModified.touch();
 
 

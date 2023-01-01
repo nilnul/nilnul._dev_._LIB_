@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.dev._design.sys_
 {
+	/// slice the system into components, each of which is of the same structure.
 	/// <summary>
 	/// for example:
 	///		computation unit and storage is designed to using NAND gate only, such that design and manufacture is easy and robust(some bad blocks can be ignored), allowing more compact layout.

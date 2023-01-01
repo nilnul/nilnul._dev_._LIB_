@@ -13,6 +13,9 @@ namespace nilnul.dev.prj.doc_
 	///	a prj might have various meta; in otherwords, various meta describes the same prj.
 	///	it would simplify things if you have only one meta.
 	/// </summary>
+	/// alias:
+	///		view
+	///		aspect
 	interface IMeta
 	{
 	}

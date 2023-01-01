@@ -17,6 +17,8 @@ namespace nilnul.dev.prj_.cs
 	///		meta
 	///			not identifier, which is <see cref="obj.identy.ITagged"/>
 	///			not spec, which is a contexted  identy like: someType, some assembly.
+	///		vw
+	///		
 	///			
 	public interface IMeta
 	{

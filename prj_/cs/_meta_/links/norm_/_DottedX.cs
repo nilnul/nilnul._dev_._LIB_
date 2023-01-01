@@ -18,11 +18,11 @@ namespace nilnul.dev.prj_.cs._meta_.links.norm_
 	///
 	//[Obsolete("vs tools use 'packages'", true)]
 
-	static public class _DottedX
+	static public class _DotLedX
 	{
 
 		
-		static public string Changed(string xDoc)
+		static public string _Change_ofClob(string xDoc)
 		{
 			return Regex.Replace(
 				xDoc,
@@ -47,13 +47,13 @@ namespace nilnul.dev.prj_.cs._meta_.links.norm_
 
 			var xDoc = System.IO.File.ReadAllText(file);
 
-			var changed = Changed(xDoc);
+			var changed = _Change_ofClob(xDoc);
 			if (changed ==xDoc)
 			{
 				return false;
 			}
 
-			System.IO.File.WriteAllText(file, Changed(xDoc) );
+			System.IO.File.WriteAllText(file, _Change_ofClob(xDoc) );
 			return true;
 
 		}

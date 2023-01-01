@@ -56,9 +56,13 @@ namespace nilnul.dev.src.sln.sub.synd.prj._main
 			)   /// torso are the same
 			.Where(
 				segs => nilnul.txts.eq_.CaseInsensitive.Singleton.eq(
-					nilnul.objs_.started._TorsoX.Torso(segs.Item2.asSegs())
+					nilnul.obj.str_.started._DetoeX._Detoe_assumeStarted(
+						segs.Item2.asSegs()
+					)
 					,
-					nilnul.objs_.started._TorsoX.Torso(prjIdentity)
+					nilnul.obj.str_.started._DetoeX._Detoe_assumeStarted(
+						prjIdentity
+					)
 				)
 			)
 			.Where(

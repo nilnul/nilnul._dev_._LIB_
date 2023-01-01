@@ -22,7 +22,7 @@ namespace nilnul.dev.prj_.cs._meta_.links
 	{
 
 		
-		static public string Changed(string xDoc)
+		static public string Change_ofClob(string xDoc)
 		{
 
 			//return links.norm_._DottedX.Changed(xDoc);
@@ -62,7 +62,7 @@ namespace nilnul.dev.prj_.cs._meta_.links
 
 			var xDoc = System.IO.File.ReadAllText(file);
 
-			var changed = Changed(xDoc);
+			var changed = Change_ofClob(xDoc);
 			if (changed ==xDoc)
 			{
 				return false;
@@ -72,13 +72,13 @@ namespace nilnul.dev.prj_.cs._meta_.links
 			return true;
 
 		}
-		public static bool OfFile(nilnul.fs.address_.SpearI parentDoc)
+		public static bool OfMeta(nilnul.fs.address_.SpearI parentDoc)
 		{
 			return  _OfFile(parentDoc.ToString());
 		}
 		static public bool OfDoc(string file)
 		{
-			 return OfFile(
+			 return OfMeta(
 				nilnul.dev.src.sln.sub.prj.meta_._ChoosePrjX.Spear_ofDoc(file)
 			);
 		}
@@ -88,13 +88,13 @@ namespace nilnul.dev.prj_.cs._meta_.links
 
 
 			var file = nilnul.dev.src.sln.sub.synd.prj_.cs._meta._LocateX.SpearNulable_ofMain(identity);
-			return  OfFile(file);
+			return  OfMeta(file);
 		}
 
 		public static bool OfContainerAddress(string v)
 		{
 
-			return  OfFile(
+			return  OfMeta(
 				nilnul.fs.folder.doc_.deV_.prj_.Cs.Address_ofContainerAddress(v)
 			);
 
