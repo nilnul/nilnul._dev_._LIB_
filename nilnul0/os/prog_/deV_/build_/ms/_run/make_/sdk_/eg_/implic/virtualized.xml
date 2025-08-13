@@ -1,0 +1,12 @@
+﻿<!--During evaluation of the project, MSBuild adds implicit imports at the top and bottom of the project file:-->
+<Project>
+	<!-- Implicit top import -->
+	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+	<PropertyGroup>
+		<TargetFramework>net46</TargetFramework>
+	</PropertyGroup>
+
+	<!-- Implicit bottom import -->
+	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

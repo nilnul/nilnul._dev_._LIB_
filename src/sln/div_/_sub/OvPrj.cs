@@ -10,6 +10,8 @@ namespace nilnul.dev.src.sln.div_._sub
 	/// solution means sln and sub (not having the prj dir)
 	/// for nulable <see cref="nameof(src.sln._sub._NulableOvPrjX)"/>
 	/// </summary>
+	/// <see cref="sln._sub._NulableOvPrjX"/>
+	/// <see cref="sln._sub._NulableOfPrj_allowSlnsX"/>
 	static public class _OvPrjX
 	{
 		/// <summary>

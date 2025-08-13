@@ -40,6 +40,7 @@ namespace nilnul.dev.prj._meta_.props_._aim
 		/// 
 		public const string Dev2nuget = nameof(Dev2nuget);
 
+		public const string Sym2nuget = nameof(Sym2nuget);
 
 
 	}

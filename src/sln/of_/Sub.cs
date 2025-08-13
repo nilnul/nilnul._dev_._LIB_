@@ -38,7 +38,7 @@ namespace nilnul.dev.src.sln.of_
 			return _Sln(
 				srcs
 				,
-				sub.Split(nilnul.obj_.deV._identity._sur._SepX.Character)
+				sub.Split(nilnul.obj_.deV._identy._nomina._sur._SepX.Character)
 			);
 		}
 		/// <summary>

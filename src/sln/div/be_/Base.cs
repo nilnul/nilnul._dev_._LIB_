@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.dev.sln.div.be_
 {
+	[Obsolete("As we now allow subsrc, the logic here needs revising;")]
 	static public class _BaseX
 	{
 

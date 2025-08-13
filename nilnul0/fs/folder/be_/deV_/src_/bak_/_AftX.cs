@@ -12,7 +12,7 @@ namespace nilnul.fs.folder.be_.deV_.src_.bak_
 	{
 		public static bool Be(nilnul.fs.FolderI s, nilnul.win.prog_.Git git = null)
 		{
-			win.prog._run.Result r = nilnul.win.prog_.git_.cfg.read_._ResultX.Result
+			var r = nilnul.win.prog_.git_.cfg.read_._ResultX.Result
 				   (new address_.spear_.ParentDoc(s.address.en, ".nilnulCfg"),
 				   "bak.aft", git);
 			if (r.beErr)

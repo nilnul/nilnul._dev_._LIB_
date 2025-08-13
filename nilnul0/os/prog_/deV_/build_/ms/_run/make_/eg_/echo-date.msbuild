@@ -1,0 +1,8 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<Target Name="EchoDate">
+		<Exec Command="echo %25date%25" />
+
+		<!--The command to do so is actually "echo %date%" but the "%" character has special meaning in MSBuild so has to be escaped. Escaping characters requires substituting them for the ASCII code for the character in hexadecimal with a preceding "%" character.-->
+	</Target>
+
+</Project>

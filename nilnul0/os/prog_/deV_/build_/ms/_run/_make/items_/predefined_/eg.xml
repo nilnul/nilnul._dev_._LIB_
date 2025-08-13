@@ -1,0 +1,9 @@
+﻿<SomeWhere>
+
+	checked the FilesForPackagingFromProject and it seems that it is a predefined ItemList from MSBuild, which is used for copying the files in internal build steps, that's why it's working.´You could add the other files to the FilesForPackagingFromProject ItemGroup or you can make a ItemGroup (list of variables) and call a copy task: <Copy SourceFiles="@(CopyAllFilesToSingleFolder)" DestinationFolder="$(TargetDir)" /> to copy the files to the folder you want.
+
+stackoverflow.com/questions/17238218/include-files-in-msbuild-that-are-not-part-of-project
+
+	MikeR
+ Jun 24, 2013 at 6:27
+</SomeWhere>

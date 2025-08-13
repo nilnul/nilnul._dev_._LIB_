@@ -1,0 +1,78 @@
+﻿<!--infoq.com/articles/MSBuild-1/
+by Mustafa Saeed Haji Ali, who lives in Hargeisa, Somaliland. He is a software developer that usually works with ASP.NET MVC. Mustafa enjoys testing and using JavaScript frameworks like KnockoutJS, AngularJS and SignalR and has a passion for evangelizing best practices.
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="RunUnitTests">
+	<!--We could also set a default Target for our build script so we wouldn't have to specify a Target. Just add a DefaultTargets attribute to the root Project element specifying the RunUnitTests Target as the default Target.-->
+
+	<ItemGroup>
+		<!--Items are defined within an ItemGroup element. There can be multiple ItemGroup elements within a Project element allowing you to group related items together. This becomes useful when you've got a build script with a lot of Items.-->
+		<BuildArtifactsDir Include="BuildArtifacts\" />
+		<!--Don't forget the trailing slash when specifying the BuildArtifacts directory.-->
+		<SolutionFile Include="HelloCI.sln" />
+		<NUnitConsole Include="C:\Program Files (x86)\NUnit 2.6\bin\nunit-console.exe" />
+		<UnitTestsDLL Include="BuildArtifacts\HelloCI.Web.UnitTests.dll" />
+		<TestResultsPath Include="BuildArtifacts\TestResults.xml" />
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+		<BuildPlatform Condition=" '$(BuildPlatform)' == '' ">Any CPU</BuildPlatform>
+		
+<!--learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2015&redirectedfrom=MSDN
+
+
+-->		
+	</PropertyGroup>
+
+	<Target Name="Clean">
+		<RemoveDir Directories="@(BuildArtifactsDir)" />
+	</Target>
+
+
+	<!--We could manually call the Clean Target before calling the Init Target every time, but a simpler solution is to add a DependsOnTargets attribute to the Init Target telling MSBuild to run the Clean Target every time the Init Target is executed.-->
+	<Target Name="Init" DependsOnTargets="Clean">
+		<!--As the attribute name implies, we can have multiple Targets run before a Target. When specifying multiple Targets, separate them by semi-colons.-->
+
+		<MakeDir Directories="@(BuildArtifactsDir)" />
+		<!--Finally, we reference the BuildArtifacts directory in our Targets using the @(ItemName) syntax.-->
+	</Target>
+	<Target Name="Compile" DependsOnTargets="Init">
+		<MSBuild Projects="@(SolutionFile)" Targets="Rebuild"
+				 Properties="OutDir=%(BuildArtifactsDir.FullPath);Configuration=$(Configuration);Platform=$(BuildPlatform)" />
+
+		<!--By doing so, we've called another instance of MSBuild from our MSBuild script.-->
+
+		<!--We've specified the Project we want the inner MSBuild Task to execute. Here we could specify another MSBuild script (which are also known as projects), or we could pass in a .csproj file which is also an MSBuild script. Instead, we've passed in the solution file for our HelloCI application. Solution files are not MSBuild scripts but MSBuild is capable of parsing solution files.-->
+		<!--We've also specified the Target the inner MSBuild Task to execute to be the "Rebuild" Target, which has been imported into the .csproj files within our solution.-->
+		<!--Finally, we set three Properties for our inner MSBuild Task:
+
+		OutDir
+		The output directory the inner MSBuild Task should save the compilation output.
+		Configuration
+		The Configuration to use when building (Debug, Release, etc.)
+		Platform
+		The Platform to compile for (x86, x64, etc.)-->
+		<!--we've used the %(Item.MetaData) syntax. The syntax should seem familiar and look like how you would access a property on an object in C#. MSBuild gives you access to certain MetaData for any Item you create like the FullPath or ModifiedTime. This MetaData is not always useful since you could have Items which are not files.-->
+	</Target>
+	<Target Name="RunUnitTests" DependsOnTargets="Compile">
+		<Exec Command='"@(NUnitConsole)" @(UnitTestsDLL) /xml=@(TestResultsPath)' />
+
+		<!--If one test fails in our test suite, the NUnit console runner will return a non-zero return value. The non-zero return value will signal to MSBuild that something went wrong and will mark the build as failed.-->
+	</Target>
+
+	<!--if you added a Target that starts a web server, using the Exec command would cause the build to wait unit the web server shuts down before it reported the build complete. Using the AsyncExec command will allow you to run commands without causing the build to wait for them to complete.-->
+	
+	<!--setting up Jenkins, so instead of having to run 1 command manually to build our projects, we can have Jenkins monitor our source code repository and start a build whenever we push new code to the repository.-->
+</Project>
+
+<!--jackhiston.com/2017/10/12/msbuild-maintenance-made-easy-with-shared-properties/-->
+
+<!--
+
+
+Recently, a new version of MSBuild has hit the streets. This came out along with Visual Studio 2017, and has changed design. Project files have been simplified, and developers are encouraged to edit them directly.
+For .NET Core projects, Visual Studio now allows the direct editing of project files, without having to unload the project first. This is a big step for Visual Studio advocates.
+MSBuild is composable, and so we can make our lives easier.
+-->

@@ -17,10 +17,17 @@ namespace nilnul.dev.src.prj_.cs.pre_.dll.path
 	/// the version in the path might be different from the version per the "Include" attribute.
 	/// 
 	/// </summary>
+	/// <see cref="nilnul.obj_.deV_.pkg.IIdentification.VersionA"/>
 	static public class _VersionX
 	{
 		const string HINT_PATH = "HintPath";
-		const string DIR_PACKAGES = @"packages\";
+		//const string DIR_PACKAGES = @"packages\";
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="e"></param>
+		/// <returns></returns>
 		static public nilnul.obj_.deV_.pkg._identity.VersionA VersionNulable(XElement e)
 		{
 			var hintPath = e.Elements().SingleOrDefault(

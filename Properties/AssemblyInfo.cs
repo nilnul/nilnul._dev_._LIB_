@@ -2,13 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
+/*
+  it(information technology) project management/mgt.
+	with this prj growing large and complex, we are in the process of exploreing the option to move pacsMgt out as a prj dependent on this, and make this prj centralize around src mgt. Src mgt is the first and fundamental step of dev; also this prj is built on nilnul.fs._git_, and src mgt is the most adjacent job in this prj that is 'dev'
+
+build:
+	build is included in nilnul.dev.pak
+ */
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("nilnul._dev_._LIB_")]
-[assembly: AssemblyDescription(@"nilnul development library; it(information technology) project management/mgt.
-	with this prj growing large and complex, we are in the process of exploreing the option to move pacsMgt out as a prj dependent on this, and make this prj centralize around src mgt. Src mgt is the first and fundamental step of dev; also this prj is built on nilnul.fs._git_, and src mgt is the most adjacent job in this prj that is 'dev'
-
+[assembly: AssemblyDescription(@"The basic&core of nilnul development library;
 make the coordination(among many persons)/inheritance(among many generations) easy
 ")]
 [assembly: AssemblyConfiguration("")]
@@ -41,5 +46,8 @@ make the coordination(among many persons)/inheritance(among many generations) ea
 
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
+//[assembly: InternalsVisibleTo("nilnul.dev.Test")]
 
 //[assembly: InternalsVisibleTo("nilnul._dev_._TEST_,publicKeyToken=085f320e4a727230")]
+
+

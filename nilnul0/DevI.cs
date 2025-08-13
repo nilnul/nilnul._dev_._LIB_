@@ -17,4 +17,5 @@ namespace nilnul
 	public interface DevI
 	{
 	}
+
 }

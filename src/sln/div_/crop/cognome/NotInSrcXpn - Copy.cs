@@ -21,13 +21,20 @@ namespace nilnul.dev.src.sln.div_.crop.cognome
 			set { _srcs = value; }
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="srcs"></param>
 		public ThrowIfNotInSrc(SrcsI3 srcs)
 		{
 			_srcs = srcs;
 		}
 
+		/// <summary>
+		/// if the srcs are empty, then no directory will be in src, and none will be bakked;
+		/// </summary>
 		public ThrowIfNotInSrc():this(
-			nilnul.dev.Properties.Settings.Default.srcs
+			nilnul.dev.Properties.Settings.Default.srcs??new StringCollection()
 		)
 		{
 		}

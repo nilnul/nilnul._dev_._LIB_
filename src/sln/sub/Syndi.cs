@@ -13,6 +13,10 @@ namespace nilnul.dev.src.sln.sub
 	/// alias:
 	///		syndicate
 	///		synd
+	///		prj
+	///			as a folder whileas the file is named as meta;
+	///
+	[Obsolete(nameof(IPrj) + " is preferred;")]
 	public interface ISyndicate:sub.dir_.ISynd
 	{
 	}

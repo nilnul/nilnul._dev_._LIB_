@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace nilnul.dev._design
 	///		1.1.1) the outer is called environment; the inner is called mechanism
 	///		2) the oriface on the demarcation is called Input/Output
 	/// </summary>
+	/// <see cref="nilnul.dev.ISys"/>
 	public interface ISys
 	{
 	}

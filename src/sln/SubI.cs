@@ -22,12 +22,16 @@ namespace nilnul.dev.sln
 	/// names shall not be used:
 	///			child
 	///				as sub might be the top sln itself
+	/// </remarks>
 	/// alias:
 	///		solution
 	///			means sln + divOfSubSln
+	///		sub
+	///			subsln
+	///			subsys
 	///	sub is a git module.
 	///		in side sub, there might be multiple prjs. we can let individual prj be a gitModule, or we can have only one module for a sub.
-	/// </remarks>
+	/// 
 	interface ISub
 	{
 	}

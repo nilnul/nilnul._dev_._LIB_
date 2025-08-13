@@ -14,7 +14,7 @@ namespace nilnul.obj_.deV_.pkg
 	/// 	/// name and ver together is used as Id/Identifier.
 
 	/// <summary>
-	/// this is identity (where versioniong can be semVer,), not identy (where version admits no semVer)
+	/// this is identity (where versioning can be semVer,), not identy (where version admits no semVer)
 	/// Here the versioning is nulable.
 	/// the dll inside the pkg is still versioned with non-semVer, but System.Version
 	/// </summary>
@@ -30,7 +30,9 @@ namespace nilnul.obj_.deV_.pkg
 	///		we mix them
 	///	</remarks>
 
-	public class Identity //: ISpec
+	[Obsolete("move to nilnul.dev.pak")]
+	public class Identity
+		//: ISpec
 	{
 		/// <summary>
 		/// key stone

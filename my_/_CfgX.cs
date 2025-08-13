@@ -9,6 +9,8 @@ namespace nilnul.dev.my_
 	/// <summary>
 	/// the parent of our work
 	/// </summary>
+	/// vs:
+	///		<see cref="nilnul.dev.ISrc"/>
 	static public class _CfgX
 	{
 		static public string Address()

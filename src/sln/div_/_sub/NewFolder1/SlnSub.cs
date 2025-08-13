@@ -9,6 +9,7 @@ namespace nilnul.dev.srcs.prj._locator
 	/// <summary>
 	/// solution means sln and sub (not having the prj dir)
 	/// </summary>
+	/// 
 	static public class _SlnSubX
 	{
 		[Obsolete()]

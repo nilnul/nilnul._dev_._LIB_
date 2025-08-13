@@ -12,10 +12,15 @@ namespace nilnul.dev.src.sln._sub
 	static public class _NulableOfPrj_allowSlnsX
 	{
 
-		public static IEnumerable< ( nilnul.fs.address_.shield_.BaseDiv, IEnumerable<string>, string ) > _SubEs_ofMain(string main, Srcs_addresses srcs)
+		public static IEnumerable< ( nilnul.fs.address_.shield_.BaseDiv, IEnumerable<string>, string ) > _SubEs_ofMain(
+			string main
+			,
+			Srcs_addresses srcs
+		)
 		{
 
 			var slns = nilnul.dev.src_.folder_.nonlinks_.disjoint._SlnsX._Shields_assumeDisjoint(srcs.toDisjointNonlinks());
+
 			//get the sln -- the folder
 
 			var rtSlnEs = dev.src.sln.of_.prj_.nomina_._RetNulableX._SrcSlnEs_ofMain(srcs, main);
@@ -121,7 +126,7 @@ subRemained
 		/// eg:  for "nilnul.fs._git_.dd.ab.cd._LIB_",
 		///		where "nilnul.fs._git_" is sln
 		///		"dd" is sub
-		///		"ab.cd._LIB_" is prjAsDnt, where "ab.cd" is subRemained
+		///		"ab.cd._LIB_" is prjAsDnt or meta, where "ab.cd" is subRemained
 		/// </param>
 		/// <returns></returns>
 		static public IEnumerable<(nilnul.fs.address_.shield_.BaseDiv, IEnumerable<string>, string)> _SubEs_ofMain(

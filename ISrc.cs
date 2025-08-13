@@ -1,4 +1,4 @@
-﻿namespace nilnul.dev
+namespace nilnul.dev
 {
 	/// <summary>
 	/// src is a movable "disk root"; so src must be a folder (or folderable, i.e, a folder, or an unoccupied address that can be createa), not a file, in order to be extensible(for example, create a cfg file or a backend repo objects holding dir).
@@ -23,4 +23,6 @@
 	public interface ISrc {
 
 	}
+
+
 }

@@ -1,0 +1,28 @@
+﻿<SomeWhere>
+
+
+	<!--In the .csrpoj file, If I have-->
+	<!--If I have-->
+
+	<Compile Include="c:\path\*.cs"></Compile>
+	<!--Then all .cs files show up as shortcuts in Solution Explorer at top level:-->
+	<!-- note: it's TOP level;-->
+
+
+	<Compile Include="c:\path\File1.cs">
+		<Link>Dir1\File1.cs</Link>
+	</Compile>
+	<!--Then Visual Studio shows that file as a shortcut under Dir1 folder in the Solution Explorer.-->
+
+
+	<None Include="..\..\..\configs\Backend***">
+		<Link>Config\%(RecursiveDir)\xx')</Link>
+	</None>
+	<Content Include="..\..\SomeDirectory\**\*.xml">
+		<Link>SomeLinkDirectoryOfYourChoosing\%(Filename)%(Extension)</Link>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</Content>
+	<ItemGroup>
+		<Compile Include="..\SomeDirectory\*.cs" LinkBase="SomeDirectoryOfYourChoosing" />
+	</ItemGroup>
+</SomeWhere>

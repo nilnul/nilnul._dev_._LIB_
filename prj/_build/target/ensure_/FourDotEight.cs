@@ -1,4 +1,5 @@
-﻿using nilnul.fs;
+using nilnul.dev.prj_.cs;
+using nilnul.fs;
 using nilnul.fs.address_;
 using NuGet.Packaging.Core;
 using NuGet.Versioning;
@@ -21,6 +22,12 @@ namespace nilnul.dev.prj._build.target.ensure_
 			return  _EnsureX.Updated_fileAssumePrj(file, _target._ValX.FourDotEight);
 
 		}
+
+		public static void Modify(Modify prjModify)
+		{
+			_EnsureX.Modify(prjModify, _target._ValX.FourDotEight);
+		}
+
 
 		public static bool Updated_assumePrj(SpearI en)
 		{

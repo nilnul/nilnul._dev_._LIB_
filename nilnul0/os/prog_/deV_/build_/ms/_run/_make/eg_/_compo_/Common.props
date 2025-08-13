@@ -1,0 +1,25 @@
+﻿
+
+<!--jackhiston.com/2017/10/12/msbuild-maintenance-made-easy-with-shared-properties/-->
+
+<!--
+
+
+Recently, a new version of MSBuild has hit the streets. This came out along with Visual Studio 2017, and has changed design. Project files have been simplified, and developers are encouraged to edit them directly.
+For .NET Core projects, Visual Studio now allows the direct editing of project files, without having to unload the project first. This is a big step for Visual Studio advocates.
+MSBuild is composable, and so we can make our lives easier.
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp2.0</TargetFramework>
+<AspNetCoreVersion>2.0.0</AspNetCoreVersion>	
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.All"  Version="$(AspNetCoreVersion)"/>
+	</ItemGroup>
+
+</Project>
+

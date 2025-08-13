@@ -1,0 +1,45 @@
+﻿<!--codeproject.com/Articles/12985/Practical-NET2-and-C-2-An-introduction-to-MSBuild
+
+Patrick Smacchia
+7 Feb 2006-->
+
+
+<!-->csc.exe /target:module Foo2.cs
+>csc.exe /Addmodule:Foo2.netmodule /LinkResource:Image.jpg  Foo1.cs
+
+, can be achieved by:
+
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<OutputPath>.\bin</OutputPath>
+	</PropertyGroup>
+
+	<Target Name="FooCompilation">
+		<MakeDir Directories= "bin"/>
+		<Copy SourceFiles="Image.jpg" DestinationFiles=".\bin\Image.jpg"/>
+		<Csc Sources="Foo2.cs"       TargetType="module"
+			 OutputAssembly=".\bin\Foo2.netmodule" />
+		<Csc Sources="Foo1.cs"       TargetType="exe"
+			 AddModules=".\bin\Foo2.netmodule" LinkResources="Image.jpg"
+			 OutputAssembly=".\bin\Foo1.exe" />
+	</Target>
+	<ItemGroup>
+		<File_Image Include="$(OutputPath)\Image.jpg"/>
+		<NetModule_Foo2 Include="$(OutputPath)\Foo2.netmodule"/>
+	</ItemGroup>
+	<Target Name="FooCompilation">
+		<MakeDir Directories= "$(OutputPath)"/>
+		<Copy SourceFiles="Image.jpg"
+			  DestinationFiles="@(File_Image)"/>
+		<Csc Sources="Foo2.cs"        TargetType="module"
+			 OutputAssembly="@(NetModule_Foo2)" />
+		<Csc Sources="Foo1.cs"        TargetType="exe"
+			 AddModules="@(NetModule_Foo2)"
+			 LinkResources="@(File_Image)"
+			 OutputAssembly="$(OutputPath)\Foo1.exe" />
+	</Target>
+
+</Project>

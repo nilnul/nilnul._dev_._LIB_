@@ -1,0 +1,6 @@
+﻿<ItemGroup>
+	<!--The following code example shows how to add Culture metadata with the value fr to the item CSFile.-->
+	<CSFile Include="main.cs" >
+		<Culture>fr</Culture>
+	</CSFile>
+</ItemGroup>

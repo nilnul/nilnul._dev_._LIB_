@@ -1,0 +1,16 @@
+﻿<Project>
+	
+	
+	<PropertyGroup Condition="Exists('$(ProjectDir)\Properties\AssemblyInfo.cs')">
+		<SomeProperty>SomeValue1</SomeProperty>
+	</PropertyGroup>
+
+<!--stackoverflow.com/questions/52400116/msbuild-condition-for-new-sdk-style-vs-old-project-format
+
+answered Sep 21, 2018 at 8:09
+Leo Liu
+
+-->
+
+
+</Project>

@@ -1,0 +1,60 @@
+﻿<Project>
+	
+	
+<PropertyGroup>
+  <_ProjectContents>$([System.IO.File]::ReadAllText(`$(MSBuildProjectFullPath)`))</_ProjectContents>
+  <_SdkRegex>(?s-i)(^|\s|&gt;)&lt;Project\s(([^&gt;]*?)\s)?Sdk(\s*?)=(\s*?)"</_SdkRegex>
+  <_IsSdkProject>$([System.Text.RegularExpressions.Regex]::IsMatch(`$(_ProjectContents)`, `$(_SdkRegex)`))</_IsSdkProject>
+</PropertyGroup>
+<PropertyGroup Condition="'$(_IsSdkProject)'=='True'">
+  <SomeProperty>SomeValue</SomeProperty>
+</PropertyGroup>
+	
+	
+	
+	<!--
+	(?s-i)(^|\s|>)<Project\s(([^>]*?)\s)?Sdk(\s*?)=(\s*?)"
+	
+	
+	Which means:
+
+In single-line, case-sensitive mode...
+Either at the start of the file, or following a white-space character, or following a > character...
+find the literal string <Project...
+then a white-space character...
+then, optionally, any number of any character except >, and another white-space character...
+then the literal string Sdk...
+then, optionally, any number of white-space characters...
+then the character =...
+then, optionally, any number of white-space characters...
+then the character "
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+stackoverflow.com/questions/52400116/msbuild-condition-for-new-sdk-style-vs-old-project-format
+	
+	answered Nov 13, 2018 at 8:09
+rdeago
+
+This is not a good approach, because you shouldn't care whether imports were performed via Sdk import or regular import. In addition, there are other ways to reference the sdk: <Import Sdk= and <Project><Sdk. 
+
+– 
+Rainer Sigwald
+ Jan 18, 2019 at 21:26
+
+-->
+
+</Project>

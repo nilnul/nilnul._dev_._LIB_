@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +15,14 @@ namespace nilnul._obj.typ._id
 	///		
 	/// growth model often makes name shorter, makes where to place clearer/simpler
 	/// 
-	/// groth model helps build a tree out of flat structure. tree carries more info rather than flat structure as there is an extra structure in addition to flat linear structure of things; you can traverse a tree to get a linear structure but you lack information to build a tree given only a linear structure of things. So tree is prefered.
+	/// growth model helps build a tree out of flat structure. tree carries more info rather than flat structure as there is an extra structure in addition to flat linear structure of things; you can traverse a tree to get a linear structure but you lack information to build a tree given only a linear structure of things. So tree is prefered.
 	/// </summary>
 	///<remarks>
 	/// 
 	///</remarks>
 	///<see cref="nilnul.dev.src.prj_.lib.schema._typ.IInfoGrow"/>
+	///<see cref="nilnul.obj_.deV._identy._nomina._local.design_.IInfoGrow"/>
+	///<see cref="nilnul.dev.src.prj_.lib.schema._typ"/>
 	///
 	/// alias:
 	///		info gain

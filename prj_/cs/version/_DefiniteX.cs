@@ -8,6 +8,9 @@ namespace nilnul.dev.prj_.cs.version
 	/// <summary>
 	/// change assmeblyInfo.cs such that version is not '*' generated.
 	/// </summary>
+	/// <remarks>
+	/// assume the file exists; if not, xpn;
+	/// </remarks>
 	static public class _DefiniteX
 	{
 		static public void _OfFolder(
@@ -15,13 +18,19 @@ namespace nilnul.dev.prj_.cs.version
 		)
 		{
 
-
 			var file = System.IO.Path.Combine(
 				folder,
 				"Properties"
 				,
 				"AssemblyInfo.cs"
 			);
+
+			if (!System.IO.File.Exists(file))
+			{
+				/// a sdk project.
+				/// todo: change the version in the meta(.proj)
+				return;
+			}
 
 			var allLines = System.IO.File.ReadAllLines(file);
 
@@ -38,7 +47,7 @@ namespace nilnul.dev.prj_.cs.version
 					var matches = Regex.Match(
 						l
 						,
-						@"^\s*\[\s*assembly:\s*AssemblyVersion\s*\(\s*""(?<major>\d+)\.(?<minor>\d+)\.\*""\s*\)\s*\]\s*$"
+						@"^\s*\[\s*assembly:\s*AssemblyVersion\s*\(\s*""(?<major>\d+)\.(?<minor>\d+)\.\*""\s*\)\s*\]\s*(?<comment>\s*//(?s).*)?$"
 					);
 
 					if (matches.Success)
@@ -48,7 +57,7 @@ namespace nilnul.dev.prj_.cs.version
 						return $@"[assembly: AssemblyVersion(""{matches.Groups["major"]}.{
 							int.Parse( matches.Groups["minor"].Value)
 							+1   //as we restart the growing of sequence, we need to ensure new ones are bigger.
-						}"")]";  /*
+						}"")]{matches.Groups["comment"]}";  /*
 						              * we have 3 options for (patch.revision):
 						              *		-) 0.0
 						              *			this one might be collapsed by some library,resulting some discrepancies.

@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 
 namespace nilnul.dev.src_.folder_.nonlinks_.disjoint
 {
+	/// <summary>
+	/// all the slns under a src.
+	/// eg:
+	///		nilnul._fs_
+	///	excluding:
+	///		(abc)
+	///		
+	/// </summary>
 	static public class _SlnsX
 	{
 		static public IEnumerable<fs.address_.shield_.BaseDir> _Shields_assumeSrc(IEnumerable<nilnul.fs.FolderI> folders)

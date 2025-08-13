@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,15 +14,22 @@ namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_
 	/// <summary>
 	/// such as (comment)abc(comment)(comment)abc
 	/// </summary>
-
+	/// <see cref=""/>
+	[Obsolete(nameof(nilnul.lang_.cognom._tex.symbol_._seg._pre_.TxtComment))]
 	public class Seg: _compile_.parener._dot_._parse.symbol_.SegOrDotI
 	{
+		/// <summary>
+		/// comment8end *
+		/// eg:
+		///		(abc)  def(abc)
+		/// </summary>
 		private _seg.Pre _pre;
 		public _seg.Pre pre
 		{
 			get { return _pre; }
 			set { _pre = value; }
 		}
+
 
 
 		private _lex.word_.Txt _txt;
@@ -32,7 +39,9 @@ namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_
 			set { _txt = value; }
 		}
 
-
+		/// <summary>
+		/// 
+		/// </summary>
 		private _seg.Post _post;
 		public Seg(Pre pre, _lex.word_.Txt txt, Post post)
 		{
@@ -54,6 +63,20 @@ namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_
 				{
 					yield return item;
 				}
+			}
+		}
+
+
+		/// <summary>
+		/// </summary>
+		/// [Obsolete($""" '-' is removed unexpectedly """)]
+		public string name
+		{
+			get
+			{
+				return string.Join("", txts);
+
+				return Regex.Replace( string.Join("", txts),@"\W","");
 			}
 		}
 
@@ -100,13 +123,6 @@ namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_
 			}
 		}
 
-		public string name
-		{
-			get
-			{
-				return Regex.Replace( string.Join("", txts),"\\W","");
-			}
-		}
 
 		public Seg foremostTxt()
 		{

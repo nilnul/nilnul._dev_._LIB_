@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +23,7 @@ namespace nilnul.dev.prj._life
 	///			maybe shall come before this, as prep happens each time, say, daily,  when you begin to update your src; init happens only once at the start of the proj.
 	///			so prepare shall be the idempotent version of init.
 	///		prime
+	///		preprocess
 	///		
 	class IPrepare
 	{

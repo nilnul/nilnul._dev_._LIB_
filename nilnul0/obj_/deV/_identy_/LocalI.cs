@@ -8,7 +8,7 @@ namespace nilnul.obj_.deV._identy_
 {
 	public interface LocalNameI
 	{
-		_identy.ILocal local { get; }
+		_identifier.ILocal local { get; }
 
 	}
 }

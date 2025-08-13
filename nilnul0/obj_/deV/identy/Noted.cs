@@ -15,7 +15,9 @@ namespace nilnul.obj_.deV.identy
 	///			where "(ef.gh" is the comment
 	///				here "(" takes precedence prior to "."
 	/// </summary>
-	interface Noted
+	/// alias:
+	///		commented
+	public interface Noted
 	{
 	}
 }

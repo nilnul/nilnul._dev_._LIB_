@@ -31,14 +31,14 @@ set date0 =% ldt %
 
 				  echo hour min sec: % hour % % min % % sec %
 				  set / a p = year * 366 + month * 30 + day
-		echo patch: % p %
+		echo patch: %p%
 		set / a b = (hour * 3600 + min * 60 + sec) / 2
 		echo build: % b %
 
 
 
 
-		set pb =% p %.% b %
+		set pb =%p%.% b %
 		set v = 1.0.% pb %
 		echo % v %
 		set pkg = nilnul._map_._DB_.% v %.nupkg

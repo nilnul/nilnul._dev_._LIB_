@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace nilnul.dev.sln.as_.dst.name._infixer._parener_._parse.symbol_
@@ -54,7 +55,6 @@ namespace nilnul.dev.sln.as_.dst.name._infixer._parener_._parse.symbol_
 
 		}
 
-
 		public Content(IEnumerable<TxtOrCommentI> enumerable)
 		{
 
@@ -97,6 +97,29 @@ namespace nilnul.dev.sln.as_.dst.name._infixer._parener_._parse.symbol_
 		{
 			return $"{txt}{commentTxtS}";
 		}
+
+
+		public IEnumerable<Txt> txts
+		{
+			get
+			{
+				yield return txt;
+
+				
+				foreach (var item in _commentTxtS)
+				{
+					yield return item.txt;
+				}
+			}
+		}
+		public string name
+		{
+			get
+			{
+				return Regex.Replace(string.Join("", txts), "\\W", "");
+			}
+		}
+
 
 		public IEnumerator<TxtOrCommentI> GetEnumerator()
 		{

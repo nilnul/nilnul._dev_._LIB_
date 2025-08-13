@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Target name="test" BeforeTargets="PreBuildEvent">
+
+		<Exec Command="echo $(Configuration)" />
+
+	</Target>
+
+	<Target name="test" AfterTargets="Build">
+
+		<MakeDir Directories ="$(OutDir)SomeSubDir" Condition="'$(Configuration)' == 'Debug'" />
+
+	</Target>
+	
+</Project>

@@ -43,7 +43,11 @@ namespace nilnul.dev.prj._build.target
 			var el = doc.XPathSelectElements(
 							"/*/*[local-name()='PropertyGroup']/*[local-name()='TargetFrameworkVersion']"
 						)
-						.Single();
+						.SingleOrDefault();
+			if (el is null) //sdk style
+			{
+				return;
+			}
 			if (el.Value != target)
 			{
 				el.Value = target;

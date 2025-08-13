@@ -1,0 +1,5 @@
+﻿<!--learn.microsoft.com/en-us/visualstudio/msbuild/how-to-use-environment-variables-in-a-build?view=vs-2022-->
+
+<!--All environment variables that are valid MSBuild property names are available to the Microsoft Build Engine (MSBuild) project file as properties. Valid property names are described in MSBuild properties. For example, environment variables that begin with a number are not available in MSBuild.-->
+<!--Reference the environment variable the same way you would a variable declared in your project file. For example, the following code references the BIN_PATH environment variable:-->
+<FinalOutput>$(BIN_PATH)\MyAssembly.dll</FinalOutput>

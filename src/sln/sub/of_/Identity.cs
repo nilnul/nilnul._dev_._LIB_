@@ -37,7 +37,7 @@ namespace nilnul.dev.src.sln.sub.of_
 			//get the sln -- the folder
 			var rtSln1 = dev.src.sln.of_._SubX._Sln(srcs, identityOfSub);
 
-			var subAsSegs = identityOfSub.Split(nilnul.obj_.deV._identity._sur._SepX.Character);
+			var subAsSegs = identityOfSub.Split(nilnul.obj_.deV._identy._nomina._sur._SepX.Character);
 
 
 			/// the name of the  sln file.

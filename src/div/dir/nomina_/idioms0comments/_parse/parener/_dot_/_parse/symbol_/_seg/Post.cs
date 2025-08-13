@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,9 @@ using nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_._seg._po
 
 namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_._seg
 {
+	/// <summary>
+	/// comment8begin *
+	/// </summary>
 	public class Post : List<_post_.CommentTxt>
 	{
 		public override string ToString()

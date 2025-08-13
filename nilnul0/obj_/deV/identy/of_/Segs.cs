@@ -10,7 +10,7 @@ namespace nilnul.obj_.deV.identy.of_
 	{
 		static public string Join(IEnumerable<string> parts) {
 			return string.Join(
-				_identity._sur._SepX.Txt
+				_identy._nomina._sur._SepX.Txt
 				,
 				parts
 			);

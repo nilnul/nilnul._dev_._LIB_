@@ -8,6 +8,6 @@ namespace nilnul.obj_.deV_.pkg.identity
 {
 	static public class _VersioningX
 	{
-		public static string RegexTxtForEnding = $@"{_identity._VersionX._Regex}\z";
+		public static string RegexTxtForEnding = $@"{_identity._VersionX.RegexTxt}\z";
 	}
 }

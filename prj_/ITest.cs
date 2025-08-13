@@ -1,11 +1,24 @@
-﻿namespace nilnul.dev.prj_
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.dev.prj_
 {
 	/// <summary>
-	/// we can copy verified test files into library and change the identy of the type there.
-	/// In testing we can reference source prj, rather than compiled pkgs, making recursive editing easy.
+	/// even for some trivia routines, the test is necessary. This will avoid some hard to debug issues in a large scoped code.
+	/// We need to ensure that all codes must be run at least once for a run of test prj.
 	/// </summary>
-	class ITest
+	/// alias:
+	///		test
+	///		tst;
+	internal class ITest:IPrj
 	{
-
 	}
+
+
+
+
+
 }

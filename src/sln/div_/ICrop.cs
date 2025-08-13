@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +33,7 @@ namespace nilnul.dev.src.sln.div_
 	///		deed
 	///		depot
 	///			maybe taken by <see cref="nilnul.fs.GitI"/>
+	///		delvable<see cref="nilnul.fs.folder_.IDelvalbe"/>
 	///		raw
 	///			taken by <see cref="nilnul.dev.ISrc"/>
 	///		svc
@@ -48,6 +49,8 @@ namespace nilnul.dev.src.sln.div_
 	///		post
 	///		job
 	///		endeaver
+	///	<see cref="nilnul.fs.folder_._partic.IDelvable"/>
+	///		,<see cref="nilnul.fs.folder.dir_.itee_.unclave_.IDelvable"/>
 	class ICrop
 	{
 	}

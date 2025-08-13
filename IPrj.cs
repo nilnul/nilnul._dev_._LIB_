@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +12,17 @@ namespace nilnul.dev
 	/// a prj in its whole lifecycle including: src code, compiled assembly, and runtime AppDomain (a component of process)
 	/// </summary>
 	/// <remarks>
+	/// This refers to a folder, whileas ".csproj" or anyohter proj such as sqlProj is the meta of the folder, just as <see cref="ISln"/> refers to a folder whileas ".sln" stores the meta of that folder;
+	/// 
+	///You don't have to use solutions or projects in Visual Studio to edit, build, and debug code. You can simply open the folder that contains your source files in Visual Studio and start editing.
+	///
+	/// It's ideal to have only one <see cref="prj.IMeta"/> for one <see cref="IPrj"/>; but plural <see cref="prj.IMeta"/> is also allowed, to present the prj in different views, targeting different runtimes;
+	/// </remarks>
+	///	alias:
+	///		synd
+	///		syndicate
+	///		container
+	///		module, as in system;
 	/// vs :
 	///		src.Prj
 	///			c# prj in src may be compiled into a pac, where bytecode is used and you will not tell whether it is in c# or vb. so cs_.Prj is not the same as a Prj.
@@ -22,9 +33,9 @@ namespace nilnul.dev
 	/// there must be a handle to denote something.
 	///		eg: when we talk about the history of a regime, the regime is the handle. not the history, as for only history, we may wonder: history of waht.
 	///	the one side of a one-to-many relation
-	/// </remarks>
+	///		
 	public interface IPrj
-		:
+				:
 		nilnul.fs.IFolder
 	{
 	}

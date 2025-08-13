@@ -39,7 +39,7 @@ namespace nilnul.dev.src.sln._nomina
 			//var dotted = prjIdentity + ;
 
 			var s = this.SingleOrDefault(
-				n=>prjIdentity.StartsWith(n.Key+ obj_.deV._identity._sur._SepX.Txt)
+				n=>prjIdentity.StartsWith(n.Key+ obj_.deV._identy._nomina._sur._SepX.Txt)
 			);
 			if (s.Key is null)
 			{

@@ -17,11 +17,14 @@ namespace nilnul.dev.src.sln.sub.prj.meta.of_.doc_
 
 
 
+
 		public static IEnumerable<nilnul.fs.address_.spear_.ParentDoc> Spears_ofDoc(
 			string main, nilnul.fs._address.doc_._exted.Ext ext, Srcs_addresses srcs)
 		{
+			//var cognom = nilnul.lang_.cognom._TexX.Parse(main);
+			//var nomian=cognom.cognomen;
 
-main = dev.src.sln._nomina.Updates.Defaulted.rewritePrj(main);
+			main = dev.src.sln._nomina.Updates.Defaulted.rewritePrj(main);
 
 			var prjAsShieldS = nilnul.dev.src.sln.sub.dir_._prj.choose_._ManyX.Shields_assumeNomina(
 				main,srcs

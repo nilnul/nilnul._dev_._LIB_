@@ -11,6 +11,8 @@ namespace nilnul.dev.sln.as_.dst.name._infixer._parener_._parse.symbol_
 
 	public interface CommentI : SymbolI, TxtOrCommentI
 	{
+		Content content { get; }
+
 		bool hasNotationCaseInsensitive(string notation);
 	}
 
@@ -20,6 +22,10 @@ namespace nilnul.dev.sln.as_.dst.name._infixer._parener_._parse.symbol_
 		{
 
 		}
+
+		public Content content => boxed;
+
+
 
 		/// <summary>
 		/// we can use, for example, "(Git)" or the ending "(git", to denote this is intended as git module.

@@ -23,6 +23,6 @@ namespace nilnul.obj_.deV._identy_
 
 	public interface NamespaceI
 	{
-		_identy.Sur sur { get; }
+		_identifier.Sur sur { get; }
 	}
 }

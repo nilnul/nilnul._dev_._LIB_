@@ -1,4 +1,4 @@
-﻿using nilnul.obj;
+using nilnul.obj;
 using NuGet.Common;
 using NuGet.Configuration;
 using NuGet.Frameworks;
@@ -59,10 +59,11 @@ namespace nilnul.dev.src.prj_.cs.pres_.raw._closure
 
 			}
 
+		
 			var prjMeta = nilnul.dev.src.sln.sub.synd.prj_.cs._meta._LocateX.SpearNulable_ofMain(
 
 				prjIdentity
-			);
+			)!;
 
 
 			var refs = pres_._RawX.Identities_assumeCsPrj(prjMeta);

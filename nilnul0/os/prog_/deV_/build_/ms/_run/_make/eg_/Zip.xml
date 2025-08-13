@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--markheath.net/post/getting-started-with-msbuild-->
+
+
+<!--created master.proj and put it in the root of my source code folder, alongside my .sln file.-->
+
+
+
+<Project ToolsVersion="3.5" DefaultTargets="Build"
+    xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!--with the DefaultTargets attribute, you can not assume any execution order.You can however specify a set of dependencies between targets using the DependsOnTargets attribute.MSBuild executes a target only when the totality of the targets on which it depends is executed. Naturally, the MSBuild engine will detect and emit an error when circular dependencies between targets exist:-->
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<DeploymentProject>MyApplication</DeploymentProject>
+		<OutputDirectory>$(DeploymentProject)\bin\$(Configuration)</OutputDirectory>
+	</PropertyGroup>
+
+	<Target Name="Clean">
+		<RemoveDir Directories="$(OutputDirectory)"
+				Condition="Exists($(OutputDirectory))"></RemoveDir>
+	</Target>
+	<Target Name="Build">
+		<MSBuild
+		  Projects="$(DeploymentProject)\MyApplication.csproj"
+		  Properties="Configuration=$(Configuration)" >
+		</MSBuild>
+
+
+	</Target>
+	<Target Name="Package" DependsOnTargets="Build">
+		<ItemGroup>
+			<!-- All files from build -->
+			<ZipFiles Include="$(DeploymentProject)\bin\$(Configuration)\**\*.*"
+			   Exclude="**\*.zip;**\*.pdb;**\*.vshost.*" />
+		</ItemGroup>
+		<Zip Files="@(ZipFiles)"
+			 WorkingDirectory="$(DeploymentProject)\bin\$(Configuration)\"
+			 ZipFileName="$(ApplicationName)-$(Configuration)-$(Version).zip"
+			 Flatten="True" />
+		
+		<!--To use the Zip task in MSBuild you first need to download and install MSBuild Community Tasks.-->
+	</Target>
+
+	<Target Name="Backup">
+		<ItemGroup>
+			<!-- All source code -->
+			<SourceFiles Include="**\*.*"
+			  Exclude="**\bin\**\*.*;**\obj\**\*.*;*.zip" />
+		</ItemGroup>
+		<Zip Files="@(SourceFiles)"
+			 WorkingDirectory=""
+			 ZipFileName="$(ApplicationName)-SourceCode-$(Version).zip" />
+	</Target>
+	
+<Target Name="Test" DependsOnTargets="Build">
+    <NUnit Assemblies="@(TestAssembly)"
+           WorkingDirectory="MyApplication.UnitTests\bin\$(Configuration)"
+           ToolPath="C:\\Program Files\\NUnit 2.4.7\\bin"
+           />
+</Target>	
+</Project>
+<!--ran the build script using the following command line: MSBuild master.proj-->

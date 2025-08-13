@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 namespace nilnul.fs.folder._repoName.dir.name_.idioms0Comments
 {
 	//[Obsolete(nameof(dev.src.div.dir.nomina._ParsedX))]
+
+	[Obsolete("lang_.cognom")]
 	static public class _ParseX
 	{
 		static public Idioms0CommentsI Parse(nilnul.obj.slider_.Enumer<dev.sln.as_.dst.name._infixer.parener._dot_._lex.WordI> input)

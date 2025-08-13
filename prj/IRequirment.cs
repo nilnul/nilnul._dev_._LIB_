@@ -9,6 +9,7 @@ namespace nilnul.dev.prj
 	/// 
 	/// 
 	/// <summary>
+	/// required precondition of a prj;
 	/// one of:
 	///		pre
 	///			premise
@@ -19,11 +20,12 @@ namespace nilnul.dev.prj
 	///		dep
 	///			listed by packages.config for nuget package.
 	/// </summary>
+	/// 
 	/// alias:
 	///		req
 	///		requirement
 	///	<seealso cref="INecessity"/>
-	class IRequirment
+	public interface IRequirment
 	{
 	}
 }

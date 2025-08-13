@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!--<TargetFramework>net48</TargetFramework>-->
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>nilnul.lang_.cot</RootNamespace>
+		<Description>commented text such as "a(ab(c(as))())d" or "ab(asd(d)as" as a lang. </Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Configurations>Debug;Release;Symbol;Sym2nuget</Configurations>
+		<Version>1.1</Version>
+		<!--<AssemblyVersion>1.0.8888.0</AssemblyVersion>-->
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+		<EnableDefaultItems>false</EnableDefaultItems>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+
+		<AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+		<SignAssembly>true</SignAssembly>
+		<GeneratePackageOnBuild Condition="'$(Configuration)'=='Symbol' OR '$(Configuration)'=='Dev2nuget'">True</GeneratePackageOnBuild>
+		<RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+	</PropertyGroup>
+	<ItemGroup>
+		<ContentWithTargetPath Include="lib\some_file.dat">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>some_file.dat</TargetPath>
+		</ContentWithTargetPath>
+		<None Include="lib\some_file.dat" />
+		<!--Adding a <None> entry for the file will ensure that it still shows up in Visual Studio's UI.-->
+
+
+	</ItemGroup>
+	<ItemGroup>
+
+		<None Update="my-directory/*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>%(Filename)%(Extension)</TargetPath>
+		</None>
+		<!--Update attribute => Enables you to modify metadata of a file that was included by using a glob-->
+		<!--Update attribute:
+
+1.Works for .net core projects
+
+2.Available in VS2017 and later
+
+3.Not supported when using it in an ItemGroup inside a Target-->
+
+		<!--Update attribute is only used to update one Item's metadata. It has no function to include some files. And it will only work when one file has been Included in one Item-->
+	</ItemGroup>
+	<ItemGroup>
+		<!--If you create a new asp.net core web project, you can see the appsettings.json file in Solution Explorer by default.But if you read the xx.csproj you can't find the definition there, the definitions is not explicitly shown in xx.csproj for sdk-format.
+
+In this situation, if we use script like <None Include="appsettings.json" CopyToOutputDirectory="Always" />, it always works to copy that file to output.
+
+But for script <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />, it works only when there's no statement like <Content xxx="appsettings.json"...> in the project file.-->
+
+		<!--
+		Before we use the Update, there already exists the definition None+Include+Appsettings.json though that's not shown in csproj. (For sdk format)
+So in a .net core console project, appsettings.json file by default is
+<None Include="appsettings.json" CopyToOutputDirectory="Never" />
+-->
+		
+		<!--In SDK-style projects, there's a good chance the files you would include are already included in the project by the default rules.--> 
+	<!--learn.microsoft.com/en-us/dotnet/core/project-sdk/overview#default-includes-and-excludes-->	
+		<Content Remove="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<Import/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="lib\IncludedDLL.dll" />
+		<Content Include="lib\IncludedDLL.dll">
+			<Link>IncludedDLL.dll</Link>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup Condition="'$(Platform)' == 'x86'">
+		<None Include="Libs\x86\**" Link="\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+
+		<None Include="Libs\x86\**" Link="mycustomfolder\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+	<ItemGroup>
+
+		<Compile Remove="nilnul0\lang_\cot\_tex\symbol_\OverallX.cs" />
+		<Compile Remove="Properties\AssemblyInfo.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="t.snk" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="nilnul0\lang_\cot\_tex\symbol_\overall\" />
+		<Folder Include="Properties\" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="nilnul._txt_._LIB_" Version="1.1.230721.103713-sym" />
+	</ItemGroup>
+
+
+	<PropertyGroup>
+		<nilnulPattern4majorMinor>^([^\.]+)\.([^\.]+)$</nilnulPattern4majorMinor>
+		<nilnulMajorMinor>$([System.Text.RegularExpressions.Regex]::Match($(Version), $(nilnulPattern4majorMinor)))</nilnulMajorMinor>
+	</PropertyGroup>
+	<PropertyGroup>
+		<nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+		<nilnulPattern4date>^.{6}</nilnulPattern4date>
+		<nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+		<nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+		<nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+		<nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+		<_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+		<nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+		<nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+	</PropertyGroup>
+	<PropertyGroup>
+		<!--<PackageVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd.HHmmss"))</PackageVersion>-->
+		<PackageVersion>$(nilnulMajorMinor)$(nilnulPatchRevision)</PackageVersion>
+		<PackageVersion Condition="'$(Configuration)'=='Sym2nuget'">$(nilnulMajorMinor)$(nilnulPatchRevision)-sym</PackageVersion>
+
+
+	</PropertyGroup>
+
+
+
+
+	<!--We can add this script in project file to output the info about None Items and Content Items that not shown in csproj:-->
+
+	<Target Name="TrytoFindDefinitionsNowShown" AfterTargets="build">
+		<Message Text="None: @(None)" Importance="high"/>
+		<Message Text="Content: @(Content)" Importance="high"/>
+	</Target>
+
+
+
+
+	<Target>
+
+		<!--Include works even in ItemGroup in Targets-->
+		<XmlRead/>
+		<CreateItem/>
+		<Error/>
+	</Target>
+
+	<!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="echo After Build: $(OutDir)" />
+	</Target>-->
+	<!--<Target Name="CopyPackage" AfterTargets="Pack">
+		<Copy       SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg"                 DestinationFolder="$(SolutionDir)NuGet\BuildOut\"         />
+	</Target>-->
+
+
+	<Target Name="PushPackage" AfterTargets="Pack" Condition="'$(Configuration)'=='Symbol' OR '$(Configuration)'=='Dev2nuget' OR '$(Configuration)'=='Sym2nuget1'">
+		<PropertyGroup>
+			<Cmd>"$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg"</Cmd>
+		</PropertyGroup>
+		<Exec Command="NuGet.exe push $(Cmd) -SkipDuplicate -Source local" />
+		<Exec Command="NuGet.exe push $(Cmd) -SkipDuplicate -Source my" />
+	</Target>
+
+	<Target Name="PushPackage" AfterTargets="Pack" Condition="'$(Configuration)'=='Sym2nuget'">
+		<PropertyGroup>
+			<Cmd>"$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg"</Cmd>
+		</PropertyGroup>
+		<Exec Command="NuGet.exe push $(Cmd) -SkipDuplicate -Source nuget" />
+		<Exec Command="NuGet.exe push $(Cmd) -SkipDuplicate -Source my" />
+		<Exec Command="echo sym2nuget;" />
+		<Message Text="echo sym2nuget from msg;"/>
+
+	</Target>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="echo postbuild;" />
+	</Target>
+
+	<UsingTask TaskName="GetAllTargets" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+		<ParameterGroup>
+			<ProjectFile ParameterType="System.String" Required="true" />
+			<TargetsOut ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+		</ParameterGroup>
+		<Task>
+			<Reference Include="System.Xml" />
+			<Reference Include="Microsoft.Build" />
+			<Reference Include="Microsoft.Build.Framework" />
+			<Using Namespace="Microsoft.Build.Evaluation" />
+			<Using Namespace="Microsoft.Build.Execution" />
+			<Using Namespace="Microsoft.Build.Utilities" />
+			<Using Namespace="Microsoft.Build.Framework" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+        var project = new Project(ProjectFile);
+        
+        var taskItems = new List<ITaskItem>(project.Targets.Count);
+        foreach (KeyValuePair<string, ProjectTargetInstance> kvp in project.Targets)
+        {
+          var target = kvp.Value;
+          var metadata = new Dictionary<string, string>
+                          {
+                            {"Condition", target.Condition},
+                            {"Inputs", target.Inputs},
+                            {"Outputs", target.Outputs},
+                            {"DependsOnTargets", target.DependsOnTargets}
+                          };
+          taskItems.Add(new TaskItem(kvp.Key, metadata));
+        }
+
+        TargetsOut = taskItems.ToArray();
+      ]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+	<Target Name="Test">
+		<GetAllTargets ProjectFile="$(MSBuildProjectFile)">
+			<Output ItemName="TargetItems" TaskParameter="TargetsOut" />
+		</GetAllTargets>
+
+		<Message Text="%(TargetItems.Identity)" />
+	</Target>
+
+</Project>

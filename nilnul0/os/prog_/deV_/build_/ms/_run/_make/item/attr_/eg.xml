@@ -1,0 +1,12 @@
+﻿<Project>
+
+
+	<ItemGroup>
+		<Content Update="**\*.map;**\*.less;*.json" CopyToPublishDirectory="Never"  />
+		<!--
+		You can add <Visible>true</Visible> to the Content element to make the items appear in Solution Explorer. 
+		-->
+	</ItemGroup>
+
+
+</Project>

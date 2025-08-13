@@ -1,0 +1,24 @@
+﻿<SomeWhere>
+
+	You cannot filter items based on Label attribute, but you can filter based on item's metadata. E.g.:
+
+	<ItemGroup>
+		<None Include="file1.dll">
+			<Label>Release Version</Label>
+		</None>
+		<None Include="file2.dll">
+			<Label>Debug Version</Label>
+		</None>
+	</ItemGroup>
+
+	<Target Name="AfterBuild">
+		<ItemGroup>
+			<_RetailContent Include="@(None)" Condition="%(Label) == 'Release Version'" />
+		</ItemGroup>
+		<Copy SourceFiles="@(_RetailContent)" DestinationFolder="$(ReleaseLocation)" ContinueOnError="false" />
+	</Target>
+
+stackoverflow.com/questions/11788381/how-to-reference-an-item-in-an-itemgroup-based-on-the-label-attribute
+answered Aug 3, 2012 at 3:37
+seva titov
+</SomeWhere>

@@ -12,6 +12,9 @@ namespace nilnul.dev.src.sln.sub.dir_._synd
 	/// choose the project container, which is a folder
 	/// </summary>
 	/// obsoleting <see cref="nilnul.dev.srcs.prj._locator._SubDirX"/>
+	///
+	///<seealso cref="sub.dir_._prj.choose_._ManyX"/>
+	///<seealso cref="nilnul.dev.srcs.prj._locator._SubDirX"/>
 	static public class _ChooseX
 	{
 		/// <summary>

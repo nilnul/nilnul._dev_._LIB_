@@ -34,6 +34,14 @@ namespace nilnul.dev.src.prj_.cs.pre_.dll
 		{
 			return Changed_fileAssumeCsPrj(file.ToString(), identity, newIdentity);
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="file"></param>
+		/// <param name="identity">old nomina,</param>
+		/// <param name="newIdentity"></param>
+		/// <returns></returns>
 		static public bool Changed_fileAssumeCsPrj(string file, string identity, string newIdentity)
 		{
 			var doc = XDocument.Load(file);
@@ -57,6 +65,17 @@ namespace nilnul.dev.src.prj_.cs.pre_.dll
 
 
 
+
+		/// <summary>
+		/// change the nomina in both:
+		///		inlcude
+		///		&
+		///		path
+		/// </summary>
+		/// <param name="doc"></param>
+		/// <param name="identity"></param>
+		/// <param name="newIdentity"></param>
+		/// <returns></returns>
 
 		static public bool Changed(XDocument doc, string identity, string newIdentity)
 		{

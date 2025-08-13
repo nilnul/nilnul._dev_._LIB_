@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,10 @@ using nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._lex.word_;
 
 namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_._seg
 {
+
+	/// <summary>
+	/// commented8end *
+	/// </summary>
 	public class Pre : List<_pre_.TxtComment>, IEquatable<Pre>
 	{
 		public override string ToString()

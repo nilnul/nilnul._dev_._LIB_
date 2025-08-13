@@ -1,0 +1,17 @@
+﻿<somewhere>
+
+
+
+	<ItemDefinitionGroup>
+		<Compile>
+			<BuildDay>Monday</BuildDay>
+		</Compile>
+	</ItemDefinitionGroup>
+	
+	<ItemGroup>
+		<Compile Include="one.cs;three.cs" />
+		<Compile Include="two.cs">
+			<BuildDay>Tuesday</BuildDay>
+		</Compile>
+	</ItemGroup>
+</somewhere>

@@ -1,4 +1,4 @@
-﻿using nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._lex.word_;
+using nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._lex.word_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._parse.symbol_._seg._pre_
 {
+	/// <summary>
+	/// txt0nul comment
+	/// eg:
+	///		(abc)
+	///		abc(def)
+	/// </summary>
 	public class TxtComment
 	{
 		private  nilnul.obj.Opt1< _lex.word_.Txt> _txt;

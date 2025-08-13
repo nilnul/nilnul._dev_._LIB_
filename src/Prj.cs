@@ -14,7 +14,7 @@ namespace nilnul.dev.src
 	/// vs nilnul.dev.src.sln.Prj
 	///		'cuz one prj can be used among many slns, then prj shall be defined not inside one sln. prj2sln relation is one2one, not many2one.
 	///
-	/// 
+	/// the name of dir is enough to infer the name of <see cref="prj.IMeta"/>
 	/// </remarks>
 	public interface IPrj {
 

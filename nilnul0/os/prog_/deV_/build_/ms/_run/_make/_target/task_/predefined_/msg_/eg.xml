@@ -1,0 +1,13 @@
+﻿
+<Project>
+  <ItemGroup>
+     <TextFiles Include="**/*.txt"
+         MyProperty="Included file %(Filename)(Extension: %(Extension)) in directory %(RelativeDir)" />
+  </ItemGroup>
+  <Target Name="ListTextFiles">
+    <Message Importance="high" Text="@(TextFiles->'%(Identity): %(MyProperty)', '%0A')" />
+	  <!--
+	   : where 0A means newline;
+	  -->
+  </Target>
+</Project>

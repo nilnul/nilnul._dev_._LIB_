@@ -11,7 +11,7 @@ namespace nilnul.obj_.deV.id_
 	/// </summary>
 	public interface ITerm
 		:
-		nilnul.txt_.vered_.id_.ITerm
+		nilnul.txt_.vered_.id_.IPerm
 	{
 
 	}

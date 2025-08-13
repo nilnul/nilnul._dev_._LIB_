@@ -13,10 +13,19 @@ namespace nilnul.dev.sln.as_.dst.name._infixer.parener._dot_._lex.word_
 		WordI
 		,
 		TxtOrCommentI
+		,
+		_infixer._parener_._parse.symbol_.CommentI
 	{
+
 		public Comment(CommentI val) : base(val)
 		{
 		}
 
+		public Content content => boxed.content;
+
+		public bool hasNotationCaseInsensitive(string notation)
+		{
+			return boxed.hasNotationCaseInsensitive(notation);
+		}
 	}
 }
