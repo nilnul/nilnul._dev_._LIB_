@@ -224,7 +224,10 @@ _pkginfo.txt
 # Others
 ClientBin/
 ~$*
-*~
+
+# this will exclude dnt such as: ~, abc~, ~abc; it's too broad, so use "~$" instead.
+#*~
+
 *.dbmdl
 *.dbproj.schemaview
 *.jfm

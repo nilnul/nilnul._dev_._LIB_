@@ -409,6 +409,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="nilnul0\fs\git\depo\_setting\ignore_\_deV\RscX.cs" />
+    <Compile Include="nilnul0\fs\git\depo\_werk_\destiny\be_\_ignored\_setting\rules_\IDev.cs" />
     <Compile Include="nilnul0\fs\_address\_route\division_\_div\_dir\dnt_\VerWithTag.cs" />
     <Compile Include="nilnul0\fs\_address\_route\division_\_div\_dir\dnt_\_identity\Variant.cs" />
     <Compile Include="nilnul0\IDev.cs" />
@@ -1595,7 +1596,6 @@
     <Folder Include="nilnul0\fs\folder\dirs_\excludeVs_\" />
     <Folder Include="nilnul0\fs\folder\dirs_\unvsgen_\_unclave_\" />
     <Folder Include="nilnul0\fs\folder\dirs_\_designate\" />
-    <Folder Include="nilnul0\fs\folder\doc_\giT_\ignore\" />
     <Folder Include="nilnul0\fs\folder_\giT_\newable\be_\trivia\" />
     <Folder Include="nilnul0\fs\folder_\nonlinks_\disjoint\" />
     <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\nonrepo\directory_\nonlink_\notDotLed_\deV_\prjs\" />
@@ -1638,7 +1638,6 @@
     <Folder Include="nilnul0\fs\git\depo\repo\_cfg_\remote_\svr_\wellknowns_\awGlBbVs\" />
     <Folder Include="nilnul0\fs\git\depo\_cfg\" />
     <Folder Include="nilnul0\fs\git\depo\_werk\" />
-    <Folder Include="nilnul0\fs\git\depo\_werk_\" />
     <Folder Include="nilnul0\fs\git\svr_\wellknown_\vs\" />
     <Folder Include="nilnul0\fs\git\svr_\wellknown_\vs_\prefixed\client\" />
     <Folder Include="nilnul0\fs\_address\dnt\be_\vs_\" />
