@@ -170,7 +170,7 @@ AppPackages/
 ClientBin/
 [Ss]tyle[Cc]op.*
 ~$*
-*~
+#*~
 *.dbmdl
 #sql server project build files
 *.jfm 
