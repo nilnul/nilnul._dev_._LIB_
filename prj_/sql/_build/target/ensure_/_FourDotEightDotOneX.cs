@@ -21,7 +21,7 @@ namespace nilnul.dev.prj_.sql._build.target.ensure_
 		{
 			return prj._build.target.ensure_._FourDotEightDotOneX.Updated_assumePrj(
 
-				src.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(
+				raw.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(
 					prjIdentity
 				)
 			);

@@ -17,18 +17,25 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
+/bin/[Dd]ebug/
+/[Dd]ebugPublic/
+/bin/[Rr]elease/
+#/bin/[Rr]eleases/
 x64/
 x86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+/[Aa][Rr][Mm]/
+/[Aa][Rr][Mm]64/
+#/bld/
+/[Bb]in/
+
+#allow obj/ in the torso of a destination
+/[Oo]bj/
+
+# we shall allow obj in the torso of a destiny.
+#*/obj/
+
+# sometimes we need a log in the torso of a path
+#/[Ll]og/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -48,8 +55,8 @@ TestResult.xml
 nunit-*.xml
 
 # Build Results of an ATL Project
-[Dd]ebugPS/
-[Rr]eleasePS/
+/[Dd]ebugPS/
+/[Rr]eleasePS/
 dlldata.c
 
 # Benchmark Results
@@ -96,7 +103,7 @@ StyleCopReport.xml
 _Chutzpah*
 
 # Visual C++ cache files
-ipch/
+/ipch/
 *.aps
 *.ncb
 *.opendb
@@ -156,7 +163,7 @@ AutoTest.Net/
 .sass-cache/
 
 # Installshield output folder
-[Ee]xpress/
+/[Ee]xpress/
 
 # DocProject is a documentation generator add-in
 DocProject/buildhelp/
@@ -169,7 +176,7 @@ DocProject/Help/Html2
 DocProject/Help/html
 
 # Click-Once directory
-publish/
+/publish/
 
 # Publish Web Output
 *.[Pp]ublish.xml
@@ -199,12 +206,12 @@ PublishScripts/
 *.nuget.targets
 
 # Microsoft Azure Build Output
-csx/
+#/csx/
 *.build.csdef
 
 # Microsoft Azure Emulator
-ecf/
-rcf/
+#ecf/
+#rcf/
 
 # Windows Store app package directories and files
 AppPackages/
@@ -237,7 +244,7 @@ orleans.codegen.cs
 
 # Including strong name files can present a security risk
 # (https://github.com/github/gitignore/pull/2483#issue-259490424)
-#*.snk
+*.snk
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
@@ -250,7 +257,7 @@ Generated_Code/
 # to a newer Visual Studio version. Backup files are not needed,
 # because we have git ;-)
 _UpgradeReport_Files/
-Backup*/
+/Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 ServiceFabricBackup/

@@ -15,7 +15,7 @@ using nilnul.fs.addresses_.disjoint_;
 namespace nilnul.dev
 {
 	public class Srcs_addresses:
-		_srcs_.AddressesA
+		_raws_.AddressesA
 		,
 		SrcsI_addresses
 	{
@@ -112,7 +112,7 @@ C:\Users\$USER$\AppData\Local\Microsoft_Corporation\UnitTestAdapter__Running__St
 
 #endif
 			return new Srcs_addresses(
-			_srcs._CfgedX.Disjoint()
+			_raws._CfgedX.Disjoint()
 			);
 		}
 	

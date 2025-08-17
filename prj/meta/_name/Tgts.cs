@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.prj._name
+namespace nilnul.dev.raw.prj._name
 {
 	/// <summary>
 	/// primitive or compound

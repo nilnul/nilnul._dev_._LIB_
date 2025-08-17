@@ -16,7 +16,7 @@ namespace nilnul.dev
 	/// <see cref="nameof(Srcs_addresses)"/>
 	/// </summary>
 	public class Srcs3:
-		_srcs_.ShieldsA
+		_raws_.ShieldsA
 		,
 		SrcsI3
 	{

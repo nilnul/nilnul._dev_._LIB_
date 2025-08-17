@@ -332,7 +332,7 @@ namespace nilnul.dev.prj_._sql_.directory.include_
 		static public bool Changed_prjOfNomina_directoryInDestination(string prjNomina, string directory)
 		{
 			return Changed_directoryInDestination(
-				src.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(prjNomina)
+				raw.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(prjNomina)
 				,
 				directory
 			);

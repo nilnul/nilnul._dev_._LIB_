@@ -17,7 +17,7 @@ namespace nilnul.obj_.deV._identy._nomina._local.design_
 	/// </remarks>
 	/// <see cref="nilnul.obj_.deV_.typ._identy._nomina.seg.design_.IInfoGrow"/>
 	/// <see cref="nilnul._obj.typ._id.IInfoGrow"/>
-	/// <see cref="nilnul.dev.src.prj_.lib.schema._typ.IInfoGrow"/>
+	/// <see cref="nilnul.dev.raw.prj_.lib.schema._typ.IInfoGrow"/>
 	/// <see cref="nilnul.obj_.deV._nomina.design_.infoPath.IInfoGrow"/>
 	internal class IInfoGrow
 	{

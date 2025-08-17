@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.sln.prj._name._tgt.primitive
+namespace nilnul.dev.raw.sln.prj._name._tgt.primitive
 {
 	/// <summary>
 	/// explicitly implement this class  to avoid common pitfall for programmers using other Contain without heeding the "case", "circa".

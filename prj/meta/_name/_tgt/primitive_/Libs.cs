@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.sln.prj._name._tgt.primitive_
+namespace nilnul.dev.raw.sln.prj._name._tgt.primitive_
 {
 	/// <summary>
 	/// a sortie of names for lib. the better is listed earlier.

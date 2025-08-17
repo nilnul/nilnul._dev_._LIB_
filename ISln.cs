@@ -1,7 +1,7 @@
 namespace nilnul.dev
 {
 	/// <summary>
-	/// a solution, which is implemented as the direct child of <seealso cref="nilnul.dev.src.div_.IDispatch"/> in prj:nilnul.dev._src_;
+	/// a solution, which is implemented as the direct child of <seealso cref="nilnul.dev.raw.div_.IDispatch"/> in prj:nilnul.dev._raw_;
 	/// <seealso cref="dev.src.ISln"/>
 	/// </summary>
 	/// <remarks>

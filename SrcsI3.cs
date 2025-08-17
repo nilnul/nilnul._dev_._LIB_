@@ -7,7 +7,7 @@
 
 	public interface SrcsI3:
 		
-		_srcs_.ShieldsI1
+		_raws_.ShieldsI1
 
 	{
 

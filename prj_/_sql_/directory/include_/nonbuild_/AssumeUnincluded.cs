@@ -205,7 +205,7 @@ namespace nilnul.dev.prj_._sql_.directory.include_.nonbuild_
 		static public bool prjOfNomina(string prjNomina, string directory)
 		{
 			return OfPrj(
-				src.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(prjNomina),  directory
+				raw.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(prjNomina),  directory
 			);
 		}
 

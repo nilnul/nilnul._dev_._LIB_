@@ -68,7 +68,7 @@ namespace nilnul.dev.prj._build.target
 		}
 
 
-		static public bool Updated(nilnul.dev.src.IPrj file, string target)
+		static public bool Updated(nilnul.dev.raw.IPrj file, string target)
 		{
 			return Updated_fileAssumePrj(file.ToString(), target);
 		}

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.upgrade_
+namespace nilnul.dev.raw.upgrade_
 {
 	/// <summary>
 	/// not kill old versions; but wait for them dying;

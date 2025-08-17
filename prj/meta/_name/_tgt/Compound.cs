@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.sln.prj._name._tgt
+namespace nilnul.dev.raw.sln.prj._name._tgt
 {
 	/// <summary>
 	/// some prj might be compound such as:

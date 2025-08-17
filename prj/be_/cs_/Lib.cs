@@ -21,7 +21,7 @@ namespace nilnul.dev.prj.be_.cs_
 				".csproj"
 				)
 				 &&
-				 nilnul.dev.src.prj_.cs.be_.Lib.Be_ofMain(exted.stub)
+				 nilnul.dev.raw.prj_.cs.be_.Lib.Be_ofMain(exted.stub)
 
 				;
 

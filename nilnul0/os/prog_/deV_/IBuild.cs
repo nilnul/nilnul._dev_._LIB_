@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.os.prog_.deV_
 {
-	/// let's put build here in nilnul.dev.src,
+	/// let's put build here in nilnul.dev.raw,
 	///		not in nilnul.dev, as build is about src (based on src and prediagnose the src), and build meta such as .csproj is part of src;
 	///		not in nilnul.dev.pak, as pak is focusing on nuget package generation and publishing and installing, whilst solving version matching in resolving dependency graph;
 	///

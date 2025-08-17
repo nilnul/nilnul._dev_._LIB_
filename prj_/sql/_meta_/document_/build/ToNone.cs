@@ -71,7 +71,7 @@ namespace nilnul.dev.prj_.sql._meta_.document_.build
 
 		static public bool OfPrjNomina(string prjNomina) {
 			return OfPrj(
-				src.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(prjNomina)
+				raw.sln.sub.synd.prj_._sql._LocateX.Spear_ofMain(prjNomina)
 			);
 		}
 

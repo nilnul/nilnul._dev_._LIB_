@@ -109,7 +109,7 @@ namespace nilnul.dev.prj_._cs_.evt_.build_.post
 		static public void OfDoc(string file)
 		{
 			OfFile(
-				nilnul.dev.src.sln.sub.prj.meta_._ChoosePrjX.Spear_ofDoc(file)
+				nilnul.dev.raw.sln.sub.prj.meta_._ChoosePrjX.Spear_ofDoc(file)
 			);
 		}
 
@@ -117,7 +117,7 @@ namespace nilnul.dev.prj_._cs_.evt_.build_.post
 		{
 
 
-			var file = nilnul.dev.src.sln.sub.synd.prj_.cs._meta._LocateX.SpearNulable_ofMain(identity);
+			var file = nilnul.dev.raw.sln.sub.synd.prj_.cs._meta._LocateX.SpearNulable_ofMain(identity);
 			OfFile(file);
 		}
 

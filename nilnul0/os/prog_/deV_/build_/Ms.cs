@@ -74,7 +74,7 @@ According to a previous answer, 2017 does in fact store this information in the 
 	///  other properties that are augmented by some other tools at later stage are deferred in latter projects;
 	/// 
 	///
-	//[Obsolete("nilnul.dev.src")]
+	//[Obsolete("nilnul.dev.raw")]
 	public class MsBuild: nilnul.win.Prog
 	{
 		public const string DivInVs = @"MSBuild\Current\Bin\";

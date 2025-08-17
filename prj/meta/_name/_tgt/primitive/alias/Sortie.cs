@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.dev.src.sln.prj._name._tgt.primitive.alias
+namespace nilnul.dev.raw.sln.prj._name._tgt.primitive.alias
 {
 	static public class _SortieX
 	{
@@ -15,7 +15,7 @@ namespace nilnul.dev.src.sln.prj._name._tgt.primitive.alias
 			"linq"
 		};
 		static public string[] LIB = new string[] { "lib", "dll","lib4fx" };
-		static public string[] TEST = new string[] { "test", "tst" };	// try?
+		static public string[] TEST = new string[] { "test", "tst", "test4fx" };	// try?
 
 		static public string[] CTR4WIN = new string[] {
 			"CTR4win"

@@ -10,7 +10,7 @@ namespace nilnul.obj_.deV._identifier
 	///	a four part pure numbered; <see cref="System.Version"/>
 	/// </summary>
 	/// <remarks>
-	/// for <see cref="nilnul.dev.src"/>, <see cref="nilnul.txt_._versioned.IVersion"/> is enough; we often only use major and minor;
+	/// for <see cref="nilnul.dev.raw"/>, <see cref="nilnul.txt_._versioned.IVersion"/> is enough; we often only use major and minor;
 	/// for <see cref="nilnul.dev.pak"/>, <see cref="nilnul.dev._pak.Versionary"/> with tags are used. we often use patch, build, and tags for a build;
 	/// 
 	/// </remarks>
@@ -23,7 +23,7 @@ namespace nilnul.obj_.deV._identifier
 	///		<see cref="nilnul.txt_._versioned.IVersion"/>, which can contain 0 or more than four ver, and which can has other separator than '.';
 	///
 	/// extension:
-	///		<see cref="nilnul.dev.src.IVersion"/> later;
+	///		<see cref="nilnul.dev.raw.IVersion"/> later;
 	///		
 
 	public interface IVersion

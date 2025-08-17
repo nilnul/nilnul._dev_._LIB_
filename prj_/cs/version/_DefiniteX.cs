@@ -88,8 +88,8 @@ namespace nilnul.dev.prj_.cs.version
 		)
 		{
 			//string prjNomina = "nilnul._web_._LIB_";
-			var prjFile = nilnul.dev.src.sln.sub.synd.prj_.cs._meta._LocateX.SpearNulable_ofMain(prjNomina) ?? throw new NullReferenceException($"{prjNomina}'s file unfound.");
-			//var prjSynd = nilnul.dev.src.sln.sub.synd.prj_.cs._meta._LocateX.._meta._LocateX.SpearNulable_ofMain(prjNomina) ?? throw new NullReferenceException($"{prjNomina}'s file unfound.");
+			var prjFile = nilnul.dev.raw.sln.sub.synd.prj_.cs._meta._LocateX.SpearNulable_ofMain(prjNomina) ?? throw new NullReferenceException($"{prjNomina}'s file unfound.");
+			//var prjSynd = nilnul.dev.raw.sln.sub.synd.prj_.cs._meta._LocateX.._meta._LocateX.SpearNulable_ofMain(prjNomina) ?? throw new NullReferenceException($"{prjNomina}'s file unfound.");
 
 			var folder = prjFile.parent.ToString();
 

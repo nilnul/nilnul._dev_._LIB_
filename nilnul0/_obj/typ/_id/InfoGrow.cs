@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using nilnul.dev.src.prj_.lib.schema._typ;
+using nilnul.dev.raw.prj_.lib.schema._typ;
 namespace nilnul._obj.typ._id
 {
 	/// <summary>
@@ -20,9 +20,9 @@ namespace nilnul._obj.typ._id
 	///<remarks>
 	/// 
 	///</remarks>
-	///<see cref="nilnul.dev.src.prj_.lib.schema._typ.IInfoGrow"/>
+	///<see cref="nilnul.dev.raw.prj_.lib.schema._typ.IInfoGrow"/>
 	///<see cref="nilnul.obj_.deV._identy._nomina._local.design_.IInfoGrow"/>
-	///<see cref="nilnul.dev.src.prj_.lib.schema._typ"/>
+	///<see cref="nilnul.dev.raw.prj_.lib.schema._typ"/>
 	///
 	/// alias:
 	///		info gain

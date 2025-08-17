@@ -12,7 +12,7 @@
 
 	public interface SrcsI_addresses:
 		
-		_srcs_.AddressesI
+		_raws_.AddressesI
 		,
 		ISrcs
 
