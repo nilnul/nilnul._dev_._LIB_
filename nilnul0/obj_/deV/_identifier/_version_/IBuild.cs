@@ -15,6 +15,8 @@ namespace nilnul.obj_.deV._identifier._version_
 	/// vs
 	///		:<see cref="nilnul.dev.raw.IVersion"/>, where there is no build
 	///		<see cref="nilnul.dev.raw._version_.IPatch"/>, where it's one of git snap which is src state at any expressible times;
+	///	alias:
+	///		<see cref="nilnul.obj_.deV._identifier._version.IBuild"/>
 	internal class IBuild
 	{
 	}

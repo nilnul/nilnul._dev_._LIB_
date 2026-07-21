@@ -1,4 +1,5 @@
 ﻿using nilnul.dev.prj_.cs;
+using nilnul.fs.address;
 using nilnul.fs.address_.spear_;
 using nilnul.fs.address_.spear_.based_;
 using nilnul.obj.seq;
@@ -52,7 +53,7 @@ namespace nilnul.dev.raw.prj_.cs.doc_.snk.put_
 		}
 		public static bool _Created_prjMetaAssumeCs(string parentDoc, string sharedInsallation)
 		{
-			return _Created_prjMetaAssumeCs(ParentDoc.Parse(parentDoc),sharedInsallation);
+			return _Created_prjMetaAssumeCs(ParentDoc.Parse(parentDoc), sharedInsallation);
 		}
 		public static bool _Created_prjMetaAssumeCs(ParentDoc parentDoc, string sharedInsallation)
 		{
@@ -110,6 +111,49 @@ namespace nilnul.dev.raw.prj_.cs.doc_.snk.put_
 				//);
 			}
 
+			var fullPath = System.IO.Path.Combine(prj.ToString(), dev.raw.synd_.cs.doc_._SnkX.TMP_DOC);
+			// if it's symlink
+			if (
+				 nilnul.fs.folder.doc.be_._SymlinkX.Be_ofAddress(fullPath)
+			)
+			{
+				var tgt = nilnul.fs.location_.link_.sym._TgtX._Address0nul_0location(fullPath);
+
+				if (tgt is null)
+				{
+					Trace.TraceWarning(
+						$"{fullPath} is a symlink, but the target is null. This is unexpected."
+					);
+
+					///nilnul.fs.location.drop_._RecyclableX.Del(fullPath);
+					///
+					nilnul.fs.file.drop_._RecyclableX.Vod(fullPath);
+
+					raw.synd_.cs.doc_.snk_.unoccupied.create_._SymX._Vod_prjAssumeCs(
+						prj, sharedInsallation
+					);
+
+					return true;
+
+				}
+
+				if (
+					nilnul.fs.address.be_.Location1.Singleton.Be(tgt.ToString())
+				)
+				{
+					return false; //not created.
+				}
+
+
+				Trace.TraceError(
+					$"{fullPath} is a symlink pointing to a valid location, but the target {tgt} is not {sharedInsallation}. This is unexpected."
+				);
+				return false;
+
+			}
+
+
+			///hard value, we cannot change that as that might be what the user puts;
 			return false;
 
 

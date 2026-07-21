@@ -18,7 +18,11 @@ namespace nilnul.dev.raw
 	/// 
 	/// sln is a git module.
 	/// </remarks>
-	public interface ISln:dev.ISln
+	/// 
+	[Obsolete(
+		//nameof(dev.raw.ISln1)
+	)]
+	interface ISln:dev.ISln
 	{
 
 	}

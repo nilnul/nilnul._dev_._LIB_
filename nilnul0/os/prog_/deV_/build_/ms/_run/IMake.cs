@@ -9,7 +9,7 @@ namespace nilnul.os.prog_.deV_.build_.ms._run
 	/// <summary>
 	/// 
 	/// </summary>
-	/// <seealso cref="nilnul.dev.prj.IMeta"/>
+	/// <seealso cref="nilnul.dev.prj.ISpecification"/>
 	/// <see cref="nilnul.dev.sln.build_._ms.IConverted"/>
 	///
 	/// alias:

@@ -37,7 +37,7 @@ namespace nilnul.dev.raw.sln.sub.dir_.synd_.tgts_
 				
 			};
 
-			dev.raw.prj._name.Tgts.CsEs.Each(
+			dev.prj._name.Tgts.CsEs.Each(
 				cs=>
 				{
 					var d = sln.sub.dir_._synd._ChooseX.DntNulable(sub, cs);

@@ -10,8 +10,11 @@ namespace nilnul.obj_.deV._identy._nomina
 	/// a term. Generally Capitalized to denote a type.
 	/// </summary>
 	/// <remarks>
-	/// for local name, we use full name.
+	/// for local name, we use full name. And often it's capitalized as in:
+	///		nilnul.num.Ord
+	///	;
 	/// for segment in namespace, we use short name such as abbreviations;
+	/// so local in general is equal to a segment of namespace.
 	/// </remarks>
 	/// alias:
 	///		loc

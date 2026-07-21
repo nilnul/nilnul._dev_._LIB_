@@ -19,6 +19,8 @@ namespace nilnul.dev._sys_
 	///		mechanism
 	///		conversion
 	///		engine
+	///		struture
+	///			,which can then be destructed
     class IMetabolism
     {
     }

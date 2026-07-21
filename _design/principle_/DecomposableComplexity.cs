@@ -12,4 +12,5 @@ namespace nilnul.dev._design.principle_
 	internal class DecomposableComplexity
 	{
 	}
+
 }

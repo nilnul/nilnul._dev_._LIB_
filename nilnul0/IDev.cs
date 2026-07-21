@@ -1,6 +1,7 @@
 namespace nilnul
 {
 	/// <summary>
+	/// the evolution of knowledge(on basis of <see cref="nilnul.ken"/>) represented by code.
 	/// first the static structure, which is a state at a timepoint, then the dynamic behavior, which is a bi-tuple: [startState, end state] describing the change across a timespan;
 	/// </summary>
 	/// <remarks>

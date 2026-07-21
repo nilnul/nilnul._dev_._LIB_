@@ -13,6 +13,9 @@ namespace nilnul.obj_
 	///			members of types
 	///			namespace
 	///		variables
+	///		the namespace
+	///		the local name
+	///		fullname
 	///		
 	/// </summary>
 	interface IDev_

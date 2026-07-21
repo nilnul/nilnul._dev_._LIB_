@@ -13,12 +13,17 @@ namespace nilnul.dev.prj_
 	/// alias:
 	///		test
 	///		tst;
-	internal class ITest:IPrj
+	internal class ITest : IPrj
 	{
 	}
 
+	static public class _TestX
+	{
+		public static string NOM = "_TEST_";
 
 
 
 
+
+	}
 }

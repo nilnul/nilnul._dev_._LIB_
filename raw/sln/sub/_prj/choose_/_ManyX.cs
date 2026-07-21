@@ -27,7 +27,9 @@ namespace nilnul.dev.raw.sln.sub.dir_._prj.choose_
 		/// <param name="ext">
 		/// ext of prjFile
 		/// </param>
-		/// <returns></returns>
+		/// <returns>
+		/// 
+		/// </returns>
 		static public (string sub, fs.folder._repoName.dir.name_.idioms0Comments_.Segs prj) DntNulable(
 			nilnul.fs.FolderI sub
 			,
@@ -243,6 +245,15 @@ namespace nilnul.dev.raw.sln.sub.dir_._prj.choose_
 
 		}
 
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="main">
+		/// eg:
+		///		nilnul._num_.LINQ
+		/// </param>
+		/// <returns></returns>
 		public static IEnumerable<BaseDir> Shields_assumeNomina(
 			string main
 			

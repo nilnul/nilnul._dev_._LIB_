@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.dev.prj.versions
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	internal class ICompatible
 	{
 		/*

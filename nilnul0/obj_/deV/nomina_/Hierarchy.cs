@@ -17,6 +17,7 @@ namespace nilnul.obj_.deV._identy.nomina_
 	/// </remarks>
 	/// alias:
 	///		subs
+	///		<see cref="nilnul.txt_._nom.term.extersed_.IPosterior"/>
 	///		
 	internal class Hierarchy
 	{

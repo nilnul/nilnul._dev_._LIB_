@@ -187,6 +187,8 @@ namespace nilnul.dev.raw.sln.sub.dir_._synd
 		/// </summary>
 		/// <param name="prjMain">
 		///		the tgt of prj is kept in the base(main) of the doc name, not just in ext
+		///		;eg:
+		///			nilnul._user_._DB_
 		/// </param>
 		/// <returns></returns>
 		public static nilnul.fs.address_.shield_.BaseDir ShieldNulable_ovBase(

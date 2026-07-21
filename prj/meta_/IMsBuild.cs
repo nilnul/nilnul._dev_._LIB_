@@ -11,7 +11,7 @@ namespace nilnul.dev.prj.meta_
 	/// </summary>
 	/// <see cref="nilnul.os.prog_.deV_.build_.ms._run.make"/>
 	public interface IMsBuild
-		:IMeta
+		:ISpecification
 	{
 	}
 }

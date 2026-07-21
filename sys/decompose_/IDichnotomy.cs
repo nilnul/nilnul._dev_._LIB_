@@ -13,6 +13,9 @@ namespace nilnul.dev.sys.decompose_
 	///	eg:
 	///		to schedule a task recurrently, we can craete the task first, and then set its recurrence attribute;
 	/// </summary>
+	/// <remarks>
+	/// usually <see cref="homo_.IBinary"/>, not heterogenous.
+	/// </remarks>
 	internal class IDichnotomy
 	{
 	}

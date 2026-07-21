@@ -14,6 +14,7 @@ namespace nilnul.obj_.deV._identy.nomina_.hier.re_
 	/// </summary>
 	/// <remarks>
 	/// </remarks>
+	/// <see cref="nomina.re_.IShuffled"/>
 	internal class Shuffled
 	{
 	}

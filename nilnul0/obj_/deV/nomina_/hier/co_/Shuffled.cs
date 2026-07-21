@@ -14,6 +14,7 @@ namespace nilnul.obj_.deV._identy.nomina_.hier.co_
 	/// </summary>
 	/// <remarks>
 	/// </remarks>
+	/// <see cref="nominas_.shuffled_.ICanonical"/>
 	internal class Shuffled
 	{
 	}

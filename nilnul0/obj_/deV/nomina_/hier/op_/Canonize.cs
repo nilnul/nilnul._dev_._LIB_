@@ -3,6 +3,7 @@
 	/// <summary>
 	/// <see cref="hier.co_.shuffled.Preference"/>
 	/// </summary>
+	/// 
 	internal class Canonize
 	{
 	}

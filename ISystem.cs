@@ -4,6 +4,10 @@ namespace nilnul.dev
 	/// eg:
 	///		information system;
 	/// </summary>
+	///  <remarks>
+	/// systemize by enclosing, structure(such as a lit via delimiting),   and input|output which is function.
+	///  
+	/// </remarks>
 	/// <see cref="nilnul.zen"/>
 	interface ISystem {
 

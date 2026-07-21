@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+	<PropertyGroup>
+		<!--To configure multiple projects, you can create a Directory.Build.props file that contains the <LangVersion>
+			element. You typically do that in your solution directory. Add the following to a Directory.Build.props file in your solution directory:-->
+		<!--
+		 nilnul: put this in src directory. Or the parent of the src directory.
+		-->
+			<LangVersion>
+			preview
+			<!--latest-->
+			<!--default-->
+			<!--latestMajor (default)-->
+		</LangVersion>
+	</PropertyGroup>
+</Project>

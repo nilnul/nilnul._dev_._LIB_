@@ -18,6 +18,7 @@ namespace nilnul.obj_.deV._identy_
 	///		context
 	///		,
 	///		sur
+	///		,schema, similar to sur.
 	///		
 	/// </remarks>
 

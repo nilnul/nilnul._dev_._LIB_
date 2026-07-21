@@ -15,4 +15,5 @@ namespace nilnul.obj_.deV._identy._nomina._sur.seg_
 	internal class IPrepositioned
 	{
 	}
+
 }

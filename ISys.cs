@@ -11,8 +11,13 @@ namespace nilnul.dev
 	///		a procedure is not a system, as the border is not explicit.
 	///	eg:
 	///		a type, an obj/instance, a project/assembly, a sln /app, an operation system, a computer as a hardware device.;
+	///		software
 	/// </remarks>
-	public interface ISys {
+	public interface ISys
+		//:
+		///nilnul.fs.IFolder		/// ? multiple files, multiple folders?
+	
+	{
 
 	}
 
